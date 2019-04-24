@@ -41,6 +41,10 @@ namespace CustomKart.UI
 
         public BMG KartSelect { get; set; }
 
+        public NARC WLMenu { get; set; }
+
+        public BMG Banner { get; set; }
+
         private int ComboIndex { get; set; }
 
         public string GetCARCExtension(int Lang)
@@ -103,6 +107,22 @@ namespace CustomKart.UI
             CharacterKartSelect.FromFileSystem(dchksel);
             var fchksel = ROMUtils.GetSFSFile("CharacterKartSelect" + ext + ".carc", rfs);
             fchksel.Data = ROM.LZ77_Compress(CharacterKartSelect.Write());
+
+
+            idx = 0;
+            foreach(TextBox elem in DlPlayTextsList.Items)
+            {
+                Banner.DAT1.Strings[idx] = elem.Text;
+                idx++;
+            }
+            var banner = Banner.Save();
+            var dwlmenu = WLMenu.ToFileSystem();
+            var fbanner = ROMUtils.GetSFSFile("banner.bmg", dwlmenu);
+            fbanner.Data = banner;
+            WLMenu.FromFileSystem(dwlmenu);
+            var fwlmenu = ROMUtils.GetSFSFile("WLMenu" + ext + ".carc", rfs);
+            fwlmenu.Data = ROM.LZ77_Compress(WLMenu.Write());
+
             MainWindow.LoadedROM.FromFileSystem(rfs);
         }
 
@@ -140,9 +160,16 @@ namespace CustomKart.UI
             var dchksel = CharacterKartSelect.ToFileSystem();
             var ksel = ROMUtils.GetFile("kart_select.bmg", dchksel);
             KartSelect = new BMG(ksel);
+            var cbwlmenu = ROMUtils.GetFile("WLMenu" + ext + ".carc", rfs);
+            var bwlmenu = ROM.LZ77_Decompress(cbwlmenu);
+            WLMenu = new NARC(bwlmenu);
+            var dwlmenu = WLMenu.ToFileSystem();
+            var banner = ROMUtils.GetFile("banner.bmg", dwlmenu);
+            Banner = new BMG(banner);
             CommonTextsList.Items.Clear();
             MBChildTextsList.Items.Clear();
             KartSelectTextsList.Items.Clear();
+            DlPlayTextsList.Items.Clear();
             foreach(var str in Common.DAT1.Strings) CommonTextsList.Items.Add(new TextBox()
             {
                 TextWrapping = TextWrapping.Wrap,
@@ -156,6 +183,12 @@ namespace CustomKart.UI
                 Text = str,
             });
             foreach(var str in KartSelect.DAT1.Strings) KartSelectTextsList.Items.Add(new TextBox()
+            {
+                TextWrapping = TextWrapping.Wrap,
+                AcceptsReturn = true,
+                Text = str,
+            });
+            foreach(var str in Banner.DAT1.Strings) DlPlayTextsList.Items.Add(new TextBox()
             {
                 TextWrapping = TextWrapping.Wrap,
                 AcceptsReturn = true,

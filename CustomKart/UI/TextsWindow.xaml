@@ -35,6 +35,12 @@
                     </ListView>
                 </Grid>
             </TabItem>
+            <TabItem Header="Download-Play">
+                <Grid>
+                    <ListView Name="DlPlayTextsList" HorizontalAlignment="Center" VerticalAlignment="Center" Height="250" Width="700">
+                    </ListView>
+                </Grid>
+            </TabItem>
         </dragablz:TabablzControl>
 
     </Grid>
