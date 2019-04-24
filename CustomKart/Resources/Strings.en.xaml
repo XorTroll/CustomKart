@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:cgen="clr-namespace:System.Collections.Generic;assembly=System"
+                    xmlns:local="clr-namespace:CustomKart">
+    <system:String x:Key="program">CKart</system:String>
+    <system:String x:Key="editAssets">Edit assets</system:String>
+    <system:String x:Key="gameName">Game name</system:String>
+    <system:String x:Key="gameCode">Game code</system:String>
+    <system:String x:Key="makerCode">Maker code</system:String>
+    <system:String x:Key="ndsROM">Nintendo DS ROM</system:String>
+    <system:String x:Key="officialExt">official format</system:String>
+    <system:String x:Key="commonExt">common format</system:String>
+    <system:String x:Key="ROMOpen">Open Mario Kart DS ROM</system:String>
+    <system:String x:Key="ROMSave">Save Mario Kart DS ROM</system:String>
+    <system:String x:Key="noROM">No ROM opened</system:String>
+    <x:Array x:Key="sequenceNames" Type="system:String">
+        <system:String>Title screen</system:String>
+    </x:Array>
+    <x:Array x:Key="courseNames" Type="system:String">
+        <system:String>Figure-8 Circuit</system:String>
+        <system:String>Yoshi Falls</system:String>
+        <system:String>S</system:String>
+    </x:Array>
+</ResourceDictionary>

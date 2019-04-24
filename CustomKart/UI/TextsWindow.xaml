@@ -1,0 +1,41 @@
+﻿<Window x:Class="CustomKart.UI.TextsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:CustomKart.UI"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        Title="TextsWindow" Height="375" ResizeMode="NoResize" Width="750">
+    <Grid>
+        <ComboBox Name="LanguageCombo" SelectionChanged="LanguageCombo_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,5">
+            <ComboBoxItem>English</ComboBoxItem>
+            <ComboBoxItem>Spanish</ComboBoxItem>
+            <ComboBoxItem>French</ComboBoxItem>
+            <ComboBoxItem>German</ComboBoxItem>
+            <ComboBoxItem>Italian</ComboBoxItem>
+        </ComboBox>
+        <dragablz:TabablzControl Margin="0,0,0,35">
+            <TabItem Header="Common">
+                <Grid>
+                    <ListView Name="CommonTextsList" HorizontalAlignment="Center" VerticalAlignment="Center" Height="250" Width="700">
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Multiplayer">
+                <Grid>
+                    <ListView Name="MBChildTextsList" HorizontalAlignment="Center" VerticalAlignment="Center" Height="250" Width="700">
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Kart select">
+                <Grid>
+                    <ListView Name="KartSelectTextsList" HorizontalAlignment="Center" VerticalAlignment="Center" Height="250" Width="700">
+                    </ListView>
+                </Grid>
+            </TabItem>
+        </dragablz:TabablzControl>
+
+    </Grid>
+</Window>

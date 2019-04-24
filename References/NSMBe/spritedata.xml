@@ -1,0 +1,3731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- NSMB Sprite Database, generated 07/11/2017 16:04:06 for NSMB Editor. http://nsmbhd.net/ -->
+
+<database timestamp="1499789046">
+
+	<categories>
+		<category id="1">Uncategorized</category>
+		<category id="2">Platforms and ropes</category>
+		<category id="3">Event controllers</category>
+		<category id="4">Bosses and cutscenes</category>
+		<category id="6">Camera controllers</category>
+		<category id="7">Useless sprites</category>
+		<category id="8">Effects and decorations</category>
+		<category id="12">Other</category>
+		<category id="13">Enemies - Overground</category>
+		<category id="14">Enemies - Underground</category>
+		<category id="15">Enemies - Water</category>
+		<category id="16">Enemies - Snow</category>
+		<category id="17">Enemies - Fire</category>
+		<category id="18">Enemies - Castle</category>
+		<category id="19">Enemies - Ghost House</category>
+		<category id="20">Enemies - Desert</category>
+	</categories>
+
+	<sprites>
+		<sprite id="0">
+			<name>Crash Sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.
+It is used in the unused levels, probably a leftover.
+It tries to load the player actor.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="1">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="2">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="3">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="4">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="5">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="6">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="7">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="8">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="9">
+			<name>Crash sprite</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>This sprite makes the level crash.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="10">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>Not all the 'nothing' sprites use the same Class ID
+The 'nothing' sprites might try to do something.
+But it would need some sort of hacking knowledge to find out what.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="11">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="12">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="13">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="14">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="15">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="16">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="17">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="18">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="19">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="20">
+			<name>Defunct? Defunct Actor 22</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes>All it has are the destructor and constructor. So completely useless.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="21">
+			<name>Mega Goomba</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/kuribo.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="22">
+			<name>Hammer Bro. from map</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/hammer_bros.nsbmd
+/enemy/I_hanmmer.nsbmd</files>
+			<field id="10" type="list" name="Loads from" values="0=Level Start,1=Midway point" notes="" />
+			<field id="11" type="checkbox" name="Can spawn Mega Mushroom" values="1" notes="" />
+			<field id="9" type="checkbox" name="Disable downward jump" values="1" notes="" />
+		</sprite>
+
+		<sprite id="23">
+			<name>Pipe Piranha Plant (facing up)</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>==Unused behaviours==
+- Can be defeated by Drill Stomp
+
+Needs to be placed on top of a [solid?]tile to work.</notes>
+			<files>/enemy/v_pakkun.nsbmd</files>
+			<field id="10-11" type="list" name="Number of fireballs" values="0=0,1=1,17=2,33=3,49=6" notes="1+ is unused, but some are used in NSMBWii." />
+		</sprite>
+
+		<sprite id="24">
+			<name>Pipe Piranha Plant (facing down)</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/v_pakkun.nsbmd</files>
+			<field id="10-11" type="list" name="Number of fireballs" values="0=0,1=1,17=2,33=3,49=6" notes="1+ is unused, but some are used in NSMBWii." />
+		</sprite>
+
+		<sprite id="25">
+			<name>Pipe Piranha Plant (facing right)</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/v_pakkun.nsbmd</files>
+			<field id="10-11" type="list" name="Number of fireballs" values="0=0,1=1,17=2,33=3,49=6" notes="1+ is unused, but some are used in NSMBWii." />
+		</sprite>
+
+		<sprite id="26">
+			<name>Pipe Piranha Plant (facing left)</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/v_pakkun.nsbmd</files>
+			<field id="10-11" type="list" name="Number of fireballs" values="0=0,1=1,17=2,33=3,49=6" notes="1+ is unused, but some are used in NSMBWii." />
+		</sprite>
+
+		<sprite id="27">
+			<name>Bill Blaster (Bullet Bill launcher)</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>Sprite set: 5-1</notes>
+			<files>/enemy/I_killer_ashiba.nsbmd (SOMETHING_killer_scaffold)
+/enemy/I_killer_black.nsbmd
+/enemy/I_killer_houdai.nsbmd (SOMETHING_killer_battery)
+/enemy/killer.nsmbd</files>
+			<field id="9" type="list" name="Shooting direction" values="1=Left,2=Right,0=Both" notes="" />
+			<field id="10" type="value" name="Height" values="2" notes="A height of 9 or more will make the Bill Blaster invisible if the 8 bottommost tiles disappear from view, but still retains collision." />
+			<field id="8" type="value" name="Unknown (8)" values="" notes="Was used by Nintendo devs, somehow as a copy of Nybble 10, but is apparently never called at all, needs testing." />
+			<field id="1" type="value" name="Unknown (11)" values="" notes="is stored by the game for ulterior use but seems to never be called, still needs testing." />
+		</sprite>
+
+		<sprite id="28">
+			<name>Bob-omb</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>A walking bomb.</notes>
+			<files>/enemy/bombhei.nsbca
+/enemy/bombhei.nsbmd</files>
+			<field id="4" type="list" name="Behaviour" values="0=Default,4=Pipe generator,2=Self-destructs (240 frames),8=Self-destructs (241 frames)" notes="" />
+			<field id="11" type="list" name="Pipe generator direction" values="0=Up,1=Down,2=Left,3=Right" notes="" />
+		</sprite>
+
+		<sprite id="29">
+			<name>Princess Peach</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/peach.nsbmd</files>
+			<field id="11" type="checkbox" name="Ignore cinematics" values="1" notes="Unused as sprite. May be used otherwise." />
+		</sprite>
+
+		<sprite id="30">
+			<name>Monty Tank</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/body_1.nsbmd
+/enemy/body_2.nsbmd
+/enemy/body_3.nsbmd
+/enemy/choropu.nsbmd
+/enemy/tire.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="31">
+			<name>Cheep Cheep</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>Benjamin: I do remember other values existing, but I haven't tested them in a while, so I don't remember.</notes>
+			<files>/enemy/pukupuku.nsbmd</files>
+			<field id="8" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="11" type="list" name="Type" values="0=Swim,1=Green (chases Mario),2=Jumping (unused),3='Swims' on walls (unused)" notes="'Swims' on walls: makes fish follow the ground and swim up walls and on ceilings." />
+			<field id="9" type="list" name="Wall placement" values="0=Top,1=Left,2=Below,3=Right" notes="Only works with 'swims on walls' type." />
+		</sprite>
+
+		<sprite id="32">
+			<name>Goal Pole's flag</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes>AKA Flagpole Flag</notes>
+			<files>/enemy/all_goal_flag.nsbmd [may be unused]
+/enemy/all_goal_flagR.nsbmd (all_goal_flagRed) [may be unused]
+/enemy/obj_goal_flag.nsbmd (object_goal_flag)[may be unused]
+/enemy/obj_goal_flagR.nsbmd (object_goal_flagRed) [may be unused]</files>
+			<field id="4" type="checkbox" name="Secret exit" values="1" notes="" />
+			<field id="11" type="checkbox" name="Unknown (11)" values="1" notes="Used in NSMBW." />
+		</sprite>
+
+		<sprite id="33">
+			<name>Trampoline (portable springboard)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>An item used to make Mario jump higher. Can be carried by Mario. Objects can push it (but only in later versions?).
+
+Bounces the player up by 6 tiles (11 if mini).
+The big version bounces the player up by 18 tiles (29 if mini).
+
+The pickup hitbox for the giant springboard is far too large and extends even above it, which makes you pick it up if you're holding B and don't press A in time when springing off it. (hitbox information &amp; text: skawo)</notes>
+			<files>/enemy/jump_step.nsbmd</files>
+			<field id="10" type="checkbox" name="Shift ½ block right" values="1" notes="" />
+			<field id="11" type="checkbox" name="Larger" values="1" notes="Unused. (Can get stuck in walls)" />
+		</sprite>
+
+		<sprite id="34">
+			<name>Red Ring</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>A.k.a. “Red Coin Ring”.
+Note: &quot;obj_e3_ring.nsbmd&quot; cannot be opened with NSMBe, for fix this problem, see this tutorial:
+
+http://nsmbhd.net/thread/3250-fixing-already-opened-files-tutorial/</notes>
+			<files>/enemy/obj_e3_ring.nsbmd</files>
+			<field id="2-3" type="value" name="Target ID" values="" notes="It can trigger anything, but it's usually used to trigger Red Coins." />
+			<field id="6" type="checkbox" name="Disable timer" values="1" notes="" />
+			<field id="10" type="checkbox" name="Shift 8 pixels right" values="1" notes="If set, the Red Ring will respawn if you change areas and come back." />
+			<field id="7" type="list" name="Switch Tile States" values="0=No,1=Like a P Switch,2=Like a ! Switch,4=Red Blocks only,5=Like a P Switch + Red Blocks,7=All switchable tiles" notes="Switches the state of all two-state tiles; invisible blue coins appear, red coin outlines become collectable, red switch blocks become solid." />
+			<field id="8" type="list" name="ID Activation mode" values="0=During timer,2=After timer" notes="Works only if Target ID is not equal to 0 and Disable timer is not set." />
+		</sprite>
+
+		<sprite id="35">
+			<name>Final Bowser controller</name>
+			<flags known="1" complete="0" />
+			<category id="4" />
+			<notes>Spawns Bowser Jr. and Big Bowser. See those sprites for more info.</notes>
+			<files>/enemy/pot.nsbmd</files>
+		</sprite>
+
+		<sprite id="36">
+			<name>Thwomp</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/dossun.nsbmd
+/enemy/dossun.nsbtp
+/enemy/dossy.nsbca</files>
+			<field id="11" type="value" name="Unknown (11)" values="" notes="Cancelled out by the code, as far as I noticed." />
+		</sprite>
+
+		<sprite id="37">
+			<name>Spiny</name>
+			<flags known="1" complete="0" />
+			<category id="20" />
+			<notes>Spawned by Lakithunder with data of: 00 00 00 00 90 01</notes>
+			<files>/enemy/paipo.nsbmd
+/enemy/togezo.nsbmd
+/enemy/togezo_shell.nsbmd</files>
+			<field id="11" type="list" name="Spawn as" values="0=Default,1=Spiny Ball,2=Shell,3=Upside-down shell" notes="" />
+			<field id="9" type="checkbox" name="Faster" values="1" notes="Unused." />
+			<field id="8" type="value" name="Unknown 8" values="" notes="Used internally by Lakithunder." />
+		</sprite>
+
+		<sprite id="38">
+			<name>Boo</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes>This sprite will freeze and remain frozen indefinitely if placed in a view with music that includes a &quot;bahp&quot; note, such as music IDs 1A and 63.</notes>
+			<files>/obj/I_teresa256_ncg.bin
+/obj/I_enemy_B_ncl.bin
+/obj/I_enemy_W_ncl.bin
+/obj/I_enemy_R_ncl.bin
+/obj/I_enemy_ncl.bin</files>
+			<field id="11" type="checkbox" name="Faster" values="1" notes="Unused." />
+		</sprite>
+
+		<sprite id="39">
+			<name>Castle boss controller</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files></files>
+			<field id="2-3" type="value" name="Target ID" values="" notes="" />
+			<field id="11" type="list" name="Boss" values="6=Bowser,0=Mummipokey,4=Cheepskipper,3=Mega Goomba,2=Petey Piranha,5=Monty Tank,1=Lakithunder,7=Dry Bowser" notes="" />
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+			<field id="10" type="checkbox" name="Win Cutscene" values="1" notes="Shows Bowser Jr and Peach. Used by the game when boss is defeated" />
+		</sprite>
+
+		<sprite id="40">
+			<name>Lakitu (unused sprite)</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>This sprite spawns Lakitu once. Once it's killed, it will not respawn.
+If you want it to respawn, use sprite Lakitu Spawner (183) instead. 
+If Sprite Set 5:1 (Bullet Bill/Bob-omb) isn't enabled, the game will freeze when lakitu tries to display the Spiny egg model.
+</notes>
+			<files></files>
+			<field id="9" type="list" name="Spawning method" values="0=Normal,1=From background" notes="If set, makes Lakitu come from the BG like in sprite 183." />
+		</sprite>
+
+		<sprite id="41">
+			<name>Bowser bridge switch (skull switch)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes></notes>
+			<files>/obj/I_switch_ncg.bin
+/obj/I-enemy256_ncl.bin
+/obj/I-enemy_B_ncl.bin
+/obj/I-enemy_ncl_ncg.bin
+/obj/I-enemy_R_ncg.bin
+/obj/I-enemy_W_ncg.bin
+label3 - 4
+label3 - 6</files>
+			<field id="2-3" type="value" name="Target ID" values="" notes="Triggers Bowser, Dry Bowser and Giant Bowser falling animation." />
+			<field id="11" type="list" name="Destroys bridge" values="1=1 tile below switch,0=2 tiles below switch" notes="" />
+		</sprite>
+
+		<sprite id="42">
+			<name>Chain Chomp</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>The code has a line that crashes the game on purpose if the nybble is set to 2+. If you comment it out it seems to work fine except freeing the Chain Chomps crashes the game for an unknown reason.
+Also crashes in VS mode.</notes>
+			<files>/enemy/w_pile.nsbtx (chain chomp's log)
+/enemy/wanwan.nsbmd (chain chomp)
+/enemy/wanwan_chain.nsbmd (chain chomp's chain)</files>
+			<field id="11" type="value" name="Number of C. Chomps" values="0" notes="0 is unused. 2 CRASHES the game and is used in Unused Level 3, but is otherwise unused. Values above 2 also crash and are completly unused." />
+		</sprite>
+
+		<sprite id="43">
+			<name>No-log Chain Chomp (unused sprite)</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Possibly spawned by sprite 42 (Chain Chomp attached to log).</notes>
+			<files>/enemy/wanwan.nsbmd
+/enemy/wanwan_chain.nsbmd</files>
+		</sprite>
+
+		<sprite id="44">
+			<name>Fire Snake (unused Actor 46)</name>
+			<flags known="1" complete="0" />
+			<category id="17" />
+			<notes>Unknown difference to used Fire Snake.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="45">
+			<name>Respawnable Hidden Block</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes>Respawns when destroyed.</notes>
+			<files></files>
+			<field id="7" type="list" name="Horizontal detection for solid tile" values="0=Left,1=Right" notes="" />
+			<field id="8" type="value" name="Horizontal distance from solid tile" values="" notes="" />
+			<field id="9" type="list" name="Vertical detection for solid tile" values="0=Up,1=Down" notes="" />
+			<field id="10" type="value" name="Vertical distance from solid tile" values="" notes="" />
+		</sprite>
+
+		<sprite id="46">
+			<name>Event controller - activates Spiked Ball when touched by Snake Block</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes>Activates a Spiked Ball when a Snake Block pass over it.</notes>
+			<files></files>
+			<field id="11" type="value" name="Spiked Ball ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="47">
+			<name>Lakithunder</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes>A thunder-y Lakitu boss.</notes>
+			<files>/enemy/thunder_jugem.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="48">
+			<name>Aquatic bubble current (up)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>This sprite is prone to self-duplication.</notes>
+			<files>/obj/l_awa_ncg.bin</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="49">
+			<name>Aquatic bubble current (down)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>Setting both input IDs to zero will make the bubbles always run.</notes>
+			<files>/obj/l_awa_ncg.bin</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="50">
+			<name>Aquatic bubble current (right)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/obj/l_awa_ncg.bin</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="51">
+			<name>Aquatic bubble current (left)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/obj/l_awa_ncg.bin</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="52">
+			<name>Buzzy Beetle</name>
+			<flags known="1" complete="1" />
+			<category id="14" />
+			<notes></notes>
+			<files>enemy/met_body.nsbmd
+enemy/met_shell.nsbmd</files>
+			<field id="11" type="list" name="Spawn as" values="0=Default,1=Ceiling walker,2=Shell,3=Upside-down shell" notes="" />
+		</sprite>
+
+		<sprite id="53">
+			<name>Dry Bones</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>Ignores water.</notes>
+			<files>/enemy/karon_body.nsbmd
+/enemy/karon_head.nsbmd</files>
+		</sprite>
+
+		<sprite id="54">
+			<name>Lava Bubble (Podoboo)</name>
+			<flags known="1" complete="1" />
+			<category id="17" />
+			<notes>Use to be known as Podoboo, back in the days of Super Mario Bros.
+Goes back and forth from sprite position and lava/bottom of the view</notes>
+			<files>/obj/I_bubble256.bin</files>
+		</sprite>
+
+		<sprite id="55">
+			<name>Bullet Bill spawner</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/killer.nsmbd</files>
+			<field id="11" type="list" name="Shooting behaviour" values="0=Doesn't spawn,1=Fires at Mario,2=Fire from sprite placement" notes="" />
+			<field id="10" type="value" name="Maximum random up-shift" values="" notes="0=1. The Bullet Bill, upon spawning, will shift up from a range of pixels between 1 and the value specified." />
+			<field id="7" type="checkbox" name="Enable Zone ID check" values="1" notes="If unchecked, the sprite spawns doesn't care if player is in the zone, and fires anyway." />
+			<field id="8-9" type="value" name="Zone ID" values="" notes="Spawns from the right edge of screen when player is in zone." />
+		</sprite>
+
+		<sprite id="56">
+			<name>Fire Bar</name>
+			<flags known="1" complete="1" />
+			<category id="17" />
+			<notes></notes>
+			<files>/enemy/firebar1.nsbmd</files>
+			<field id="8" type="list" name="Rotation" values="0=Counterclockwise,1=Clockwise" notes="" />
+			<field id="10" type="checkbox" name="Enable second bar" values="1" notes="" />
+			<field id="11" type="value" name="Radius" values="" notes="" />
+			<field id="9" type="checkbox" name="Faster" values="1" notes="Completes a turn exactly 4/3 times as fast if checked." />
+		</sprite>
+
+		<sprite id="57">
+			<name>Coin</name>
+			<flags known="1" complete="1" />
+			<category id="1" />
+			<notes>This is an actor version of the coin. Because it is an actor, you can do more things with it.</notes>
+			<files></files>
+			<field id="5" type="checkbox" name="Shift 8 pixels right" values="1" notes="" />
+			<field id="6" type="checkbox" name="Shift 8 pixels down" values="1" notes="" />
+			<field id="9" type="list" name="Direction/Z order" values="0=Left/in front,1=Left down/behind,2=Left/more down,7=Left down slow,10=Right,14=Up right fast" notes="" />
+			<field id="11" type="list" name="Type" values="0=Regular,1=In bubble,2=Three in bubble,3=Hops up-left,4=Drops,5=Hops,6=Moves right,7=Moves up-left,8=From block,11=Hops high up-left" notes="" />
+		</sprite>
+
+		<sprite id="58">
+			<name>Bowser</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes>- Can start moving without being activated in some circumstances [desmume glitch?]
+- After roaring it allows Mario to move after boss activator makes him stop.</notes>
+			<files>/enemy/koopa_new.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+			<field id="0-1" type="value" name="Bridge ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="59">
+			<name>Hammer Bro.</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Make sure to put 2 levels of ground at the location of the Hammer Bro, or he will glitch and fall in to the ground.
+
+Does not have:
+- Any (or at least not any working-) nybbles/values that change the jumping AI, like there are in NSMBW.</notes>
+			<files>/enemy/hammer_bros.nsbmd
+/enemy/I_hanmmer.nsbmd</files>
+		</sprite>
+
+		<sprite id="60">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="61">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="62">
+			<name>Big Bowser (unused sprite)</name>
+			<flags known="1" complete="0" />
+			<category id="4" />
+			<notes>Spawned by Final Bowser controller
+Game crashes after roaring animation if used anywhere other than World 8 Final Castle Area 3.</notes>
+			<files></files>
+			<field id="0-1" type="value" name="Bridge ID" values="" notes="Set to 2 when spawned by Final Bowser controller" />
+			<field id="11" type="checkbox" name="Unknown 11" values="1" notes="Used when spawned by Final Bowser controller" />
+		</sprite>
+
+		<sprite id="63">
+			<name>Dry Bowser</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/bonekoopa.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+			<field id="0-1" type="value" name="Bridge ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="64">
+			<name>Whomp</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>Seems to have unused ceiling detection.</notes>
+			<files>/enemy/battan.nsbmd</files>
+			<field id="10" type="checkbox" name="Doesn't move" values="1" notes="" />
+			<field id="11" type="checkbox" name="Bigger" values="1" notes="" />
+		</sprite>
+
+		<sprite id="65">
+			<name>Cheepskipper</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/bosspuku.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="66">
+			<name>P Switch</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes></notes>
+			<files>/obj/I_switch_ncg.bin
+/obj/I_enemy_ncl.bin
+/obj/I_enemy_B_ncl.bin
+/obj/I_enemy_W_ncl.bin
+/obj/I_enemy_R_ncl.bin</files>
+			<field id="0-1" type="value" name="Triggering event ID" values="" notes="If not set, the switch will always show. If set, the switch will only show while this event ID is activated. Slightly buggy if used with multiple use as the switch will pop back up immediately, which looks a bit strange and also causes Mario to be pushed into the air. No &quot;real&quot; glitch." />
+			<field id="2-3" type="value" name="Target event ID" values="" notes="By default, this switch will activate blue coins and turn coins into brick blocks and vice versa. Don't use this switch in combination with a tile god which creates blue coins; said blue coins' graphics will be glitched, so use blue coins objects instead." />
+			<field id="4" type="list" name="Settings" values="0=None,1=Falls,4=Loads at midway" notes="If 1, the switch will be movable by environment stuff, such as dropping down when bricks below it are destroyed, or riding along a conveyor belt. If 4, the switch will only show if the level has been started from a midway point." />
+			<field id="5" type="list" name="Delay on multiple use" values="0=Instantaneous (no delay),2=Short delay,3=Long delay,1=Very long delay" notes="This will set how long the switch takes to pop up after the timer expires on a multiple-use switch." />
+			<field id="6" type="checkbox" name="Non-timed event" values="1" notes="" />
+			<field id="8" type="list" name="Switch mode" values="0=Activates target (switches event state),1=Deactivates target (switches event state)" notes="" />
+			<field id="9" type="list" name="Usage mode" values="0=Single use,1=Multiple use,2=Unknown. 2 is unused." notes="" />
+			<field id="10" type="checkbox" name="Shift ½ block right" values="1" notes="" />
+			<field id="11" type="checkbox" name="Upside down" values="1" notes="" />
+		</sprite>
+
+		<sprite id="67">
+			<name>Sushi (shark)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>Spawned by the Sushi spawner. Its default behaviour (moving back and forth) is unused, but can be seen in the E3 2005 trailer.</notes>
+			<files>/enemy/hojiro.nsbmd</files>
+			<field id="5" type="list" name="Unknown Behaviour Nybble 5" values="0=Normal,1=Unknown,2=Unknown,3=Unknown" notes="" />
+			<field id="8" type="value" name="Speed" values="" notes="Used by the sprite 247. Value 2 makes Sushi swims on the side." />
+			<field id="9" type="checkbox" name="Small" values="1" notes="Unused." />
+			<field id="11" type="list" name="Unknown Behaviour Nybble 11" values="0=Normal,1=Unknown,2=Unknown,3=Unknown" notes="" />
+		</sprite>
+
+		<sprite id="68">
+			<name>Lift moving up and down</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/n_lift.nsbtx (normal_lift)</files>
+			<field id="9" type="value" name="Tiles to move" values="" notes="" />
+			<field id="7" type="list" name="Starting direction" values="0=Up,1=Down" notes="" />
+			<field id="11" type="value" name="Length" values="1" notes="Length formula is 1+(N11 mod 8)." />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="4" type="checkbox" name="Enable trigger ID" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="69">
+			<name>Lift moving left and right</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/n_lift.nsbtx (normal_lift)</files>
+			<field id="9" type="value" name="Tiles to move" values="" notes="" />
+			<field id="7" type="list" name="Starting direction" values="0=Right,1=Left" notes="" />
+			<field id="11" type="value" name="Length" values="1" notes="" />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="4" type="checkbox" name="Enable trigger ID" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="70">
+			<name>Rotating log lift (unused actor)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/r_lift_L.nsbmd (rotate_lift_Large)
+/enemy/r_lift_S.nsbmd (rotate_lift_Small)</files>
+			<field id="11" type="checkbox" name="Longer" values="1" notes="" />
+		</sprite>
+
+		<sprite id="71">
+			<name>Stone wall moving up and down</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/z_lift.nsbtx ([SOMETHING]_lift)</files>
+			<field id="9" type="value" name="Tiles to move" values="" notes="" />
+			<field id="7" type="list" name="Starting direction" values="0=Up,1=Down" notes="" />
+			<field id="11" type="value" name="Length" values="1" notes="Length formula is 1+(N11 mod 8)." />
+			<field id="8" type="list" name="Height" values="0=1,1=2,2=4,3=8" notes="Height formula is 2^(N8 mod 4)." />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="4" type="checkbox" name="Enable trigger ID" values="1" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+		</sprite>
+
+		<sprite id="72">
+			<name>Stone wall moving left and right (actor 166)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/z_lift.nsbtx ([SOMETHING]_lift)</files>
+			<field id="9" type="value" name="Tiles to move" values="" notes="" />
+			<field id="7" type="list" name="Starting direction" values="0=Right,1=Left" notes="" />
+			<field id="11" type="value" name="Length" values="1" notes="" />
+			<field id="8" type="list" name="Height" values="0=1,1=2,2=4,3=8" notes="Height formula is 2^(N8 mod 4)." />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="4" type="checkbox" name="Enable trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="73">
+			<name>Wobbly metal lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/W_rift.nsbmd (SOMETHING_LIFT)
+possibly: W_kusari.nsbmd ([SOMETHING]_[SOMETHING]) (might be for something else)</files>
+			<field id="11" type="list" name="Maximum tilting" values="3=7.5°,2=15°,1=30°,0=60°" notes="" />
+		</sprite>
+
+		<sprite id="74">
+			<name>Wobble Rock</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/balanceA.nsbmd (ballanceSOMETHING)</files>
+		</sprite>
+
+		<sprite id="75">
+			<name>Seesaw lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>A.K.A
+* See-saw Platform</notes>
+			<files>/enemy/seesaw.nsbmd</files>
+			<field id="4" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="76">
+			<name>Scale lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/n_lift.nsbtx (normal_lift)
+/enemy/n_lift_line.nsbtx (normal_lift_line)
+/enemy/s_pulley.nsbmd (scale_pulley)</files>
+			<field id="9" type="value" name="Left side rope height" values="" notes="" />
+			<field id="10" type="value" name="Right side rope height" values="" notes="" />
+			<field id="11" type="value" name="Distance between steps" values="" notes="" />
+			<field id="4" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="77">
+			<name>Flimsy Lift (falls once touched)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/n_lift.nsbtx</files>
+			<field id="11" type="value" name="Length" values="1" notes="Length formula is 2+2×(N11 mod 4)" />
+		</sprite>
+
+		<sprite id="78">
+			<name>Lift moving one way once stood on</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/n_lift.nsbtx (normal_lift)</files>
+			<field id="7" type="list" name="Direction" values="0=Up,1=Down,2=Right,3=Left" notes="" />
+			<field id="11" type="value" name="Length" values="1" notes="" />
+			<field id="5" type="list" name="Speed" values="2=15 pixels/sec,1=30 pixels/sec,0=60 pixels/sec" notes="" />
+			<field id="6" type="list" name="Travelling distance" values="0=Unlimited,1=114 Blocks,2=232 Blocks,3=348 Blocks,4=464 Blocks,5=580 Blocks,6=696 Blocks,7=7112 Blocks,8=8128 Blocks,9=9144 Blocks,10=10160 Blocks,15=11176 Blocks,16=12192 Blocks,17=13208 Blocks,18=14224 Blocks,19=15240 Blocks" notes="0 = Unlimited, 1 = 14 Blocks, 2-15 = 16xValue Blocks" />
+			<field id="9" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="79">
+			<name>Three platform rickshaw lift (rotates in place by self)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/kuruma3_L.nsbmd [wheel/rickshaw_3_Large)
+/enemy/kuruma3_S.nsbmd (wheel/rickshaw_3_Small)
+/enemy/kuruma_lift.nsbtx (wheel/rickshaw_lift)</files>
+			<field id="7" type="list" name="Rotation" values="0=Counterclockwise,1=Clockwise" notes="" />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="11" type="checkbox" name="Longer steps" values="1" notes="Unused." />
+		</sprite>
+
+		<sprite id="80">
+			<name>Lift spawner</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/n_lift.nsbtx (normal_lift)</files>
+			<field id="4" type="list" name="Offscreen pos." values="0=Keep moving,1=Wait for Mario" notes="Used in the MvsL level. This controls what the lift (spawner, surely?) does while off screen, best I can tell. Position is affected, but speed stays the same." />
+			<field id="7" type="list" name="Direction" values="0=Up,1=Down,2=Right,3=Left" notes="2 (Right) and 3 (Left) are unused." />
+		</sprite>
+
+		<sprite id="81">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="82">
+			<name>Rotating rectangle lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>'Stick to line' option is unused.</notes>
+			<files>/enemy/rect_lift.nsbmd</files>
+			<field id="7" type="list" name="Rotation" values="0=Counterclockwise,1=Clockwise" notes="Does not apply if Nybble 9 is set to 2." />
+			<field id="9" type="list" name="Spinning" values="0=Constant,1=90° periodically,2=When stood on" notes="" />
+			<field id="4" type="checkbox" name="Shift 8 pixels down" values="1" notes="" />
+			<field id="5" type="checkbox" name="Faster" values="1" notes="" />
+			<field id="6" type="checkbox" name="Stick to a line" values="1" notes="If you want to go right, put clockwise. If you want to go left, put counterclockwise." />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="83">
+			<name>Self-activating block </name>
+			<flags known="1" complete="0" />
+			<category id="12" />
+			<notes>Brick/? block that activates when spawned. Used by the game when ? block is hit.
+Work in progress.
+
+Fields in here were translated from single nibble flipping.
+
+Please contribute by figuring out what the different combinations of sprite data do. Post your findings here: http://board.dirbaio.net/thread.php?id=244
+
+Nibbles 6-7 with AA makes a dud block spawn something weird.
+
+00 00 00 00 00 00</notes>
+			<files></files>
+			<field id="4" type="list" name="Unknown 4" values="0=No modification,1=Throw item right,2=Dud block,9=Throw item left" notes="" />
+			<field id="5" type="checkbox" name="Unknown 5" values="1" notes="" />
+			<field id="6" type="checkbox" name="Start with dud block" values="8" notes="" />
+			<field id="7" type="checkbox" name="Item goes to touch screen" values="15" notes="" />
+			<field id="8" type="checkbox" name="Item overlap when spawned" values="1" notes="" />
+			<field id="9" type="list" name="Unknown 9" values="0=No modification,1=Throw item right,4=Item falls/throw item if on solid,15=Item spawns like touchscreen" notes="" />
+			<field id="10" type="list" name="Unknown 10" values="0=No modification,1=Dud block,2=Brick spawn item,3=Brick into dud block,4=Block disappear item goes up,5=Block disappear,6=? Block disappear item go down,7=Block disappear 2,8=Nibble value in sprite 31,9=Dud block 2,11=Dud block 3,12=10 coin brick + item,13=10 coin brick,14=static Coin + item going down,15=Static Coin" notes="" />
+			<field id="11" type="list" name="Item type" values="0=Mushroom/Fire Flower,1=Starman,2=Coin,3=Poof?,4=2 Coins?,5=Mega Mushroom,6=Mushroom,7=1-Up,8=Mushroom 2,9=Fire Flower,10=Vine,11=Blue Shell,12=Mushroom 3,13=Spring,14=Mushroom 4,15=No Item?" notes="Having Raw Sprite Data 00 00 00 00 0F 59 is mini mushroom for some reason." />
+		</sprite>
+
+		<sprite id="84">
+			<name>Zoom</name>
+			<flags known="1" complete="1" />
+			<category id="6" />
+			<notes>Technically the documentation for this sprite is complete, just confusing, there is a suggestion of a visual representation of the sprites effects to make it easier to understand:
+http://nsmbhd.net/thread/1566-visual-representation-of-sprites-84-and-245-suggestion/#23062
+
+Here are the heights you get with each width:
+24 width - 18 height</notes>
+			<files></files>
+			<field id="4-5" type="value" name="Delay" values="" notes="" />
+			<field id="6" type="value" name="Zone width" values="" notes="0=infinite." />
+			<field id="7" type="value" name="Zone height" values="" notes="0=infinite." />
+			<field id="8-9" type="value" name="Zoom left" values="" notes="This value will match the width (in tiles) in-game. By default the game uses a width of 16 tiles, with this sprite you can use any width between 8 and 24 included. Don't forget the game always uses a ratio of 4 tiles in width for 3 tiles in height, so to keep the best aspect you might want to put in this field a value that is divisible by 4." />
+			<field id="10-11" type="value" name="Zoom right" values="" notes="Ditto. Setting this to a value equal to nybbles 8-9 (the previous field) is recommended." />
+		</sprite>
+
+		<sprite id="85">
+			<name>Flip fence (duplicate sprite)</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="86">
+			<name>Rotating triangle lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>&quot;Only someone with direct access to the database can procede this modification : Class ID is actually 180, not 6 !&quot;</notes>
+			<files>/enemy/tri_lift.nsbmd (triangle_lift)</files>
+			<field id="7" type="list" name="Rotation" values="0=Counterclockwise,1=Clockwise" notes="Does not apply if Nybble 9 is set to 2." />
+			<field id="9" type="list" name="Spinning" values="0=Constant,1=120° periodically,2=When stood on" notes="" />
+			<field id="4" type="checkbox" name="Shift 8 pixels down" values="1" notes="" />
+			<field id="5" type="checkbox" name="Faster" values="1" notes="" />
+			<field id="6" type="checkbox" name="Stick to a line" values="1" notes="If you want to go right, put clockwise. If you want to go left, put counterclockwise." />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="87">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="88">
+			<name>Brick Block containing P Switch</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>TODO:
+Move spritedata from ? switch to here.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="89">
+			<name>Snailicorn</name>
+			<flags known="1" complete="1" />
+			<category id="16" />
+			<notes></notes>
+			<files>/enemy/donketu.nsbmd</files>
+		</sprite>
+
+		<sprite id="90">
+			<name>Wiggler</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/body01.nsbmd
+/enemy/body02.nsbmd
+/enemy/body03.nsbmd
+/enemy/body04.nsbmd
+/enemy/head.nsbmd
+/enemy/t_body01.nsbmd
+/enemy/t_body02.nsbmd
+/enemy/t_body03.nsbmd
+/enemy/t_body04.nsbmd
+/enemy/t_head.nsbmd</files>
+			<field id="11" type="checkbox" name="Bigger" values="1" notes="1 is unused and gives it glitchy animations and hitbox." />
+			<field id="4" type="checkbox" name="Unknown (4)" values="1" notes="Used in W4-4" />
+		</sprite>
+
+		<sprite id="91">
+			<name>Track-controlled lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>You can't make it longer, so try putting two beside each other without &quot;Wait for Mario&quot; checked.</notes>
+			<files>/enemy/n_lift_line.nsbtx (normal_lift_line)</files>
+			<field id="7" type="list" name="Starting direction" values="0=Up/Right,1=Down/Left" notes="" />
+			<field id="5" type="list" name="Speed" values="0=60 pixels/sec,1=90 pixels/sec,2=120 pixels/sec,3=180 pixels/sec" notes="" />
+			<field id="6" type="list" name="Movement trigger" values="0=On its own,1=Once stood on" notes="" />
+			<field id="4" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="11" type="value" name="Unknown Nybble 11" values="" notes="Used as 2 and 6 in Unused Level 1." />
+		</sprite>
+
+		<sprite id="92">
+			<name>Unagi (eel)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>This sprite will not spawn if none of the values are checked.
+Officially known as the 'Unagi'.</notes>
+			<files>/enemy/moray.nsbmd</files>
+			<field id="7-11" type="list" name="Direction" values="0=Doesn't spawn,1=Stays in place,16=Left,65536=Right" notes="" />
+		</sprite>
+
+		<sprite id="93">
+			<name>Arrow signboard</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes></notes>
+			<files>/enemy/yajirusi_l.nsbmd
+/enemy/yajirusi_r.nsbmd</files>
+			<field id="10" type="list" name="Direction" values="0=Left,1=Left-down,2=Down,3=Right-down,4=Right,5=Right-up,6=Up,7=Left-up" notes="" />
+			<field id="11" type="checkbox" name="Mirrored" values="1" notes="" />
+			<field id="7" type="checkbox" name="Smaller" values="1" notes="" />
+			<field id="8-9" type="list" name="Shift position" values="0=No shifting,16=8 pixels right,1=8 pixels down,17=8 pixels right and down" notes="" />
+		</sprite>
+
+		<sprite id="94">
+			<name>Swooper</name>
+			<flags known="1" complete="1" />
+			<category id="14" />
+			<notes>A bat.</notes>
+			<files>/enemy/basabasa.nsbmd
+/enemy/basabasa_wait.nsbmd</files>
+			<field id="10-11" type="list" name="Size" values="0=Small,1=Big,32=Small (shift 1 tile down),33=Big (shift 2 tiles down)" notes="Somewhat buggy when putting values between 2 and 17 inclusive as the sprite and the hitbox become completely disjointed." />
+		</sprite>
+
+		<sprite id="95">
+			<name>Spin Block</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Random notes:
+- When the player is fully submerged in water, they can only use the spin block when ducking, and even then, it just propels the swimming player upward - not putting them into &quot;spinning mode&quot;. When the player reaches the surface (if there is one), they stop going up.</notes>
+			<files>/enemy/spin_obj.nsbmd (spin_object)</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+			<field id="8" type="value" name="Unknown 8" values="" notes="Used in-game. Doesn't do anything notable." />
+			<field id="9" type="value" name="Unknown 9" values="" notes="Used in-game. Doesn't do anything notable." />
+		</sprite>
+
+		<sprite id="96">
+			<name>Seaweed</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes></notes>
+			<files>/enemy/obj_wakame.nsbmd (object_seaweed)</files>
+		</sprite>
+
+		<sprite id="97">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="98">
+			<name>Camera vertical scrolling ? (unused actor)</name>
+			<flags known="0" complete="0" />
+			<category id="6" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="99">
+			<name>Four platform rickshaw lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/kuruma4.nsbmd
+/enemy/kuruma_lift.nsbtx</files>
+			<field id="6" type="checkbox" name="Stick on line" values="1" notes="" />
+			<field id="4" type="checkbox" name="Enable Trigger ID" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="100">
+			<name>Vertical camera offset (unused actor)</name>
+			<flags known="1" complete="0" />
+			<category id="6" />
+			<notes>(Discoverd that it does something: Hiccup)
+(Spritedata/purpose: Sharks)
+If Mario/Luigi is inside the AOE (Area of Effect) of this actor, the camera will go up by HH pixels, camera will scroll down back once Mario/Luigi leaves the horizontal boundary specified by the value L.</notes>
+			<files></files>
+			<field id="4" type="list" name="Activate the sprite from" values="0=Below,1=Above" notes="" />
+			<field id="9" type="value" name="Length" values="" notes="From 0 to 15. Sprite position is always the leftmost tile." />
+			<field id="10-11" type="value" name="Height" values="" notes="From 0 to 255. If Height is set for example at 60, Mario will have to jump 60 pixels above the sprite's AOE for said effect to take place." />
+		</sprite>
+
+		<sprite id="101">
+			<name>Event controller - view enter</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>Activates an event when the view is loaded - used in NSMBW.</notes>
+			<files></files>
+			<field id="2-3" type="value" name="Target ID" values="" notes="This event will be activated when the view loads." />
+			<field id="4-5" type="value" name="Time activated" values="" notes="This value only works if switch mode is set to activate event, and sets a duration that the target ID will be activated for." />
+			<field id="10" type="checkbox" name="Switch mode: activates target" values="1" notes="" />
+			<field id="11" type="checkbox" name="Disable sprite" values="" notes="Makes the sprite skip its function and delete itself. Unused in NSMBW." />
+		</sprite>
+
+		<sprite id="102">
+			<name>Spiked Ball</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/iron_ball.nsbmd</files>
+			<field id="9-10" type="list" name="Direction" values="0=Left,1=Right,2=Towards player,16=Towards player from right only,17=Towards player from left only" notes="" />
+			<field id="11" type="list" name="Speed" values="0=Slope only,1=60 pixels/sec,2=90 pixels/sec,3=120 pixels/sec" notes="" />
+			<field id="8" type="checkbox" name="Bounce on walls faster" values="1" notes="" />
+			<field id="2-3" type="value" name="Destroyer ID 1" values="" notes="The spiked ball won't spawn while the ID is activated. 0=disable" />
+			<field id="0-1" type="value" name="Destroyer ID 2" values="" notes="This one will have no effect if Destroyer ID 1 is equal to 0." />
+			<field id="7" type="value" name="Spiked Ball ID" values="" notes="For use with Spiked Ball Activator (46)" />
+		</sprite>
+
+		<sprite id="103">
+			<name>Dorrie</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>If end path node is not set, Dorrie will keep going back and forth between last two nodes. Set end as value 1 in unknown 6.
+
+Using value 256 in unknown 3 will lower Dorrie's head. 512 will raise it again. Set this at each node you want a change or it will continue from last node setting.</notes>
+			<files>/enemy/dossy.nsbmd</files>
+			<field id="4" type="value" name="Path ID" values="" notes="" />
+			<field id="10-11" type="value" name="Starting node" values="" notes="255=Appear Always, 0=Appear at level start, Anything else=Appear from midway" />
+			<field id="6" type="value" name="Size" values="1" notes="Size is 1+(N6 mod 4)." />
+			<field id="5" type="list" name="Direction" values="0=Right,1=Left,2=Towards background,3=Away from background" notes="2 and 3 don't function properly. 1, 2 and 3 are Unused." />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="Starts facing away from background and turns to actual direction when activated. If set to zero, Dorrie won't start until touched by Mario. Unused." />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="Starts facing away from background and turns to actual direction when activated. If set to zero, Dorrie won't start until touched by Mario. Unused." />
+		</sprite>
+
+		<sprite id="104">
+			<name>Tweester (Tornado)</name>
+			<flags known="1" complete="1" />
+			<category id="20" />
+			<notes>This tornado, may or may not be the same thing as a Tweester.
+
+Slings you up in the air, after which you can Drill Stomp.</notes>
+			<files>/enemy/sand_tornado.nsbmd</files>
+		</sprite>
+
+		<sprite id="105">
+			<name>Whirlpool</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/enemy/waterland_uzu.nsbmd (Dire Dire Docks_whirlpool) [ported from SM64DS]</files>
+			<field id="11" type="list" name="Visible when inactive" values="1=Yes,0=No" notes="" />
+		</sprite>
+
+		<sprite id="106">
+			<name>Red Coin</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files></files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="When an object with this Event ID is activated (usually a red Coin ring) this Coin will appear." />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="When an object with this Event ID is activated (usually a red Coin ring) this Coin will appear." />
+			<field id="11" type="value" name="Red Coin counter ID" values="" notes="If you have multiple sets of red Coins in a level, each set must have a unique ID or they will not be counted properly." />
+		</sprite>
+
+		<sprite id="107">
+			<name>? Switch</name>
+			<flags known="1" complete="0" />
+			<category id="3" />
+			<notes>==Boss notes==
+* When sprite set 16 is set to any of the boss sets, the switch timer plays over the BG music, like in the Mega Goomba boss battle and with Red Rings. Though P Switches and ! Switches are silent with a boss sound set.
+* If the ? switch is absent in a Mega Goomba boss battle, the game freezes upon taking the key on a real NDS (not on DeSmuME though). Results are the same every time, if no ? switch is present, the game will freeze upon generation of the key (not even a brick block with ? switch will work). If there are more than 1 ? switch, the game will check for the leftmost switch first, then the bottommost if there are 2 or more switches on the same X coordinate, the one to fulfill this condition is the one to pop. [Source: Sharks]</notes>
+			<files>/obj/I_switch_ncg.bin
+/obj/I_enemy_ncl.bin
+/obj/I_enemy_B_ncl.bin
+/obj/I_enemy_W_ncl.bin
+/obj/I_enemy_R_ncl.bin</files>
+			<field id="0-1" type="value" name="Triggering event ID" values="" notes="If not set, the switch will always show. If set, the switch will only show while this event ID is activated. Slightly buggy if used with multiple use as the switch will pop back up immediately, which looks a bit strange and also causes Mario to be pushed into the air. No &quot;real&quot; glitch." />
+			<field id="2-3" type="value" name="Target event ID" values="" notes="" />
+			<field id="4" type="list" name="Settings" values="0=None,1=Falls,4=Loads at midway,2=Unknown [see note]" notes="If 1, the switch will be movable by environment stuff, such as dropping down when bricks below it are destroyed, or riding along a conveyor belt. If 4, the switch will only show if the level has been started from a midway point.  Value 2 is used in 2-3, it may have something to do with the target ID." />
+			<field id="5" type="list" name="Delay on multiple use" values="0=Instantaneous (no delay),2=Short delay,3=Long delay,1=Very long delay,15=Unknown" notes="[Check this nybble]. This will set how long the switch takes to pop up after the timer expires on a multiple use switch. Value 15 may have something to do with the timer. Maybe it pops up just after target ID is deactivated after activation with timer?" />
+			<field id="6" type="checkbox" name="Non-timed event" values="1" notes="" />
+			<field id="8" type="list" name="Switch mode" values="0=Activates target (switches event state),1=Deactivates target (switches event state)" notes="" />
+			<field id="9" type="list" name="Usage mode" values="0=Single use,1=Multiple use,2=Unknown" notes="" />
+			<field id="10" type="checkbox" name="Shift ½ block right" values="1" notes="" />
+			<field id="11" type="checkbox" name="Upside down" values="1" notes="If this is checked, the switch will be facing down. Upside down switches cannot fall." />
+		</sprite>
+
+		<sprite id="108">
+			<name>! Switch</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes></notes>
+			<files>/obj/I_switch_ncg.bin
+/obj/I_enemy_ncl.bin
+/obj/I_enemy_B_ncl.bin
+/obj/I_enemy_W_ncl.bin
+/obj/I_enemy_R_ncl.bin</files>
+			<field id="0-1" type="value" name="Triggering event ID" values="" notes="" />
+			<field id="2-3" type="value" name="Target event ID" values="" notes="By default, this switch will turn yellow outlines into uncollectible golden coins and red outlines into red coins which act like golden coins; snake block tiles will be collectible as coins and the block-shaped outlines will turn into red blocks." />
+			<field id="4" type="list" name="Settings" values="0=None,1=Falls,4=Loads at midway" notes="" />
+			<field id="5" type="list" name="Delay on multiple use" values="0=Instantaneous (no delay),2=Short delay,3=Long delay,1=Very long delay,15=Unknown" notes="" />
+			<field id="6" type="checkbox" name="Non-timed event" values="1" notes="" />
+			<field id="8" type="list" name="Switch mode" values="0=Activates target (switches event state),1=Deactivates target (switches event state)" notes="" />
+			<field id="9" type="list" name="Usage mode" values="0=Single use,1=Multiple use,2=Unknown" notes="" />
+			<field id="10" type="checkbox" name="Shift ½ block right" values="1" notes="" />
+			<field id="11" type="checkbox" name="Upside down" values="1" notes="" />
+		</sprite>
+
+		<sprite id="109">
+			<name>Amp</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/bilikyu.nsbmd
+/enemy/elec.nsbmd</files>
+			<field id="10" type="list" name="Shift position" values="0=None,1=½ block right,2=½ block down,3=½ block right and down" notes="" />
+			<field id="11" type="checkbox" name="Behind fence" values="1" notes="" />
+		</sprite>
+
+		<sprite id="110">
+			<name>Brick Block containing ! Switch (unused actor)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>See ? Switch</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="111">
+			<name>Floating log</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/W_maruta.nsbmd</files>
+			<field id="4" type="value" name="Unknown 4" values="" notes="Used in-game. Doesn't do anything notable." />
+		</sprite>
+
+		<sprite id="112">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="113">
+			<name>Cheep Chomp</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/enemy/bakubaku.nsbmd</files>
+		</sprite>
+
+		<sprite id="114">
+			<name>Burner (Small)</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/burner1x3.nsbmd
+/enemy/fire_cannon.nsbmd</files>
+			<field id="11" type="list" name="Direction" values="0=Right,1=Left,2=Up,3=Down" notes="" />
+		</sprite>
+
+		<sprite id="115">
+			<name>Large Spiked Ball</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/big_iron_ball.nsbmd</files>
+			<field id="9-10" type="list" name="Direction" values="0=Left,1=Right,2=Towards player,16=Towards player from right only,17=Towards player from left only" notes="" />
+			<field id="11" type="list" name="Speed" values="0=Slope only,1=60 pixels/sec,2=90 pixels/sec,3=120 pixels/sec" notes="" />
+			<field id="8" type="checkbox" name="Bounce on walls faster" values="1" notes="" />
+			<field id="2-3" type="value" name="Destroyer ID 1" values="" notes="The spiked ball won't spawn while the ID is activated. 0=disable" />
+			<field id="0-1" type="value" name="Destroyer ID 2" values="" notes="This one will have no effect if Destroyer ID 1 is equal to 0." />
+		</sprite>
+
+		<sprite id="116">
+			<name>Skeeter (Water Bug)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/enemy/bakudan.nsbmd
+/enemy/bomb_menbo.nsbmd</files>
+			<field id="11" type="list" name="Mobility" values="0=Moves around,1=Stays in place" notes="" />
+		</sprite>
+
+		<sprite id="117">
+			<name>Map Flying ? Block</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes>Moves slowly if in water.</notes>
+			<files>/enemy/pata_block.nsbmd
+
+This NSBMD contains red and gold flying blocks + wings
+sprites:
+117 and 290</files>
+			<field id="10" type="list" name="Loads from" values="0=Level start,1=Midway point" notes="" />
+			<field id="11" type="checkbox" name="Can spawn Mega Mushroom" values="1" notes="" />
+			<field id="9" type="list" name="Starting direction" values="0=Left,1=Right" notes="" />
+			<field id="6" type="list" name="Looping pattern" values="0=Fly off screen,1=Center of Loop,2=Edge of Loop" notes="" />
+			<field id="8" type="list" name="Flying pattern" values="0=Back and forth,1=Forward 4/back 8,2=Stays in place" notes="" />
+		</sprite>
+
+		<sprite id="118">
+			<name>Burner</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/burner1x6.nsbmd
+/enemy/fire_cannon.nsbmd</files>
+			<field id="11" type="list" name="Direction" values="0=Right,1=Left,2=Up,3=Down" notes="" />
+		</sprite>
+
+		<sprite id="119">
+			<name>Swinging lift (pendulum-like)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/swing.nsbmd</files>
+			<field id="4" type="list" name="Length" values="0=4,2=8,3=12,4=16,5=20,6=24,7=28,8=32,9=36,10=40,11=44,12=48,13=52,14=56,15=60" notes="Length formula is N4 × 4.1 acts like 0. Big sizes should not be used, as they don't display  unless the pivot is on-screen." />
+			<field id="5" type="list" name="Amplitude" values="0=0°,1=11.25°,2=22.5°,3=33.75°,4=45°,5=56.25°,6=67.5°,7=78.75°,8=90°,9=101.25°,10=112.5°,11=123.75°,12=135°,13=146.25°,14=157.5°,15=168.75°" notes="" />
+			<field id="6" type="list" name="Oscillation period" values="0=0 frame,1=1024 frames,2=512 frames,3=341.3 frames,4=256 frames,5=204.8 frames,6=170.7 frames,7=146.3 frames,8=128 frames,9=113.8 frames,10=102.4 frames,11=93.1 frames,12=85.3 frames,13=78.8 frames,14=73.1 frames,15=68.3 frames" notes="" />
+			<field id="7" type="value" name="Starting position coefficient" values="" notes="For full details on the starting position formula, refer to this post: http://nsmbhd.net/post/43562/" />
+		</sprite>
+
+		<sprite id="120">
+			<name>Grounded Piranha Plant</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Unused behaviours:
+- Can be defeated by Drill Stomp</notes>
+			<files>/enemy/pakkun.nsbmd</files>
+		</sprite>
+
+		<sprite id="121">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="122">
+			<name>Big Grounded Piranha Plant</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Unused behaviours:
+- Can be defeated by Drill Stomp</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="123">
+			<name>Grounded Fire Piranha Plant</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Unused behaviours:
+- Can be defeated by Drill Stomp</notes>
+			<files>/enemy/v_pakkun.nsbmd [wrong?]</files>
+		</sprite>
+
+		<sprite id="124">
+			<name>Large grounded Fire Piranha Plant (unused actor)</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Unused. Used in NSMBWii.
+
+Unused behaviours:
+- Can be defeated by Drill Stomp</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="125">
+			<name>Defunct Actor 229</name>
+			<flags known="0" complete="0" />
+			<category id="7" />
+			<notes>Sprite set: 8-4
+Reverse engineering by MeroMero:
+https://nsmbhd.net/thread/2966-new-actor-discoveries-and-extra-info-on-old-ones/?from=20#46117
+and Skawo:
+https://nsmbhd.net/thread/3820-unused-code-re/</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="126">
+			<name>Drawbridge lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/d_bridge.nsbtx (draw_bridge)</files>
+			<field id="4" type="value" name="Length of side" values="" notes="" />
+			<field id="5" type="value" name="Closed time" values="" notes="Standard: 1" />
+			<field id="6" type="value" name="Open time" values="" notes="Standard: 1" />
+			<field id="7" type="list" name="Maximum angle" values="1=11.25°,2=22.5°,3=33.75°,4=45°,5=56.25°,0=67.5°,7=78.75°,8=90°,9=101.25°,10=112.5°,11=123.75°,12=135°,13=146.25°,14=157.5°,15=168.75°" notes="Note : 6 acts like 0." />
+			<field id="8" type="checkbox" name="Moving" values="1" notes="" />
+			<field id="11" type="list" name="Stopping position" values="0=Up,1=Down" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="Enables/disables movement." />
+		</sprite>
+
+		<sprite id="127">
+			<name>Big four platform rickshaw lift (rotates on spot by self)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/A_jiku.nsbmd
+/enemy/wheel_lift.nsbtx</files>
+			<field id="7" type="list" name="Rotation" values="0=Counterclockwise,1=Clockwise" notes="" />
+			<field id="4" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="Unused." />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="Unused." />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="Unused." />
+		</sprite>
+
+		<sprite id="128">
+			<name>Warp Cannon</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes>Note: &quot;w_cannon.nsbmd&quot; cannot be opened with NSMBe, for fix this problem, see this tutorial:
+
+http://nsmbhd.net/thread/3250-fixing-already-opened-files-tutorial/</notes>
+			<files>/enemy/w_cannon.nsbmd</files>
+			<field id="4" type="list" name="Destination world" values="1=World 1,2=World 2,3=World 3,4=World 4,5=World 5,6=World 6,7=World 7,8=World 8" notes="Worlds 1-4 have no icons. Cannon will appear as &quot;W5&quot; for them." />
+		</sprite>
+
+		<sprite id="129">
+			<name>Boss Key Location</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes>If the boss is defeated, the Boss Battle Key falls on the place where you placed this sprite.
+If else it falls in a default place?</notes>
+			<files>/enemy/koopa_key.nsbmd</files>
+		</sprite>
+
+		<sprite id="130">
+			<name>Jumping Cheep Cheep</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>Funny (but useful) Glitch:
+If you put a Green Cheep Cheep on the same screen as one of these, it becomes green!</notes>
+			<files></files>
+			<field id="10" type="checkbox" name="Boss Behaviour" values="1" notes="Stays on screen and only jumps when the boss tells it to. Used in Cheepskipper battle." />
+		</sprite>
+
+		<sprite id="131">
+			<name>Checkpoint - vertical</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files>/enemy/s_flag.nsbmd</files>
+		</sprite>
+
+		<sprite id="132">
+			<name>Checkpoint (midway point)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>The midway point. The ID of the Start position needs to be configured in the View's settings.</notes>
+			<files>/enemy/s_flag.nsbmd</files>
+		</sprite>
+
+		<sprite id="133">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="134">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="135">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="136">
+			<name>Pokey</name>
+			<flags known="1" complete="1" />
+			<category id="20" />
+			<notes>A tall cactus enemy.
+
+Unused behaviours:
+- Can be defeated by Drill Stomp</notes>
+			<files>/enemy/sanbo_body.nsbmd
+/enemy/sanbo_head.nsbmd</files>
+			<field id="11" type="value" name="Height" values="2" notes="Height formula is 2+(n mod 8) with n being the value of this nybble" />
+		</sprite>
+
+		<sprite id="137">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="138">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="139">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="140">
+			<name>Boss Key</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes>Presumably spawned by boss(related) actors.</notes>
+			<files>/enemy/koopa_key.nsbmd</files>
+			<field id="11" type="checkbox" name="Blocks horiz. scroll" values="1" notes="Not nessacerally useful, (and slightly glichy) but it scrolls the camera the defined amount of pixels. high numbers crash the game" />
+		</sprite>
+
+		<sprite id="141">
+			<name>Swelling ground</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_suna.nsbtx (SOMETHING_sand)
+</files>
+			<field id="4" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="5" type="list" name="Direction" values="0=Up,1=Down" notes="" />
+		</sprite>
+
+		<sprite id="142">
+			<name>Tightrope</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Usable underwater, but may glitch if the rope part of the sprite is allowed to touch a solid tile while Mario/Luigi walks or stands on it. </notes>
+			<files>/enemy/rope.nsbtx
+/enemy/rope_end.nsbmd</files>
+			<field id="4" type="value" name="Length" values="" notes="If both length and height are set, it will be diagonal." />
+			<field id="5" type="signedvalue" name="Height" values="" notes="" />
+		</sprite>
+
+		<sprite id="143">
+			<name>Spiked ? Block (unused actor 251)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files></files>
+			<field id="10" type="list" name="Rotation" values="0=Clockwise,1=Couterclockwise" notes="" />
+			<field id="11" type="list" name="Contents" values="0=Coin,1=Powerup,2=1 up,3=1-up,4=Powerup (throw down),5=Crash,6=Mushroom (throws down),7=Coin,8=Coin,9=Crash,10=Coin,11=Mini Mushroom,12=Crash,13=Coin,14=Powerup,15=Powerup (spawns like from inventory)" notes="" />
+		</sprite>
+
+		<sprite id="144">
+			<name>Spiked ? Block</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/BG_ncl/d_2d_A_J_jyotyu_B_ncl.bin
+/BG_ncl/d_2d_A_J_jyotyu_ncl.bin
+/BG_ncl/d_2d_A_J_jyotyu_R_ncl.bin
+/BG_ncl/d_2d_A_J_jyotyu_W_ncl.bin
+/obj/A_block_ncg.bin</files>
+			<field id="10" type="list" name="Rotation" values="0=Clockwise,1=Counterclockwise" notes="" />
+			<field id="11" type="list" name="Contents" values="0=Coin,1=Mushroom/flower,2=1UP,3=1UP,4=Mushroom/flower,5=Crash,6=Mushroom,7=Coin,8=Coin,9=Crash,10=Coin,11=Mini mushroom,12=Crash,13=Coin,14=Mushroom/flower,15=Mushroom/flower spawning like touchscreen" notes="" />
+		</sprite>
+
+		<sprite id="145">
+			<name>Spiked ? Block (unused actor 253)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files></files>
+			<field id="10" type="list" name="Rotation" values="0=Clockwise,1=Counterclockwise" notes="" />
+			<field id="11" type="list" name="Contents" values="0=Coin,1=Powerup,2=1 up,3=1-up,4=Powerup (throw down),5=Crash,6=Mushroom (throws down),7=Coin,8=Coin,9=Crash,10=Coin,11=Mini Mushroom,12=Crash,13=Coin,14=Mushroom/Flower,15=Mushroom/Flower spawning like touchscreen" notes="" />
+		</sprite>
+
+		<sprite id="146">
+			<name>Ground-pound panel</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Needs a ground-pound to be able to pass from top. Is jump-through from bottom.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="147">
+			<name>Bump from below platform (Mario Bros. style platform)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_m_yuka.nsbtx ([SOMETHING]_[SOMETHING]_floor)
+/enemy/I_m_yuka_hidari.nsbtx ([SOMETHING]_[SOMETHING]_floor_left)
+/enemy/I_m_yuka_migi.nsbtx ([SOMETHING]_[SOMETHING]_floor_right)</files>
+			<field id="11" type="value" name="Length" values="" notes="" />
+		</sprite>
+
+		<sprite id="148">
+			<name>Goomba</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/obj/I_kuribo256_ncg.bin</files>
+			<field id="11" type="list" name="Spawn Type" values="0=Normal,1=Spinning,2=Rising" notes="Makes the Goomba spawn differently. 1 used for Mega Mario ground pound. 2 used for Enemy Spawner." />
+		</sprite>
+
+		<sprite id="149">
+			<name>Koopa Troopa</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>If you want to change colors in the Koopa Troopa's pallette, open 'I_enemy_B_ncl.bin', because that's the palette which belongs to it. When you edit the colors with 'I_enemy_W_ncl' for example, nothing will change in NSMB.</notes>
+			<files>/obj/I_nokonoko256_ncg.bin
+/obj/I_enemy_B_ncl.bin</files>
+			<field id="11" type="list" name="Color" values="0=Green,1=Red,2=Blue,3=Blue (stays on ledge)" notes="" />
+			<field id="10" type="checkbox" name="In shell" values="1" notes="Unused. (If you select blue, it won't be a Blue Shell-item, unless you groundpound on it)" />
+		</sprite>
+
+		<sprite id="150">
+			<name>Koopa Paratroopa</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Unused behaviours:
+- Has water behaviour when Direction is set to Jumping [may be used, or koopa leftover]</notes>
+			<files>/obj/I_nokonoko256_ncg.bin
+/obj/I_enemy_B_ncl.bin
+
+If you want to change colors in the Koopa Troopa's pallette, open 'I_enemy_B_ncl.bin', because that's the palette which belongs to it. When you edit the colors with 'I_enemy_W_ncl' for example, nothing will change in NSMB.</files>
+			<field id="8" type="list" name="Starting direction" values="0=Down/Left,1=Up/Right" notes="" />
+			<field id="9" type="list" name="Starting position" values="0=Midway,1=Start Bottom-Left,2=Start Top-Right" notes="" />
+			<field id="10" type="list" name="Direction" values="0=Jumping,1=Left-right,2=Up-down" notes="" />
+			<field id="11" type="list" name="Color" values="0=Green,1=Red,2=Blue,3=Blue (stays on ledge)" notes="" />
+		</sprite>
+
+		<sprite id="151">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="152">
+			<name>Event trigger block</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>Can only be activated by jump-from-below or Ground Pound.
+Switches an event on, then when hit again; off, then when hit again; on....etc</notes>
+			<files>/obj/A_block_ncg.bin</files>
+			<field id="2-3" type="value" name="Target ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="153">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="154">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="155">
+			<name>Special exit controller (warp entrance)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>AKA:
+Reggie! Name = Special Exit Controller
+NSMB2 internal actor name = NextGotoBlock
+The actor will apparently delete itself after use and it will only re-spawn if you go to another area and back. Could be worked around by using multiple warps. Untested if event activation can undelete the actor.</notes>
+			<files></files>
+			<field id="7" type="list" name="Warp mode" values="0=Set to this or to 8 if dest. is in another area,1=If climbing vine,3=Set to this or to 1 if dest. is in current area,8=Wavy transition" notes="" />
+			<field id="6" type="value" name="Destination area" values="" notes="Set to 0 when warping to the same area." />
+			<field id="11" type="value" name="Destination entrance" values="" notes="" />
+			<field id="9" type="value" name="Length" values="1" notes="" />
+			<field id="10" type="value" name="Height" values="1" notes="" />
+			<field id="4" type="checkbox" name="Allows Mega Mario" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="Use this ID fo the warp to activate with the ID, and then deactivate after being used." />
+			<field id="5" type="checkbox" name="Disable sound" values="1" notes="Disables sound if warping to other area but crashes if destination is in same area." />
+		</sprite>
+
+		<sprite id="156">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="157">
+			<name>Fire Bro.</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/hammer_bros.nsbmd
+/obj/I_fireball_ncg.bin
+/obj/I_enemy_ncl.bin</files>
+		</sprite>
+
+		<sprite id="158">
+			<name>Boomerang Bro.</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/hammer_bros.nsbmd
+/enemy/boomerang.nsbmd</files>
+		</sprite>
+
+		<sprite id="159">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="160">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="161">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="162">
+			<name>Mushroom Platform lift (tilting and bobbing)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>A basic mushroom platform, where Mario/Luigi can stand. There is unused stuff like moving when stood on (huh? -Hiccup). 7 is the maximum height that works with sprite data.  If you want it to be longer, set it to 7 and then use a mushroom stalk object in the tileset to make the mushroom's stalk height look higher.
+This mushroom can be either red or green.</notes>
+			<files>/enemy/I_kinoko_ashiba.nsbtx
+/enemy/I_kinoko_ashiba2.nsbtx
+/enemy/I_kinoko_kuki.nsbtx
+/enemy/I_kinoko_kuki_l.nsbtx
+/enemy/I_kinoko_kuki_s.nsbtx
+/enemy/I_kinoko_kuki_sl.nsbtx</files>
+			<field id="6" type="list" name="Bob / Colour" values="0=No,2=Yes,8=No (green),10=Yes (green)" notes="Green is unused." />
+			<field id="7" type="value" name="Stalk height" values="" notes="Max 7. Add tiles under it." />
+			<field id="8" type="value" name="Length" values="" notes="" />
+			<field id="9" type="value" name="Tilt angle" values="" notes="" />
+			<field id="10-11" type="value" name="Speed" values="" notes="" />
+		</sprite>
+
+		<sprite id="163">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="164">
+			<name>Event controller - &quot;AND&quot; (If X AND Y, do Z)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>This sprite works by allowing up to 4 input IDs to be required to activate a single output. All input IDs must be set to a relevant value. Do not leave any as '0' - if you have less than four, you can enter the same ID into several spaces.</notes>
+			<files></files>
+			<field id="0-1" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="4-5" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="6-7" type="value" name="Trigger ID 3" values="" notes="" />
+			<field id="8-9" type="value" name="Trigger ID 4" values="" notes="" />
+			<field id="2-3" type="value" name="Target ID" values="" notes="" />
+			<field id="10" type="list" name="Usage Mode" values="0=Single Use,1=Multi Use,2=Only while All Events are Active (this can be used again and again- also might need better wording" notes="Determines, if and how often the relevant Event IDs will be triggered. Events with Values '0' (Single Use) or '1' (Multi Use) will keep their status, unless deactivated/reactivated manually." />
+			<field id="11" type="list" name="Switch Mode" values="0=Activates Target (Switches Event State),1=Deactivates Target (Switches Event State)" notes="" />
+		</sprite>
+
+		<sprite id="165">
+			<name>Event controller - &quot;OR&quot; (If X OR Y, do Z)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes></notes>
+			<files></files>
+			<field id="0-1" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="4-5" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="6-7" type="value" name="Trigger ID 3" values="" notes="" />
+			<field id="8-9" type="value" name="Trigger ID 4" values="" notes="" />
+			<field id="2-3" type="value" name="Target ID" values="" notes="This sprite allows up to 4 inputs to trigger the same output ID. All input IDs must be set to relevant values. Do not leave any IDs as 0 - if you have less than four, you can enter the same ID into several spaces." />
+			<field id="10" type="list" name="Usage Mode" values="0=Single Use,1=Multi Use,2=Only while All Events are Active" notes="How does 1 work?" />
+			<field id="11" type="list" name="Switch Mode" values="0=Activates Target (Switches Event State),1=Deactivates Target (Switches Event State)" notes="" />
+		</sprite>
+
+		<sprite id="166">
+			<name>Event controller - &quot;RANDOM&quot; (If X, do Y or Z)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>This Event Controller can cause one of the four random IDs to trigger, if a relevant Event ID has been activated. You do not have to use all four Random ID slots, and you can use the same ID on multiple slots. 
+Example: 
+A in ID1
+A in ID2
+B in ID3. 
+2/3 chance of A, 1/3 chance of B.</notes>
+			<files></files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="This event causes one of the four random IDs to trigger." />
+			<field id="0-1" type="value" name="Random target ID 1" values="" notes="" />
+			<field id="4-5" type="value" name="Random target ID 2" values="" notes="" />
+			<field id="6-7" type="value" name="Random target ID 3" values="" notes="" />
+			<field id="8-9" type="value" name="Random target ID 4" values="" notes="" />
+			<field id="10" type="list" name="Usage mode" values="0=&quot;Single use&quot;,1=&quot;Multiple use&quot;,2=&quot;Only while&quot;" notes="Determines, if and how often the relevant Event IDs will be triggered. Events with Values '0' (Single Use) or '1' (Multi Use) will keep their status, unless deactivated/reactivated manually." />
+			<field id="11" type="list" name="Switch mode" values="0=Activates target,1=Deactivates target" notes="" />
+		</sprite>
+
+		<sprite id="167">
+			<name>Event controller - chainer (If X, do Y)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>This event controller links two events together. If the first event ID is triggered, then the second event ID will be activated/deactivated, depending on the mode. It's also possible to define a delay time. If the delay is set to 0, the event will be activated instantly. If not, it will wait a specific amount of time before activating.</notes>
+			<files></files>
+			<field id="0-1" type="value" name="Trigger ID" values="" notes="When this event ID is activated, the target event ID will be activated or deactivated (depending on the mode)." />
+			<field id="2-3" type="value" name="Target ID" values="" notes="When activated, this event ID will be switched (activated or deactivated), depending on the chosen mode. Note: Deactivating a deactivated event will activate it. Activating an already activated event will deactivate it." />
+			<field id="4-5" type="value" name="Activation delay" values="" notes="If the delay is set to 0, the event will be activated instantly. If not, it will wait a specific amount of time before activating. Info: A Value of 6 is approximately 1 tick (1 second on the game's clock)." />
+			<field id="7" type="checkbox" name="Disable sprite" values="" notes="Does nothing/self destructs." />
+			<field id="10" type="list" name="Usage mode" values="0=Single use,1=Multiple use,2=Only while" notes="" />
+			<field id="11" type="list" name="Switch mode" values="0=Activates target,1=Deactivates target" notes="" />
+		</sprite>
+
+		<sprite id="168">
+			<name>Event controller - &quot;IF&quot; (uses zones)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>This event controller can activate a target event ID, if either a player touches a predefined location and/or specified enemies are defated. There are many additional settings for this controller that can tweak its behaviour, for example requiring Mario to have a specific power-up status, or requiring him to be inside a location instead of just touching it. Setting up the controller to deactivate the event ID instead of activating it, will also swap the effect of the controller, requiring Mario to leave a predefined location or to clear a predefined location from all enemies to trigger the event.  Note that unlike NSMBW, only enemy &quot;life&quot; status is watched, not their position. The zone is used to select sprites placed in the editor that should be watched.</notes>
+			<files></files>
+			<field id="2-3" type="value" name="Target ID" values="" notes="This event ID will be activated when the specified conditions are met." />
+			<field id="4-5" type="value" name="Player zone ID" values="" notes="Set to 255 to make it watch everywhere for Mario to meet the condition." />
+			<field id="6-7" type="value" name="Enemies zone ID" values="" notes="Set to 255 to make it watch everywhere for enemies to be defeated." />
+			<field id="8" type="list" name="Required player power-up" values="0=Any,1=No power-up,2=Super Mushroom,3=Fire Flower,4=Mega Mushroom,5=Mini Mushroom,6=Blue Shell,7=Starman" notes="Event will only be triggered if Mario's power-up matches the specified, or this is set to 0." />
+			<field id="9" type="list" name="Required player action" values="0=None,1=Touching ground,2=In air,3=On vine" notes="0 - event is only triggered if a player is inside the Mario location. 1 - event is only triggered if a player is touching the ground while inside the Mario location. 2 - the event is only triggered if a player is jumping or otherwise not touching the ground inside the Mario location. Measurements always correspond to Mario's feet (lowest pixel)." />
+			<field id="10" type="list" name="Usage mode" values="0=&quot;Single use&quot;,1=&quot;Multiple use&quot;,2=&quot;Only while&quot;" notes="0 - event is only triggered once, when the Mario status and enemy status are satisfied. 1 - event is triggered each time the Mario status and enemy status are satisfied, but does not revert to the opposite state unless forced to by another controller. 2 - event is only triggered while Mario status and enemy status are satisfied." />
+			<field id="11" type="list" name="Switch mode" values="0=Activates target (switches event state),1=Deactivates target (switches event state)" notes="If this option is set to &quot;Deactivates target&quot;, the activation modes will be reversed; for example, activation mode 2 will deactivate the event while you're touching the zone, and reactivate it when you leave. Note on locations for enemies that have &quot;Deactivates target&quot; set: The opposite effect of the controller becomes active, when Mario gets close enough to the sprite (to load it into memory). The opposite effect of the controller is always active, though. The event is deactivated while the enemy enemy of the location is alive, and will reactivate when it dies. As stated before, this special behaviour is only valid for enemy-'deactivated' locations." />
+		</sprite>
+
+		<sprite id="169">
+			<name>Spin Block (unused Actor 255)</name>
+			<flags known="1" complete="0" />
+			<category id="2" />
+			<notes>Not complete because: Unknown values, unknown use
+Won't appear if Sprite 95 is not in immediate vicinity.</notes>
+			<files>/enemy/spin_obj.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+			<field id="8" type="value" name="Unknown 8" values="" notes="Used in-game. Doesn't do anything notable." />
+			<field id="9" type="value" name="Unknown 9" values="" notes="Used in-game. Doesn't do anything notable." />
+		</sprite>
+
+		<sprite id="170">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="171">
+			<name>Spin Block (unused Actor 256)</name>
+			<flags known="1" complete="0" />
+			<category id="2" />
+			<notes>Not complete because: Unknown values, unknown use
+Won't appear if Sprite 95 is not in immediate vicinity.</notes>
+			<files>/enemy/spin_obj.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+			<field id="8" type="value" name="Unknown 8" values="" notes="Used in-game. Doesn't do anything notable." />
+			<field id="9" type="value" name="Unknown 9" values="" notes="Used in-game. Doesn't do anything notable." />
+		</sprite>
+
+		<sprite id="172">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="173">
+			<name>Swinging/able rope</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files></files>
+			<field id="5" type="checkbox" name="Mario controls sway" values="1" notes="" />
+			<field id="11" type="value" name="Length in tiles" values="4" notes="Maximum = 8." />
+			<field id="10" type="value" name="Sway on own +/-" values="" notes="These values go from 0 (none) to F (almost horizontal). At a 4 tile (0 value length) they increase 1/2 tile at the bottom per number." />
+		</sprite>
+
+		<sprite id="174">
+			<name>Mushroom Platform lift (Moving, tilting &amp; bobbing)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Moves to the right until it hits a wall, then goes left, until it hits a wall, ect
+This mushroom can be either red or green.</notes>
+			<files>/enemy/I_kinoko_ashiba.nsbtx
+/enemy/I_kinoko_ashiba2.nsbtx
+/enemy/I_kinoko_kuki.nsbtx
+/enemy/I_kinoko_kuki_l.nsbtx
+/enemy/I_kinoko_kuki_s.nsbtx
+/enemy/I_kinoko_kuki_sl.nsbtx</files>
+			<field id="4" type="checkbox" name="Use tracks" values="1" notes="Unused." />
+			<field id="5" type="value" name="Horizontal speed" values="" notes="" />
+			<field id="6" type="list" name="Color" values="0=Red,1=Green" notes="Green is unused." />
+			<field id="7" type="value" name="Stalk Height/Shift" values="" notes="" />
+			<field id="8" type="value" name="Width" values="" notes="" />
+			<field id="9" type="value" name="Tilting angle" values="" notes="" />
+			<field id="10" type="value" name="Bop speed" values="" notes="" />
+			<field id="11" type="value" name="Tilting speed" values="" notes="" />
+		</sprite>
+
+		<sprite id="175">
+			<name>Bouncy bricks (Unused)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>It is glitchy with Mini Mario, he just falls through when it wobbles. You can work around this by putting a solid underneath it.
+
+
+NOTES:
+The texture inside puyo_lift.nsbtx is sampletex2.
+This 'sampletex2' suggests the sprite was for testing or the texture was temorary.
+
+It's texture is an early brick block sprite sheet</notes>
+			<files>/enemy/puyo_lift.nsbtx (jelly_lift)
+</files>
+			<field id="4" type="list" name="Behaviour" values="0=Stretch up &amp; down,1=Depress while stood on,2=Solid" notes="Glitchy with Mini Mario, he just falls through the bricks when they wobble." />
+		</sprite>
+
+		<sprite id="176">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="177">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="178">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="179">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="180">
+			<name>Climbing Koopa</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/net_nokonoko.nsbmd</files>
+			<field id="10" type="list" name="Walking direction" values="0=Horizontal,1=Vertical" notes="" />
+			<field id="9" type="list" name="Fence position" values="0=In front,1=Behind" notes="" />
+			<field id="8" type="checkbox" name="Faster" values="1" notes="" />
+			<field id="11" type="list" name="Color" values="0=Green,1=Red" notes="" />
+		</sprite>
+
+		<sprite id="181">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="182">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="183">
+			<name>Lakitu spawner</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Spawns Lakitu (40).
+
+The lakitu spawns if Mario is inside Lakitu inside the Zone. If Lakitu is killed, it is respawned. If Mario exits the Zone, Lakitu despawns.
+If Sprite Set 5:1 (Bullet Bill/Bob-omb) isn't enabled, the game will freeze when Lakitu tries to display the Spiny egg model.
+</notes>
+			<files>/enemy/jugem_body.nsmbd
+/enemy/jugem_cloud.nsmbd</files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+			<field id="11" type="checkbox" name="Z Order" values="1" notes="Changes Z order so Spiny appear behind Lakitu when thrown. Unused." />
+		</sprite>
+
+		<sprite id="184">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="185">
+			<name>Cheep Cheep random spawner</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>Let spawn random generated Cheep Cheep in the selected Zone.</notes>
+			<files>/enemy/pukupuku.nsbmd</files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="Let spawn random generated Cheep-Cheep in the selected Zone." />
+			<field id="10" type="checkbox" name="Green (chases Mario)" values="1" notes="" />
+			<field id="11" type="checkbox" name="Faster &amp; out of water" values="1" notes="Makes some swim faster and makes them cover whole screen, not just part with water" />
+		</sprite>
+
+		<sprite id="186">
+			<name>Paragoomba</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Unused behaviours:
+- Has ceiling detection [may be used]
+- Has water interaction [may be used, or Goomba leftover]</notes>
+			<files>/obj/I_kuribo256_ncg.bin</files>
+		</sprite>
+
+		<sprite id="187">
+			<name>Balance lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Stops moving when it gets near to the top of the view.</notes>
+			<files>/enemy/b_lift.nsbtx (balance lift)</files>
+			<field id="6" type="list" name="Loads from" values="0=Level start,1=Midway point" notes="" />
+			<field id="11" type="list" name="Arrows" values="0=Left Up Right,1=Left  Down Right,2=Left Up Right,3=Left Right" notes="" />
+			<field id="8" type="list" name="Disappears" values="1=Yes,0=No" notes="" />
+		</sprite>
+
+		<sprite id="188">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="189">
+			<name>Pipe Cannon</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/polygon_unit/I_dokan.nsbtx (SOMETHING_earthen pipe)</files>
+			<field id="11" type="list" name="Angle" values="0=Far right,1=Far left,2=Medium right,3=Medium left,4=Straight up,5=Very far right" notes="" />
+		</sprite>
+
+		<sprite id="190">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="191">
+			<name>Hanging bouncing ? block</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_hatena_normal.nsbmd (SOMETHING_question_normal)</files>
+			<field id="0-1" type="value" name="Trigger ID 1" values="" notes="Unused." />
+			<field id="2-3" type="value" name="Trigger ID 2" values="" notes="Unused." />
+			<field id="6" type="value" name="Drop / Swing Amount" values="" notes="" />
+			<field id="11" type="list" name="Item" values="0=Coin,1=Powerup,2=Star,3=1-up,4=Fireflower,5=Mini Mushroom,6=Shell Powerup,7=Mega Mushroom,8=Mushroom" notes="Unused." />
+		</sprite>
+
+		<sprite id="192">
+			<name>Falling coin</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes>Todo: maximum amount of coins in air before slowdown + max in air before crash</notes>
+			<files></files>
+			<field id="0-1" type="value" name="Trigger ID" values="" notes="Disappears after a few seconds, no matter if the event is activated." />
+			<field id="10-11" type="value" name="coins number" values="" notes="" />
+		</sprite>
+
+		<sprite id="193">
+			<name>Big Dry Bones</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/karon_body.nsbmd
+/enemy/karon_head.nsbmd</files>
+		</sprite>
+
+		<sprite id="194">
+			<name>Big Thwomp</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>/enemy/dossun.nsbmd
+/enemy/dossun.nsbtp</files>
+			<field id="11" type="value" name="Unknown (11)" values="" notes="Unused. Cancelled out by the code, as far as I noticed." />
+		</sprite>
+
+		<sprite id="195">
+			<name>0 Stick to bottom length activator left</name>
+			<flags known="1" complete="1" />
+			<category id="6" />
+			<notes>The DS screen is 12 tiles high. When this is used as a top limit, it will control the tiles below the icon. As a bottom limit, it controls tiles above.</notes>
+			<files></files>
+			<field id="4" type="list" name="Type" values="0=Bottom limit,1=Top limit" notes="" />
+			<field id="10-11" type="value" name="Pix. past limit" values="" notes="Pixels able to be seen past limit. This will shift 12 tile screen down from icon position." />
+			<field id="8" type="checkbox" name="Death below limit" values="1" notes="Must be empty map block, no tiles below. Mario image must fall out of screen." />
+		</sprite>
+
+		<sprite id="196">
+			<name>0 Stick to bottom length activator right</name>
+			<flags known="1" complete="1" />
+			<category id="6" />
+			<notes>The DS screen is 12 tiles high. When this is used as a top limit, it will control the tiles below the icon. As a bottom limit, it controls tiles above. This sprite is used to center the screen.</notes>
+			<files></files>
+			<field id="4" type="list" name="Type" values="0=Bottom limit,1=Top limit" notes="" />
+			<field id="10-11" type="value" name="Pix. past for limit" values="" notes="Pixels able to be seen past limit. This will shift 12 tile screen down from icon position." />
+			<field id="8" type="checkbox" name="Death below limit" values="1" notes="Must be empty map block, no tiles below. Mario image must fall out of screen." />
+		</sprite>
+
+		<sprite id="197">
+			<name>Tile creator/destroyer (Tile god)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>To change what this can spawn, swap tiles around in map16.</notes>
+			<files></files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="10" type="value" name="Length" values="" notes="0 and 1 are the same: 1 block." />
+			<field id="11" type="value" name="Height" values="" notes="Ditto." />
+			<field id="8" type="list" name="Block type" values="0=Red block,1=Brick block,2=Blue coin,3=Stone block,4=Wood block,5=Nothing,6=Right facing red pipe top edge,7=Broken red pipe top right edge,15=Used block" notes="If you destroy a tile with 3 (blue coin), it will destroy the tile with no shards. (What is inbetween 7 and 15?)" />
+			<field id="7" type="list" name="Pattern/special" values="0=Solid,1=Checkerboard,2=Reverse checkerboard" notes="All other than 0 (solid) are unused." />
+			<field id="9" type="list" name="Effect/action" values="0=Off/destroy first,1=On/create first" notes="" />
+			<field id="4" type="checkbox" name="Permanent" values="" notes="" />
+		</sprite>
+
+		<sprite id="198">
+			<name>In air vertical scroll stop left</name>
+			<flags known="1" complete="1" />
+			<category id="6" />
+			<notes></notes>
+			<files></files>
+			<field id="4" type="list" name="Type" values="0=Bottom limit,1=Top limit" notes="" />
+			<field id="10-11" type="value" name="Shift up (in pixels)" values="" notes="Pixels able to be seen past limit." />
+			<field id="8" type="checkbox" name="Allow disable" values="1" notes="Can only be set to a max of 31 pixels. Past that move the sprite." />
+			<field id="9" type="value" name="ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="199">
+			<name>In air vertical scroll stop right</name>
+			<flags known="1" complete="1" />
+			<category id="6" />
+			<notes></notes>
+			<files></files>
+			<field id="4" type="list" name="Type" values="0=Bottom limit,1=Top limit" notes="" />
+			<field id="10-11" type="value" name="Shift up (in pixels)" values="" notes="Pixels able to be seen past limit." />
+			<field id="8" type="checkbox" name="Allow disable" values="1" notes="" />
+			<field id="9" type="value" name="ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="200">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="201">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="202">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="203">
+			<name>Unused Purple Mushroom Platform lift (tilt while stepped on, slower)</name>
+			<flags known="1" complete="0" />
+			<category id="2" />
+			<notes>Unused. Tilts slower than used purple tilting mushroom. Fits perfectly with the stalk object in the snow with ice tileset (Hiccup: Is this not true for the other one?)</notes>
+			<files>/enemy/I_kinoko_ashib_s.nsbtx</files>
+			<field id="10" type="value" name="Width" values="" notes="" />
+		</sprite>
+
+		<sprite id="204">
+			<name>Fire Snake</name>
+			<flags known="1" complete="1" />
+			<category id="20" />
+			<notes></notes>
+			<files>/enemy/f_body.nsbmd
+/enemy/f_snake.nsbmd</files>
+		</sprite>
+
+		<sprite id="205">
+			<name>Flame Chomp spawner</name>
+			<flags known="1" complete="1" />
+			<category id="17" />
+			<notes>Spawns a Flame Chomp with actor data of: 00 00 00 00 00 00</notes>
+			<files>/enemy/keronpa.nsbmd
+/enemy/keronpa_body.nsbmd</files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="206">
+			<name>Ghost house goo</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="207">
+			<name>Big Cheep Cheep</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>Unused behaviours:
+- Can be defeated by ground pound for 200pts, with no effect [may be default behaviour]</notes>
+			<files>/enemy/big_pukupuku.nsbmd</files>
+			<field id="8" type="checkbox" name="Slower" values="1" notes="Unused." />
+			<field id="11" type="checkbox" name="Green (chases Mario)" values="" notes="" />
+		</sprite>
+
+		<sprite id="208">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="209">
+			<name>Sledge Bro.</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Can destroy smashable (question mark/brick/wood/stone/used) blocks.</notes>
+			<files>/enemy/himan.nsbmd</files>
+		</sprite>
+
+		<sprite id="210">
+			<name>MvsL Battle Star</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files>/obj/I_star_red_ncg.bin
+/obj/I_enemy256_ncl.bin</files>
+			<field id="10-11" type="value" name="Star ID" values="" notes="These must be the same number of stars as in the original level. Each star must have a unique ID, starting from 1. If not, the game will hang. Also, if the ID is set to 0, it doesn't spawn, but the game doesn't crash (as seen in SMB 1-1)" />
+		</sprite>
+
+		<sprite id="211">
+			<name>Blooper</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/enemy/gesso.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="11" type="checkbox" name="Avoids Mario" values="" notes="Unused." />
+		</sprite>
+
+		<sprite id="212">
+			<name>Blooper Nanny (unused actor 144)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>&quot;Only someone with direct access to the database can proceed this modification : Class ID is actually 144, not 2 !&quot;
+</notes>
+			<files>/enemy/gesso.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="11" type="checkbox" name="Avoids Mario" values="" notes="" />
+		</sprite>
+
+		<sprite id="213">
+			<name>Blooper Nanny that spawns Baby Bloopers</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/enemy/gesso.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="11" type="checkbox" name="Avoids Mario" values="" notes="" />
+		</sprite>
+
+		<sprite id="214">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="215">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="216">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="217">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="218">
+			<name>Auto-scrolling controller</name>
+			<flags known="1" complete="0" />
+			<category id="6" />
+			<notes>==Old==
+This sprite have to use together with paths. Unknown 1 is for speed. It should be divisible by 8. Unknown 3 maybe acceleration from former node's speed to this node's speed. 
+
+And I've found some interesting formula: x=98k/y. Where k is a amount of pixel being passed within x mario's second. And y is the value you entered in unknown 1. It relates together. But it might not always work. It may have something to do with unknown 3 too...
+
+Calculation example: let say you want a sprite to move camera up 4 tiles within 16 mario sec.. Your formula is x=98k/y. As 4 tiles=64 pixels. Substitute it, then you have to multiply it with 98. 98x64=6272. And subtitute x with 16. Then 16=6272/y.
+And solve it to find y. After you got y, you insert that number into unknown 1. And test it in the emu, does 4 tiles are passed within 16 mario sec. or not? But I think it does. Remember unknown 3 ? 0. Sometimes the time don't have to be whole number. 
+Also, I think the position where the sprite is first recognized by the game will determine the camera movement along the path. (Camera movement to the right , left, or straightly of the path) And there're some nybbles controlling how the sprite will act; wait for Mario to come near then scroll or scroll immediately when recognized. I don't know which, but it does have.
+That's all I've found. :)
+Hope this help!</notes>
+			<files></files>
+			<field id="10-11" type="value" name="Path ID" values="" notes="Sets the path the camera will follow while scrolling. Unknown 1 of the first node is target speed and and unknown 3 is something to do with time." />
+			<field id="7" type="list" name="Loads from?" values="0=Midway Point,1=Unknown 1,2=Level Start" notes="1 is unused." />
+			<field id="9" type="list" name="Scrolling direction" values="0=Vertical,1=Horizontal" notes="" />
+			<field id="4-5" type="value" name="Starting node" values="" notes="" />
+			<field id="6" type="checkbox" name="Start from both Midway and Level Start" values="8" notes="" />
+		</sprite>
+
+		<sprite id="219">
+			<name>Spike Top</name>
+			<flags known="1" complete="1" />
+			<category id="14" />
+			<notes>A beetle with a spike on its head, that crawls slowly on all sides of a surface.
+
+Unused behaviours:
+- Can be defeated by Drill Stomp [may be spiny leftover?]</notes>
+			<files>/enemy/toge_met_body.nsbmd
+toge means horn (as in spike on an animal)</files>
+			<field id="10-11" type="list" name="Direction" values="0=Right,1=Left,16=Up (spike on left),17=Down (spike on right),32=Left (upside down),33=Right (upside down),48=Down (spike on left),49=Up (spike on right)" notes="" />
+		</sprite>
+
+		<sprite id="220">
+			<name>Bowser Jr.</name>
+			<flags known="1" complete="0" />
+			<category id="4" />
+			<notes>Values 3 and 4 are not used at all.
+Value 5 is used internally by the game in W8 Final Castle area 3.
+Value 7 is used in W8 Tower 1 area 2 (only in the European, Korean and Chinese roms).
+
+Test the unknowns :P I know for a fact that there is something that determines if Bowser Jr. will have collision to certain sprites like the drawbridge.
+
+Has weird interactions between values.</notes>
+			<files>/enemy/koopa_jr.nsbmd</files>
+			<field id="3-4" type="checkbox" name="Fireball immunity" values="17" notes="Unused." />
+			<field id="5" type="list" name="Battle mode" values="0=Tower battle,1=Final boss battle" notes="Unused in sprite. If final boss battle is chosen, Bowser Jr. will have the same &quot;death&quot; as in the final boss battle." />
+			<field id="7" type="checkbox" name="Unknown 7" values="1" notes="Used in-game. Has something to do with Bowser Jr. running behavior. Mandatory if you plan to use the Invisible behaviour." />
+			<field id="9" type="list" name="Speed progression" values="0=Slow-slow-med,1=Slow-med-med,2=Slow-med-fast" notes="" />
+			<field id="10" type="list" name="Behaviour" values="2=Normal,1=Normal (jumping),0=With mask,3=With mask (jumping),11=Normal (invisible),12=Unstompable,14=Unstompable (invisible)" notes="11, 12 and 14 are unused." />
+			<field id="11" type="checkbox" name="Doesn't manipulate camera" values="1" notes="Normally Bowser Jr. changes the camera if player moves out of the small area around him." />
+		</sprite>
+
+		<sprite id="221">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="222">
+			<name>Mini Goomba</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes>Unused behaviours:
+- Jumps with the music like goombas do [may be goomba leftover]</notes>
+			<files>/I_kuribo256_ncg.bin
+/I_enemy_ncl.bin
+</files>
+			<field id="10" type="checkbox" name="Shift ½ block  right" values="1" notes="" />
+			<field id="11" type="checkbox" name="Shift ½ block down" values="1" notes="" />
+		</sprite>
+
+		<sprite id="223">
+			<name>Flip fence</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_waku_s.nsbmd (SOMETHING_frame_small)
+/enemy/I_kurowaku.nsbmd</files>
+		</sprite>
+
+		<sprite id="224">
+			<name>Big flip fence</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_kaiten_ami.nsbmd
+/enemy/I_kaiten_ami.nsbtx</files>
+		</sprite>
+
+		<sprite id="225">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="226">
+			<name>Scuttlebug</name>
+			<flags known="1" complete="1" />
+			<category id="14" />
+			<notes>A spider.</notes>
+			<files>/enemy/gasagoso.nsbmd</files>
+			<field id="10" type="value" name="Drop height" values="4" notes="" />
+			<field id="11" type="list" name="Behaviour" values="0=Hangs on web,1=Drops on ground,2=Drops on ground (different stomp)" notes="1=ignores nybble 10. 2=same as 1 but it falls off screen when stomped instead of getting squished; unused." />
+		</sprite>
+
+		<sprite id="227">
+			<name>Moneybag</name>
+			<flags known="1" complete="1" />
+			<category id="13" />
+			<notes></notes>
+			<files>/enemy/gamaguchi.nsbmd</files>
+		</sprite>
+
+		<sprite id="228">
+			<name>Roulette Block</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files>/BG_ncl/d_2d_A_J_jyotyu_B_ncl.bin
+/BG_ncl/d_2d_A_J_jyotyu_ncl.bin
+/BG_ncl/d_2d_A_J_jyotyu_R_ncl.bin
+/BG_ncl/d_2d_A_J_jyotyu_W_ncl.bin
+/obj/A_block_hahen_ncg.bin</files>
+			<field id="11" type="list" name="Extra item" values="0=Blue Shell,1=Mini Mushroom" notes="Higher than 1 is unused." />
+		</sprite>
+
+		<sprite id="229">
+			<name>Petey Piranha</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/boss_packun.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="230">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="231">
+			<name>Water</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>There is no way to make water only appear in a zone; like in NSMBW, but you can emulate this with the unused water tiles (which has its limitations) or by quickly rising the water when you enter an area and lowering it when you exit it (with the event controllers).</notes>
+			<files>/enemy/suimen_texanim1.nsbtx</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="On ID 2 the water will rise, but have to be activated again with a stop command to lower." />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="On ID 1 the water will rise then lower. (This is wrong, Hiccup thinks[E version])" />
+			<field id="4" type="value" name="Water lowering's delay" values="" notes="Any value other than 0 will override both Input IDs." />
+			<field id="5" type="value" name="Water rising's delay" values="" notes="Any value other than 0 will override both Input IDs." />
+			<field id="6-7" type="value" name="Opacity" values="" notes="Modulo 32. 0 is transparent. 31 has the highest opacity. Does not do anything or does not exist for Lava and Poison Water." />
+			<field id="8-9" type="value" name="Tiles to move" values="" notes="" />
+			<field id="10-11" type="value" name="Speed" values="" notes="Modulo 128. If lower than 128 then the water will rise, if greater or equal than 128 the water will lower. Lowering water does not work properly. If you want lowering water, rise it with a enter-view event, then &quot;unrise&quot; it or get the code hack that fixes the problem." />
+		</sprite>
+
+		<sprite id="232">
+			<name>Hanging ? Block</name>
+			<flags known="1" complete="1" />
+			<category id="1" />
+			<notes>These hanging blocks were used in W-4 Ghost House.</notes>
+			<files>/enemy/I_hatena_normal2.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="11" type="list" name="Contents" values="0=Coin,1=Fire flower,2=Starman,3=1UP,4=Fire flower,5=Mini mushroom,6=Blue shell,7=Mega mushroom,8=Red mushroom,9=Red mushroom" notes="" />
+			<field id="10" type="value" name="2nd powerup list? 10" values="" notes="" />
+			<field id="5" type="value" name="Unknown 5" values="1" notes="" />
+			<field id="4" type="checkbox" name="Multiple use" values="" notes="" />
+		</sprite>
+
+		<sprite id="233">
+			<name>Swinging/able pole</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/W_negi.nsbmd
+/enemy/W_bou.nsbtx</files>
+			<field id="11" type="value" name="Height" values="4" notes="Height is 4+(N11 mod 8)." />
+			<field id="10" type="checkbox" name="Sticks on line" values="1" notes="" />
+			<field id="9" type="list" name="Starting direction" values="0=Right,1=Left" notes="" />
+		</sprite>
+
+		<sprite id="234">
+			<name>Lava</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>See Water
+
+</notes>
+			<files>/enemy/yogan_texanim1.nsbtx</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="Without either input ID, the lava will rise automatically. If you set a value for either one of the IDs by themselves, the lava will rise to the height you select when that ID is activated. ID2 will only make the lava rise, and will wait for an off command from the ID2 activator again. If you set a values for both IDs, ID1 will make the lava go up then down." />
+			<field id="6" type="value" name="Unknown 6" values="" notes="Nybbles 6 and 7 don't seem to have an effect. But they are used ingame. Nybbles 4 and 5 could still do something." />
+			<field id="7" type="value" name="Unknown 7" values="" notes="" />
+			<field id="8-9" type="value" name="Tiles to rise" values="" notes="" />
+			<field id="10-11" type="value" name="Speed to rise" values="" notes="Modulo 128. If lower than 128 then the lava will rise, if greater or equal than 128 the lava will lower." />
+		</sprite>
+
+		<sprite id="235">
+			<name>Star Coin</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>AKA:
+NSMB2 internal actor name = CollectionCoin</notes>
+			<files>/enemy/coin.nsbmd (uncollected)
+/enemy/blie_coin.nsbmd (collected)</files>
+			<field id="9" type="list" name="Number" values="0=Star Coin-1,1=Star Coin-2,2=Star Coin-3" notes="(Replace this with a signed value)" />
+			<field id="11" type="checkbox" name="Shift ½ block down" values="1" notes="" />
+			<field id="10" type="checkbox" name="Shift ½ block right" values="1" notes="" />
+			<field id="8" type="checkbox" name="Behind fence" values="1" notes="" />
+			<field id="0-1" type="value" name="Target ID" values="" notes="" />
+			<field id="6" type="list" name="Timer if Target ID is not null" values="0=Timed,1=Untimed" notes="Timer works just like switches." />
+			<field id="3" type="value" name="Unknown value 2-3" values="" notes="" />
+		</sprite>
+
+		<sprite id="236">
+			<name>Rotating square lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/square_lift.nsbmd</files>
+			<field id="7" type="list" name="Rotation" values="0=Counterclockwise,1=Clockwise" notes="Does not apply if Nybble 9 is set to 2." />
+			<field id="9" type="list" name="Spinning" values="0=Constant,1=90° periodically,2=When stood on" notes="" />
+			<field id="4" type="checkbox" name="Shift ½ block down" values="1" notes="" />
+			<field id="5" type="checkbox" name="Faster" values="1" notes="" />
+			<field id="6" type="checkbox" name="Stick to a line" values="1" notes="If you want to go right, put clockwise. If you want to go left, put counterclockwise." />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="237">
+			<name>Broozer</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes>The punching ghost. It can break breakable blocks. It's sound effects are in the ghost house music. Uses the tile god actor to destroy blocks, for some reason.
+
+</notes>
+			<files>/enemy/crasher.nsbmd</files>
+		</sprite>
+
+		<sprite id="238">
+			<name>Purple Mushroom Platform lift (tilt while stepped on)</name>
+			<flags known="1" complete="0" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_kinoko_ashib_s.nsbtx</files>
+			<field id="10" type="value" name="Length" values="" notes="" />
+			<field id="11" type="value" name="Unknown value 11" values="" notes="" />
+		</sprite>
+
+		<sprite id="239">
+			<name>Yellow/Orange Mushroom Platform lift (Rising/descending while stepped on)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Has the same data as sprite 312.</notes>
+			<files>/enemy/I_kinoko_ashib2u.nsbtx
+/enemy/I_kinoko_ashib_u.nsbtx
+/enemy/I_kinoko_kuki_u.nsbtx</files>
+			<field id="9" type="value" name="Distance" values="" notes="N9-N10 is the actual distance this mushroom will move." />
+			<field id="10" type="value" name="Stalk height and move direction" values="" notes="If N9-10&gt;0, this mushroom will go up, else it'll go down." />
+			<field id="11" type="value" name="Width" values="" notes="" />
+			<field id="8" type="checkbox" name="Returns to original position" values="" notes="The mushroom will return to its original position once Mario/Luigi gets off it." />
+			<field id="1-2" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="3-4" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="240">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="241">
+			<name>Bill Blaster Turret (Direction changing Bullet Bill launcher)</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>First checkboxes are bottom cannons.</notes>
+			<files>/enemy/killer.nsmbd</files>
+			<field id="8-9" type="binary" name="Empty spots" values="" notes="individual bits indicate empty spots" />
+			<field id="10-11" type="binary" name="Cannons to flip" values="" notes="individual bits indicate flipped cannons" />
+			<field id="7" type="value" name="Height" values="1" notes="Height is 1 + (N7 mod 8)" />
+			<field id="4" type="checkbox" name="Slower firepower" values="1" notes="Unused." />
+		</sprite>
+
+		<sprite id="242">
+			<name>Blue Mushroom Platform (Expanding/contracting)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_kinoko_ashib_y.nsbtx
+/enemy/I_kinoko_kuki_y.nsbtx
+/enemy/I_kinoko_kuki_yl.nsbtx</files>
+			<field id="9" type="checkbox" name="Short when Expanded" values="1" notes="" />
+			<field id="10" type="checkbox" name="Start Expanded" values="1" notes="" />
+			<field id="11" type="value" name="Stalk Height" values="" notes="" />
+		</sprite>
+
+		<sprite id="243">
+			<name>Roof Spiny</name>
+			<flags known="1" complete="1" />
+			<category id="14" />
+			<notes></notes>
+			<files>/enemy/paipo.nsbmd
+/enemy/togezo.nsbmd
+/enemy/togezo_shell.nsbmd</files>
+			<field id="9" type="checkbox" name="Faster" values="1" notes="Unused. Likely a copypaste from the Spiny." />
+		</sprite>
+
+		<sprite id="244">
+			<name>Bouncy Mushroom Platform</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>No problems with underwater players bouncing on it, but doesn't appear to have special underwater behaviour.</notes>
+			<files>/enemy/I_kinoko_ashib_t.nsbtx
+/enemy/I_kinoko_kuki_t.nsbtx
+/enemy/I_kinoko_kuki_tl.nsbtx</files>
+			<field id="11" type="value" name="Stalk height" values="" notes="" />
+			<field id="10" type="list" name="Shift position" values="0=No shifting,1=8 pixels left,2=8 pixels right" notes="" />
+		</sprite>
+
+		<sprite id="245">
+			<name>Corked Pipe + foot pump</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files>/enemy/obj_bellows.nsbmd
+/enemy/obj_cork.nsbmd</files>
+			<field id="6" type="value" name="Destination area" values="" notes="" />
+			<field id="11" type="value" name="Destination entrance" values="" notes="" />
+			<field id="10" type="value" name="Horizontal distance between pump and tube" values="" notes="" />
+			<field id="8" type="value" name="Vertical distance between pump and tube" values="" notes="" />
+			<field id="9" type="list" name="Shift 21 tiles left" values="1=Yes,0=No" notes="" />
+			<field id="7" type="list" name="Shift 16 tiles down" values="1=Yes,0=No" notes="" />
+		</sprite>
+
+		<sprite id="246">
+			<name>Floating barrel</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/barrel.nsbmd</files>
+			<field id="11" type="checkbox" name="Starts a bit submerged" values="1" notes="Unused." />
+		</sprite>
+
+		<sprite id="247">
+			<name>Sushi spawner (shark spawner)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files></files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="248">
+			<name>Balloon Boo</name>
+			<flags known="1" complete="0" />
+			<category id="19" />
+			<notes></notes>
+			<files>/enemy/balloon_teresa.nsbmd</files>
+			<field id="7" type="checkbox" name="Stays in Zone" values="1" notes="" />
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="When waiting to be triggered, the area below Balloon Boo hurts Mario. You can't see anything there, but the game sees it as part of the sprite. When you activate the input ID, the area goes away, and Balloon Boo goes into a weird (unused or just glitchy?) state [in E version]." />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="10" type="list" name="Behaviour" values="0=Default,1=Acts like a Boo" notes="Unused, the Balloon Boo will act exactly like an original Boo, but the hitbox will be glitchy, so it is not generally recommended for use." />
+		</sprite>
+
+		<sprite id="249">
+			<name>Track-controlled wall-jump lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/obj_lift_block.nsbtx (object_lift_block)</files>
+			<field id="7" type="list" name="Starting direction" values="0=Right,1=Left" notes="" />
+			<field id="5" type="list" name="Speed" values="0=60 pixels/sec,1=90 pixels/sec,2=120 pixels/sec,3=180 pixels/sec" notes="" />
+			<field id="6" type="list" name="Movement trigger" values="0=On its own,1=When touched at least once" notes="" />
+			<field id="11" type="value" name="Length" values="4" notes="Width is 4+(N11 mod 4)" />
+			<field id="8" type="value" name="Height" values="4" notes="Height is 4+(N8 mod 4)" />
+		</sprite>
+
+		<sprite id="250">
+			<name>Crowber</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes></notes>
+			<files>/enemy/crow.nsbmd
+/enemy/crow.nsbca
+</files>
+		</sprite>
+
+		<sprite id="251">
+			<name>Big Unagi</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/enemy/morray_big.nsbmd</files>
+			<field id="7" type="checkbox" name="Visible facing right" values="1" notes="" />
+			<field id="8-9" type="value" name="Zone ID" values="1" notes="Required, or he will not move." />
+			<field id="10" type="checkbox" name="Visible facing left" values="1" notes="" />
+		</sprite>
+
+		<sprite id="252">
+			<name>Banzai Bill Blaster</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>Sprite set: 5-1</notes>
+			<files>/enemy/mag_killer.nsbmd
+/enemy/magnum_battery.nsbmd
+/enemy/magnum_battery2.nsbmd</files>
+			<field id="9" type="list" name="Shooting direction" values="1=Left,2=Right,0=Both" notes="1 and 2 are unused." />
+			<field id="11" type="value" name="Unknown (11)" values="" notes="Stored by the game for ulterior use but seems to never be called, still needs testing." />
+		</sprite>
+
+		<sprite id="253">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="254">
+			<name>Kab-omb</name>
+			<flags known="1" complete="1" />
+			<category id="17" />
+			<notes></notes>
+			<files>/enemy/hanabi.nsbmd</files>
+			<field id="11" type="checkbox" name="Chases Mario" values="1" notes="This makes him chase Mario if hit by a fireball/Raining Debris. If not set, he will run left and right. 0 (unchecked) is unused." />
+		</sprite>
+
+		<sprite id="255">
+			<name>Jungle FG Effect (Unused Actor)</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>* The width of the effect is 15 blocks right from the sprite's place and height is 3 blocks down from the sprite's place and i.e. it is 16x4. The image is repeated sideways
+
+* The effect is above most things.
+
+* Only the first sprite placed defines the where the effect is located.
+
+* The X position of the sprite does not affect the X or Y position of the effect. The Y position does affect the Y position of the effect.
+</notes>
+			<files>/polygon_unit/W_junglekusa_10.nsbtx</files>
+			<field id="4-5" type="checkbox" name="Swimmable" values="" notes="" />
+			<field id="10-11" type="signedvalue" name="Scroll Up/Down" values="" notes="If swimmable, the image doesn't move. If negative value it scrolls down, if positive value it scrolls up." />
+		</sprite>
+
+		<sprite id="256">
+			<name>Rotating carry-through-wall turntable-like lift</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/W_turntable.nsbmd</files>
+			<field id="6" type="list" name="Direction" values="0=From left to right,1=From right to left" notes="Default is left side. Check to start right." />
+		</sprite>
+
+		<sprite id="257">
+			<name>Coin trail Cheep Cheep</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files>/enemy/pukupuku.nsbmd</files>
+			<field id="4" type="checkbox" name="Swims left" values="8" notes="Unused." />
+			<field id="11" type="checkbox" name="Avoids Mario" values="1" notes="Also swims faster. Unused." />
+		</sprite>
+
+		<sprite id="258">
+			<name>Spike Bass (unused sprite)</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="259">
+			<name>Poisoned Water</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>See Water</notes>
+			<files>/enemy/doku_texanim1.nsbtx</files>
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="6" type="value" name="Unknown 6" values="" notes="Nybbles 6 and 7 don't seem to have an effect. But they are used ingame. Nybbles 4 and 5 could still do something." />
+			<field id="7" type="value" name="Unknown 7" values="" notes="" />
+			<field id="8-9" type="value" name="Tiles to Rise" values="" notes="" />
+			<field id="10-11" type="value" name="Speed" values="" notes="Modulo 128. If lower than 128 then the poisoned water will rise, if greater or equal than 128 the poisoned water will lower." />
+		</sprite>
+
+		<sprite id="260">
+			<name>Fast Spike Pillar - Down</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>Falling Spike</notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=With delay" notes="" />
+			<field id="6" type="list" name="Distance" values="1=7 tiles,3=10 tiles,2=14 tiles,0=16 tiles" notes="Time travel is the same no matter the distance." />
+			<field id="7-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="10-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="261">
+			<name>Fast Spike Pillar - Up</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=With delay" notes="" />
+			<field id="6" type="list" name="Distance" values="1=7 tiles,3=10 tiles,2=14 tiles,0=16 tiles" notes="Time travel is the same no matter the distance." />
+			<field id="7-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="10-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="262">
+			<name>Fast Spike Pillar - Left</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=With delay" notes="" />
+			<field id="6" type="list" name="Distance" values="1=7 tiles,3=10 tiles,2=14 tiles,0=16 tiles" notes="Time travel is the same no matter the distance." />
+			<field id="7-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="10-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="263">
+			<name>Fast Spike Pillar - Right</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=With delay" notes="" />
+			<field id="6" type="list" name="Distance" values="1=7 tiles,3=10 tiles,2=14 tiles,0=16 tiles" notes="Time travel is the same no matter the distance." />
+			<field id="7-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="10-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="264">
+			<name>Mega Ground Pound's sky drops improver</name>
+			<flags known="1" complete="1" />
+			<category id="1" />
+			<notes>Only increase the CHANCE to drop Goombas when Groundpounding.</notes>
+			<files></files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="265">
+			<name>Phantom Hand (Pointing hand)</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes>Points at connected Winged ? Blocks.
+Also points to Unused Invisible Podoboos without connections.</notes>
+			<files>/enemy/finger.nsbmd</files>
+			<field id="11" type="value" name="Phantom Hand ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="266">
+			<name>Invisible Lava Bubble (unused actor)</name>
+			<flags known="1" complete="0" />
+			<category id="17" />
+			<notes>- It is an invisible fireball that moves left and right from its position
+- Phantom Hands will point to the invisible fireball location. It is in the Class Hierachy after the Phantom Hand and it is after the Phantom Hand in the actors and in the sprites. It is also in the same sprite set as the Phantom Hand, and has the same prefix as the Phantom Hand in the Class Hierachy (2291).
+- Phantom Hands ignore Flying ? Blocks they are linked to, when there is an Invisible Fire Bubble in the view.
+- It will show when you get hurt by it. It then pauses and moves a few pixels left and right, before continuing its normal movement.
+- Being invincible or huge does not kill it, but you do not get hurt by it and it does not show when you touch it while invincible/huge.
+- It is invulnerable to the player's fireballs, the shell attack and throwing shells at it.
+- Uses the same graphics as the normal Fire Bubble.
+- It has the collision type that enemies use.</notes>
+			<files>/obj/I_bubble256.bin</files>
+		</sprite>
+
+		<sprite id="267">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="268">
+			<name>Underwater bounce bubble</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>If it is ground pounded it will be destroyed, which is a unused behaviour.</notes>
+			<files>/enemy/W_awa.nsbmd</files>
+			<field id="10-11" type="list" name="Shift position" values="0=No shifting,17=2 pixels left,33=4 pixels left,49=6 pixels left,65=8 pixels left,81=10 pixels left,97=12 pixels left,113=14 pixels left,129=16 pixels left,145=18 pixels left,161=20 pixels left,177=22 pixels left,193=24 pixels left,209=26 pixels left,225=28 pixels left,241=30 pixels left,16=2 pixels right,32=4 pixels right,48=6 pixels right,64=8 pixels right,80=10 pixels right,96=12 pixels right,112=14 pixels right,128=16 pixels right,144=18 pixels right,160=20 pixels right,176=22 pixels right,192=24 pixels right,208=26 pixels right,224=28 pixels right,240=30 pixels right" notes="Unused." />
+			<field id="2-3" type="value" name="Destroyer ID 1" values="" notes="Unused." />
+			<field id="0-1" type="value" name="Destroyer ID 2" values="" notes="Unused." />
+		</sprite>
+
+		<sprite id="269">
+			<name>Giant Wiggler</name>
+			<flags known="1" complete="0" />
+			<category id="13" />
+			<notes>Todo: test path values and other nybbles</notes>
+			<files></files>
+			<field id="11" type="value" name="Path ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="270">
+			<name>Smashed pipe sprite</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes>The effect will activate every time you get to the point were you can see the sprite.
+This sprite gets spawned in-game every time you break a pipe as mega Mario. This is only the case for a certain data.
+
+NOTE: There was sprite data controlling the size, color and behavior. Must investigate.
+
+http://board.dirbaio.net/thread.php?id=353 Please check here.</notes>
+			<files></files>
+			<field id="6" type="value" name="Color/type?" values="" notes="" />
+			<field id="7" type="value" name="Facing?" values="" notes="0-9 destroy?" />
+			<field id="10-11" type="value" name="Length" values="" notes="" />
+		</sprite>
+
+		<sprite id="271">
+			<name>Crowber spawner</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes></notes>
+			<files></files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="Crobers will spawn when Mario is inside this zone." />
+		</sprite>
+
+		<sprite id="272">
+			<name>Snowy branch</name>
+			<flags known="1" complete="1" />
+			<category id="16" />
+			<notes></notes>
+			<files>/enemy/I_mominoki_eda.nsbmd
+/enemy/I_mominoki_eda2.nsbmd
+/enemy/I_mominoki_yuki2.nsbmd
+/enemy/I_mominoki_yuki3.nsbmd</files>
+			<field id="11" type="list" name="Branch side" values="0=Right,1=Left" notes="" />
+		</sprite>
+
+		<sprite id="273">
+			<name>Snow Spike</name>
+			<flags known="1" complete="1" />
+			<category id="16" />
+			<notes></notes>
+			<files>/enemy/gabon.nsbmd</files>
+		</sprite>
+
+		<sprite id="274">
+			<name>Sinking-snow pile</name>
+			<flags known="1" complete="1" />
+			<category id="16" />
+			<notes>Length of 0 makes the game crash!</notes>
+			<files>/enemy/I_yuki_yuka.nsbtx</files>
+			<field id="11" type="value" name="Length" values="" notes="Game will crash if set to 0!" />
+		</sprite>
+
+		<sprite id="275">
+			<name>Blockhopper</name>
+			<flags known="1" complete="1" />
+			<category id="20" />
+			<notes>A value of 5 (which is unused) for nybble 9 will yield different results for each region :
+US : Starman
+JP : Flower
+EU : Mini-mushroom
+KS : Blue shell
+CH : Mushroom/flower</notes>
+			<files>/enemy/gorem_body.nsbmd
+/enemy/gorem_head.nsbmd
+/enemy/gorem_head1.nsbmd</files>
+			<field id="9" type="list" name="Item" values="0=Nothing,1=Coin,2=Mushroom/Flower,3=1-Up,4=Coin,5=[See comment],6=Coin,7=Mushroom/Flower,8=Mushroom/Flower,9=Mushroom (weird),10=Mushroom,11=Coin,12=Mushroom/Flower,13=Mushroom/Flower,14=Flower,15=Coin" notes="5=Star (weird) [US]; Flower [JP]; Mini Mushroom [EU]; Blue Shell [KS]; Mushroom/Flower [CH]. 0, 4 and 5 are unused." />
+			<field id="10" type="checkbox" name="Brick Head" values="1" notes="Makes Blockhopper a bit like the Pile Driver Micro-Goombas in SMB3. Same behaviour as far as I can tell. Unused." />
+			<field id="11" type="value" name="Height" values="1" notes="Higher values will slow down the game. There is a limit, of something." />
+		</sprite>
+
+		<sprite id="276">
+			<name>Scroll and Mario stop sideways</name>
+			<flags known="1" complete="0" />
+			<category id="6" />
+			<notes>Remember, the DS screen is 16 tiles wide. Make sure you allow for the full width of the screen or you camera will scroll shaky. Using X coordinates, numerically these should be 15 tiles apart.
+
+This sprite, along with 198/199, doesn't always work. Try moving 276s up or down if they don't work.
+
+Sprite must be placed at the bottom of the limit. Height is counted from the sprite position up.
+
+When using retro scroll horizontal, you have to select &quot;stop from scrolling left&quot;.
+
+These can be passed through using a connected pipe.
+</notes>
+			<files></files>
+			<field id="4" type="list" name="Retro scroll" values="0=None,1=Horizontal ,2=Vertical" notes="" />
+			<field id="9-10" type="value" name="Tile height up" values="1" notes="You can calculate by map Y coordinates." />
+			<field id="11" type="list" name="Direction" values="0=Stop from scrolling right,1=Stop from scrolling left" notes="" />
+		</sprite>
+
+		<sprite id="277">
+			<name>Arrow sign</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes></notes>
+			<files>/obj/I_dokan_yajirushi_ncg.bin</files>
+			<field id="4" type="list" name="Layer priority" values="0=Model,1=Tileset,2=Foreground,3=Background" notes="0, 2 and 3 are unused." />
+			<field id="5" type="list" name="Direction" values="0=Up,1=Up/right,2=Right,3=Down/right,4=Down,5=Down/left,6=Left,7=Up/left" notes="" />
+		</sprite>
+
+		<sprite id="278">
+			<name>Groundpound-able ghost house goo</name>
+			<flags known="1" complete="0" />
+			<category id="2" />
+			<notes></notes>
+			<files></files>
+			<field id="11" type="value" name="Length" values="1" notes="" />
+			<field id="10" type="value" name="Height" values="1" notes="" />
+		</sprite>
+
+		<sprite id="279">
+			<name>Flipper (one-way gate)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/W_ben.nsbmd ([SOMETHING]_[SOMETHING])
+/enemy/W_ben01.nsbmd ([SOMETHING]_[SOMETHING]_01)</files>
+			<field id="11" type="list" name="Type" values="0=Faces up; opens from left,1=Faces up; opens from right,2=Faces down; opens from left,3=Faces down; opens from right,4=Faces right; opens from bottom,5=Faces right; opens from top,6=Faces left; opens from bottom,7=Faces left; opens from top" notes="Nybble 8+ is 2 tiles higher opens from left, and can't be touched by Mario." />
+		</sprite>
+
+		<sprite id="280">
+			<name>Horizontal camera offset</name>
+			<flags known="1" complete="1" />
+			<category id="6" />
+			<notes>You must set values for right and below tiles distances to activate. These are just like zones, the tiles are coordinates of activation. Setting either setting to zero will not give Mario an area to activate the sprite.
+
+The default game lag is 2 tiles. This is in addition to that lag. This will shift Mario's center to one side or the other.
+
+Camera will not return to normal until re-entering sprite zone. So far, at least until more data is found.</notes>
+			<files></files>
+			<field id="6-7" type="value" name="Pixel zone below" values="" notes="This is how many pixels below the sprite that the sprite can be activated in." />
+			<field id="8-9" type="value" name="Pixels to full offset" values="" notes="This is how many pixels Mario needs to move past the sprite until it reaches the full horizontal offset." />
+			<field id="10-11" type="signedvalue" name="Pixel offset +=left" values="" notes="Default value is 2 tiles (32 pixels) either way from center" />
+		</sprite>
+
+		<sprite id="281">
+			<name>Squiggler</name>
+			<flags known="1" complete="1" />
+			<category id="14" />
+			<notes>A caterpillar that is smaller than the Wiggler. Crawls slowly on all sides of  a surface.</notes>
+			<files>/enemy/I_wakaba.nsbmd
+/enemy/wakaba.nsbmd
+/enemy/wakaba_yoko.nsbmd
+/sound_data.sdat/SeqArc/SAR_ENEMY_02_SE_EMY_WAKABA_APP</files>
+			<field id="11" type="list" name="Pipe exit facing" values="0=Up,1=Down,3=Left,2=Right" notes="2 and 3 are unused." />
+		</sprite>
+
+		<sprite id="282">
+			<name>Swinging/able vine</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Requires BOTH sprite sets &quot;Vine&quot; and &quot;Rope&quot;.
+If not, it crashes.</notes>
+			<files>/enemy/W_tuta.nsbmd ([SOMETHING]_[ivy/vine])</files>
+			<field id="10" type="value" name="Swing angle" values="" notes="" />
+			<field id="11" type="value" name="Length" values="" notes="" />
+			<field id="5" type="checkbox" name="Dont restrict angle" values="1" notes="" />
+		</sprite>
+
+		<sprite id="283">
+			<name>Spike Bass spawner</name>
+			<flags known="1" complete="1" />
+			<category id="15" />
+			<notes>Spawns a Spike Bass into onscreen actor-based liquid if the player is in the zone.
+
+Test: multiple onscreen liquids.</notes>
+			<files>/enemy/togepuku.nsbmd</files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+			<field id="10" type="checkbox" name="Use Restricted Movement" values="1" notes="Unused." />
+			<field id="11" type="value" name="Restricted Movement Distance" values="" notes="Unused." />
+		</sprite>
+
+		<sprite id="284">
+			<name>Splunkin (pumpkin)</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes>A walking pumpkin.</notes>
+			<files>/enemy/kabochan.nsbmd</files>
+			<field id="11" type="checkbox" name="Explodes at start" values="1" notes="At spawn. Unused." />
+		</sprite>
+
+		<sprite id="285">
+			<name>Scuttlebug spawner</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files>/enemy/gasagoso.nsbmd</files>
+			<field id="8-9" type="value" name="Zone ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="286">
+			<name>Event controller - multi-chainer (if X, do Y through Z)</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes></notes>
+			<files></files>
+			<field id="0-1" type="value" name="Starter ID" values="" notes="The activator will start running when this event ID is triggered." />
+			<field id="2-3" type="value" name="Finisher ID" values="" notes="The activator will trigger all events from the start event ID to this event ID. If 0, the sprite will trigger every single event from the starting from the starter ID. This may need testing, though." />
+			<field id="4-5" type="value" name="Delay" values="" notes="" />
+			<field id="10" type="list" name="Usage mode" values="0=One time use,1=Multiple use,2=Reset after use" notes="" />
+		</sprite>
+
+		<sprite id="287">
+			<name>Enemy-in-Pipe Generator</name>
+			<flags known="1" complete="1" />
+			<category id="1" />
+			<notes>Uses sound set 8 for Bob-ombs</notes>
+			<files></files>
+			<field id="10" type="list" name="Enemy" values="0=Goomba,1=Bob-omb" notes="" />
+			<field id="11" type="list" name="Direction" values="0=Up,1=Down,2=Left,3=Right" notes="" />
+			<field id="9" type="checkbox" name="Slower Spawn Rate" values="1" notes="Unused (From NSMBW)" />
+		</sprite>
+
+		<sprite id="288">
+			<name>Nothing</name>
+			<flags known="1" complete="1" />
+			<category id="7" />
+			<notes></notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="289">
+			<name>Platform Block (expandable block)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/obj/A_block_ncg.bin ([SOMETHING]_block_[SOMETHING].[SOMETHING])</files>
+			<field id="11" type="checkbox" name="Turn used at 4th hit" values="1" notes="Turns into used blocks. Unused. All values above 1 seem to produce same result as 1." />
+		</sprite>
+
+		<sprite id="290">
+			<name>Flying ? Block</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes></notes>
+			<files>enemy/pata_block.nsbmd
+
+this nsbmd contains red and gold flying blocks + wings
+sprites:
+117 and 290</files>
+			<field id="11" type="list" name="Item" values="0=Coin,1=Mushroom/flower,2=Starman,3=1UP,4=? switch,5=P-switch,6=Red ! switch,7=Vine with Mario clone,8=Mini mushroom" notes="" />
+			<field id="9" type="list" name="Starting position" values="0=Left,1=Right" notes="" />
+			<field id="6" type="list" name="Looping pattern" values="0=Fly off screen,1=Center of loop,2=Edge of loop" notes="" />
+			<field id="8" type="list" name="Flying pattern" values="0=16 tile,1=Forward 4/back 8,2=Stay in place" notes="" />
+			<field id="4" type="list" name="Gets pointed to by Phantom Hands" values="1=Yes,0=No" notes="" />
+			<field id="7" type="value" name="Phantom Hand ID" values="" notes="Pointing hands only." />
+			<field id="0-1" type="value" name="Trigger ID" values="" notes="Switch appears when on (but only appears after emptying it out of the block)." />
+			<field id="2-3" type="value" name="Target ID" values="" notes="Switches ID on when switch pressed." />
+			<field id="5" type="value" name="Clone Settings" values="" notes="See nybble 7 of Actor 21" />
+		</sprite>
+
+		<sprite id="291">
+			<name>Brick Block containing ? Switch</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes>See ? Switch.</notes>
+			<files></files>
+		</sprite>
+
+		<sprite id="292">
+			<name>Event Activated Door</name>
+			<flags known="1" complete="1" />
+			<category id="3" />
+			<notes></notes>
+			<files></files>
+			<field id="2-3" type="value" name="Input ID" values="" notes="" />
+			<field id="9" type="value" name="Dest. area" values="" notes="" />
+			<field id="10-11" type="value" name="Dest. entrance" values="" notes="" />
+		</sprite>
+
+		<sprite id="293">
+			<name>Touching ground vertical scroll stop left </name>
+			<flags known="1" complete="0" />
+			<category id="6" />
+			<notes>This sprite seems to disable all other camera sprites when activated.
+
+It also changed horizontal scrolling...I think.</notes>
+			<files></files>
+			<field id="4" type="list" name="Type" values="0=Bottom limit,1=Top limit" notes="" />
+			<field id="10-11" type="value" name="Visible Y pix. past" values="" notes="Pixels able to be seen past limit." />
+			<field id="8-9" type="value" name="Disable Y pix. past" values="" notes="Can only be set to a max of 31 pixels. Past that move the sprite." />
+		</sprite>
+
+		<sprite id="294">
+			<name>Touching ground vertical scroll stop right</name>
+			<flags known="1" complete="0" />
+			<category id="6" />
+			<notes>This sprite seems to disable all other camera sprites when activated.</notes>
+			<files></files>
+			<field id="4" type="list" name="Type" values="0=Bottom limit,1=Top limit" notes="" />
+			<field id="10-11" type="value" name="Visible Y pix. past" values="" notes="Pixels able to be seen past limit." />
+			<field id="8-9" type="value" name="Disable Y pix. past" values="" notes="Can only be set to a max of 31 pixels. Past that move the sprite." />
+		</sprite>
+
+		<sprite id="295">
+			<name>Mummipokey</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/I_sandoboss_ishi.nsbmd
+/enemy/I_sandobossjimen.nsbmd
+/enemy/sand_worm.nsbmd</files>
+			<field id="2-3" type="value" name="Trigger ID" values="" notes="" />
+		</sprite>
+
+		<sprite id="296">
+			<name>Lift moving left and right (unused actor 163)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Same settings as Actor 162. Does it differ in any way?</notes>
+			<files>/enemy/n_lift.nsbtx</files>
+			<field id="9" type="value" name="Tiles to move" values="" notes="" />
+			<field id="7" type="list" name="Starting direction" values="0=Right,1=Left" notes="" />
+			<field id="11" type="value" name="Length" values="" notes="" />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="4" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+		</sprite>
+
+		<sprite id="297">
+			<name>Stone wall moving left and right (actor 167)</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Exact duplicate of used horizontal moving stone block.
+Same settings as Actor 166.</notes>
+			<files>/enemy/z_lift.nsbtx ([SOMETHING]_lift)</files>
+			<field id="9" type="value" name="Tiles to move" values="" notes="" />
+			<field id="7" type="list" name="Start Direction" values="0=Right,1=Left" notes="" />
+			<field id="11" type="value" name="Length" values="1" notes="" />
+			<field id="8" type="list" name="Height" values="0=1,1=2,2=4,3=8" notes="Height formula is 2^(N11 mod 4)." />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+			<field id="4" type="checkbox" name="0=Disable/1=Enable Trigger ID check" values="1" notes="" />
+			<field id="2-3" type="value" name="Trigger ID 1" values="" notes="" />
+			<field id="0-1" type="value" name="Trigger ID 2" values="" notes="" />
+			<field id="10" type="value" name="Unknown 10" values="" notes="Used in-game, useless." />
+		</sprite>
+
+		<sprite id="298">
+			<name>Stone wall moving left &amp; right or up &amp; down</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes></notes>
+			<files>/enemy/I_TEST_toge_l.nsbtx
+/enemy/I_TEST_toge_r.nsbtx
+/enemy/I_TEST_togeshita.nsbtx
+/enemy/I_TEST_togeue.nsbtx
+/enemy/z_lift.nsbtx</files>
+			<field id="4" type="checkbox" name="Horizontal movement" values="1" notes="" />
+			<field id="5" type="list" name="Spikes" values="0=None,1=Top,2=Bottom,3=Top and Bottom,4=Right,5=Left,6=Right and left" notes="" />
+			<field id="6" type="value" name="Start delay" values="" notes="" />
+			<field id="7" type="value" name="End delay" values="" notes="" />
+			<field id="8" type="signedvalue" name="Tiles to move" values="" notes="Negative numbers = down/left. Positive numbers up/right. NOT diagonal for example - ticking &quot;Horizontal movement&quot; and &quot;Tiles to move&quot; to minus -7 will make it move left one block. For vertical movement -8 is no move movement -7 is down one -6 is down two ect" />
+			<field id="9" type="list" name="Speed" values="0=Slowest,1=Medium,2=Fast,3=Fastest" notes="" />
+			<field id="10" type="value" name="Height" values="1" notes="" />
+			<field id="11" type="value" name="Length" values="1" notes="" />
+		</sprite>
+
+		<sprite id="299">
+			<name>Snake Block</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>It owns sudden mind to decimate unspecified substantial tiles amidst lures way. (It destroys any solid tiles it moves over.)
+The sprite spawns the green block tile in jyotyu map16.
+
+Don't give it diagonal directions or it will go wrong.</notes>
+			<files>/BG_*/*jyotyu*</files>
+			<field id="10" type="value" name="Path ID" values="" notes="If you don't have a matching ID, the game will freeze." />
+			<field id="9" type="list" name="Loads from" values="0=Level start,1=Midway point" notes="" />
+			<field id="6-7" type="value" name="Starting node" values="" notes="" />
+			<field id="4" type="list" name="Last node behaviour" values="0=Nothing (keeps shape),1=Falls apart (doesn't keep shape),2=Comes back and forth,3=Skyrockets (keeps shape),4=Falls apart (keeps shape)" notes="Game will freeze if N4 mod 8 is 5 or 6." />
+			<field id="8" type="value" name="Length" values="3" notes="" />
+			<field id="5" type="checkbox" name="Slower" values="1" notes="" />
+		</sprite>
+
+		<sprite id="300">
+			<name>Haunted lift</name>
+			<flags known="1" complete="1" />
+			<category id="19" />
+			<notes></notes>
+			<files>/enemy/savage_lift.nsbmd</files>
+			<field id="11" type="value" name="Y-Shift (pixels)" values="" notes="" />
+		</sprite>
+
+		<sprite id="301">
+			<name>Toadsworth</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files>/enemy/kinoji.nsbmd</files>
+			<field id="11" type="list" name="Type" values="0=1UP,1=Unused,2=Item,3=Mega mushroom,4=Background chooser" notes="1 makes glitchy blocks that do nothing. Never use it." />
+		</sprite>
+
+		<sprite id="302">
+			<name>Toad House block</name>
+			<flags known="1" complete="1" />
+			<category id="4" />
+			<notes></notes>
+			<files></files>
+			<field id="4" type="list" name="Bonus game" values="0=1-Up Minigame,1=Background Chooser" notes="" />
+			<field id="10" type="list" name="Shift position" values="0=No shifting,1=8 pixels right" notes="" />
+			<field id="11" type="list" name="Block ID" values="0=1,1=2,2=3,3=4,4=5,5=6" notes="" />
+		</sprite>
+
+		<sprite id="303">
+			<name>Ball 'n' Chain</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes>AKA: Flail, pendulum...</notes>
+			<files>/enemy/I_tekkyu.nsbmd</files>
+			<field id="10" type="list" name="Rotation" values="0=Counterclockwise,1=Clockwise" notes="" />
+			<field id="11" type="list" name="Starting position" values="0=Right,1=Up,2=Left,3=Down" notes="" />
+		</sprite>
+
+		<sprite id="304">
+			<name>Spike Pillar - down</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=Forward with delay" notes="" />
+			<field id="6-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="9-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="305">
+			<name>Final Castle Create Loop</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files></files>
+			<field id="10-11" type="value" name="ID" values="" notes="" />
+			<field id="8-9" type="value" name="Length" values="" notes="Actual width is found by reversing the nybbles and subtracting 15" />
+		</sprite>
+
+		<sprite id="306">
+			<name>Final Castle Wrong Path</name>
+			<flags known="1" complete="1" />
+			<category id="12" />
+			<notes></notes>
+			<files></files>
+			<field id="11" type="value" name="ID" values="" notes="" />
+			<field id="10" type="value" name="Height" values="" notes="Sprite is positioned at the bottom" />
+		</sprite>
+
+		<sprite id="307">
+			<name>Spike Pillar - up</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=Forward with delay" notes="" />
+			<field id="6-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="9-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="308">
+			<name>Spike Pillar - left</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=Forward with delay" notes="" />
+			<field id="6-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="9-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="309">
+			<name>Spike Pillar - right</name>
+			<flags known="1" complete="1" />
+			<category id="18" />
+			<notes></notes>
+			<files>enemy/I_TEST_kui.nsbmd</files>
+			<field id="4" type="list" name="Speed" values="3=Doesn't move,2=Slowest,0=Medium,1=Fastest" notes="" />
+			<field id="5" type="list" name="Start" values="0=Forward,2=Backward,8=Forward with delay" notes="" />
+			<field id="6-8" type="value" name="Forward delay" values="" notes="60 frames = 1 second." />
+			<field id="9-11" type="value" name="Backward delay" values="" notes="60 frames = 1 second." />
+		</sprite>
+
+		<sprite id="310">
+			<name>Fog FG effect</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 315, 324 and 325.</notes>
+			<files>/polygon_unit/evf_haze1.nsbtx</files>
+			<field id="4" type="list" name="Direction" values="0=Left-down,1=Left-up,2=Right-down,3=Right-up" notes="" />
+			<field id="5-6" type="value" name="Opacity" values="" notes="Modulo 32. 0 is transparent, 30 is almost opaque, 31 is completely red." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="311">
+			<name>Snow FG effect 1</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 313, 314, 316, 317, 318, 319, 320, 321 and 322.</notes>
+			<files>/polygon_unit/evf_snow1_a.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="312">
+			<name>Rise or lower while/once on Mushroom Platform lift - mechanical</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>Has the same data as sprite 239. Any code differences other than the obvious?</notes>
+			<files>/enemy/I_kinoko_ashib3u.nsbtx [this must be wrong]
+/enemy/I_kinoko_kuki_u3.nsbtx</files>
+		</sprite>
+
+		<sprite id="313">
+			<name>Snow FG effect 2</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 314, 316, 317, 318, 319, 320, 321 and 322.</notes>
+			<files>/polygon_unit/evf_snow1_b.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="314">
+			<name>Snow FG effect 3</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 316, 317, 318, 319, 320, 321 and 322.</notes>
+			<files>/polygon_unit/evf_snow1_c.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="315">
+			<name>Cloud FG effect</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 310, 324 and 325.</notes>
+			<files>/polygon_unit/evf_cloud1.nsbtx</files>
+			<field id="4" type="list" name="Direction" values="0=Left-down,1=Left-up,2=Right-down,3=Right-up" notes="" />
+			<field id="5-6" type="value" name="Opacity" values="" notes="Modulo 32. 0 is transparent, 30 is almost opaque, 31 is completely red." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="316">
+			<name>Water FG effect 1</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 314, 317, 318, 319, 320, 321 and 322.</notes>
+			<files>/polygon_unit/evf_sea1_a.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="317">
+			<name>Water FG effect 2</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 314, 316, 318, 319, 320, 321 and 322.</notes>
+			<files>/polygon_unit/evf_sea1_b.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="318">
+			<name>Fire FG effect 1</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 314, 316, 317, 319, 320, 321 and 322.</notes>
+			<files>/polygon_unit/evf_spark1_a.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="319">
+			<name>Fire FG effect 2</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 314, 316, 317, 318, 320, 321 and 322.</notes>
+			<files>/polygon_unit/evf_spark1_b.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="320">
+			<name>Fire FG effect 3</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 314, 316, 317, 318, 319, 321 and 322.</notes>
+			<files>/polygon_unit/evf_spark1_c.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="321">
+			<name>Light FG Effect 1</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 314, 316, 317, 318, 319, 320 and 322.</notes>
+			<files>/polygon_unit/evf_tree1_a.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="322">
+			<name>Light FG Effect 2</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 311, 313, 314, 316, 317, 318, 319, 320 and 321.</notes>
+			<files>/polygon_unit/evf_tree1_b.nsbtx</files>
+			<field id="4" type="value" name="Swaying start position" values="" notes="Also doubles as a direction value (Modulo 4) if nybble 10 and/or nybble 11 are not null. 0 is left-down, 1 is left-up, 2 is right-down and 3 is right-up." />
+			<field id="5" type="value" name="Swaying distance" values="" notes="0 is static." />
+			<field id="6" type="value" name="Swaying speed" values="" notes="0 is static, 15 is the fastest." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="323">
+			<name>Squishy cloud platform</name>
+			<flags known="1" complete="1" />
+			<category id="2" />
+			<notes>This squishes under Mario's feet.
+
+There is an unused (except off screen) tile version in the tileset &quot;Sky (World 7)&quot;.</notes>
+			<files>/enemy/l_kumo.nsbtx</files>
+			<field id="11" type="value" name="Length" values="" notes="Cloud extends from sprite position to the right." />
+		</sprite>
+
+		<sprite id="324">
+			<name>Grassland Clouds FG effect</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 310, 315 and 325.</notes>
+			<files>/polygon_unit/evf_tcloud1_a.nsbtx</files>
+			<field id="4" type="list" name="Direction" values="0=Left-down,1=Left-up,2=Right-down,3=Right-up" notes="" />
+			<field id="5-6" type="value" name="Opacity" values="" notes="Modulo 32. 0 is transparent, 30 is almost opaque, 31 is completely red." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+		<sprite id="325">
+			<name>Small Grassland Clouds FG effect</name>
+			<flags known="1" complete="1" />
+			<category id="8" />
+			<notes>Has the same data as sprites 310, 315 and 324.
+Direction: list at nybble 4: 0=Left-down,1=Left-up,2=Right-down,3=Right-up
+Opacity: value at nybble 5-6. Modulo 32. 0 is transparent, 30 is almost opaque, 31 is completely red.
+Mixed shift: value at nybble 7. Shift horizontally and vertically.
+Horizontal scrolling: value at nybble 8. 0 is the slowest, 15 is the fastest.
+Vertical scrolling: value at nybble 9. 0 is the slowest, 15 is the fastest.
+Horizontal speed: value at nybble 10. 0 is the slowest, 15 is the fastest.
+Vertical speed: value at nybble 11. 0 is the slowest, 15 is the fastest.</notes>
+			<files>/polygon_unit/evf_tcloud1_b.nsbtx</files>
+			<field id="4" type="list" name="Direction" values="0=Left-down,1=Left-up,2=Right-down,3=Right-up" notes="" />
+			<field id="5-6" type="value" name="Opacity" values="" notes="Modulo 32. 0 is transparent, 30 is almost opaque, 31 is completely red." />
+			<field id="7" type="value" name="Mixed shift" values="" notes="Shift horizontally and vertically." />
+			<field id="8" type="value" name="Horizontal scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="9" type="value" name="Vertical scrolling" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="10" type="value" name="Horizontal speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+			<field id="11" type="value" name="Vertical speed" values="1" notes="1 is the slowest, 16 is the fastest." />
+		</sprite>
+
+	</sprites>
+</database>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="CustomKart.UI.SoundWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:CustomKart.UI"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        Title="SoundWindow" Height="260" ResizeMode="NoResize" Width="407.629">
+    <Grid>
+        <dragablz:TabablzControl>
+            <TabItem Header="Sequences (SSEQ)">
+                <Grid>
+                    <ComboBox Name="SequencesCombo" SelectionChanged="SequencesCombo_SelectionChanged" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Width="350"/>
+                    <Button Name="SequenceImportButton" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0" Click="SequenceImportButton_Click">Import sequence</Button>
+                    <Button Name="PlayButton" Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-75,125,0,0" Width="40" Height="40" Click="PlayButton_Click">
+                        <materialDesign:PackIcon Kind="Play"/>
+                    </Button>
+                    <Button Name="StopButton" Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="75,125,0,0" Click="StopButton_Click" Width="40" Height="40">
+                        <materialDesign:PackIcon Kind="Stop"/>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Wave archives">
+                <Grid>
+                    <Label Content="English" HorizontalAlignment="Left" Margin="20,58,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleEnText" HorizontalAlignment="Left" Height="45" Margin="20,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Spanish" HorizontalAlignment="Left" Margin="20,134,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleEsText" HorizontalAlignment="Left" Height="45" Margin="20,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Japanese" HorizontalAlignment="Left" Margin="20,211,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleJaText" HorizontalAlignment="Left" Height="45" Margin="20,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.458,3.174"/>
+                    <Label Content="German" HorizontalAlignment="Left" Margin="210,58,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleDeText" HorizontalAlignment="Left" Height="45" Margin="210,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="French" HorizontalAlignment="Left" Margin="210,134,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleFrText" HorizontalAlignment="Left" Height="45" Margin="210,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="Italian" HorizontalAlignment="Left" Margin="210,211,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleItText" HorizontalAlignment="Left" Height="45" Margin="210,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" RenderTransformOrigin="0.458,3.174"/>
+                </Grid>
+
+            </TabItem>
+        </dragablz:TabablzControl>
+        
+    </Grid>
+</Window>
