@@ -15,9 +15,23 @@ using NDS.NitroSystem.FND;
 using MKDS_Course_Modifier.Misc;
 using NSMBe4;
 using System.ComponentModel;
+using Newtonsoft.Json.Linq;
 
 namespace CustomKart.UI
 {
+    public static class BMGExtensions
+    {
+        public static void LoadFromList(this BMG bmg, ListView list)
+        {
+            var i = 0;
+            foreach (TextBox box in list.Items)
+            {
+                bmg.DAT1.Strings[i] = box.Text;
+                i++;
+            }
+        }
+    }
+
     /// <summary>
     /// Lógica de interacción para TextsWindow.xaml
     /// </summary>
@@ -26,195 +40,231 @@ namespace CustomKart.UI
         public TextsWindow()
         {
             InitializeComponent();
-            ComboIndex = -1;
+
+            Static2D = new CARCEditor("Static2D.carc");
+
+            for(var i = 0; i < CARCLanguages.Length; i++)
+            {
+                var main2d = new CARCEditor(FormatLanguageFile("Main2D", "carc", i));
+                Main2D.Add(main2d);
+                var common = new BMG(main2d.ReadFile("common.bmg"));
+                Common.Add(common);
+
+                var mbchild = new BMG(Static2D.ReadFile(FormatLanguageFile("MBChild", "bmg", i)));
+                MBChild.Add(mbchild);
+
+                var chksel = new CARCEditor(FormatLanguageFile("CharacterKartSelect", "carc", i));
+                CharacterKartSelect.Add(chksel);
+                var kartsel = new BMG(chksel.ReadFile("kart_select.bmg"));
+                KartSelect.Add(kartsel);
+
+                var wlmenu = new CARCEditor(FormatLanguageFile("WLMenu", "carc", i));
+                WLMenu.Add(wlmenu);
+                var banner = new BMG(wlmenu.ReadFile("banner.bmg"));
+                Banner.Add(banner);
+
+                var menu = new CARCEditor(FormatLanguageFile("Menu", "carc", i));
+                Menu.Add(menu);
+                var menu_bmg = new BMG(menu.ReadFile("menu.bmg"));
+                MenuBMG.Add(menu_bmg);
+                var mission = new BMG(menu.ReadFile("mission.bmg"));
+                Mission.Add(mission);
+                var rule = new BMG(menu.ReadFile("rule.bmg"));
+                Rule.Add(rule);
+            }
+
+            Load();
         }
 
-        public NARC Main2D { get; set; }
-
-        public BMG Common { get; set; }
-
-        public NARC Static2D { get; set; }
-
-        public BMG MBChild { get; set; }
-
-        public NARC CharacterKartSelect { get; set; }
-
-        public BMG KartSelect { get; set; }
-
-        public NARC WLMenu { get; set; }
-
-        public BMG Banner { get; set; }
-
-        private int ComboIndex { get; set; }
-
-        public string GetCARCExtension(int Lang)
+        private void LoadBMGOnList(ref ListView list, BMG bmg)
         {
-            string carc = "_";
-            if(Lang == 0) carc += "us";
-            else if(Lang == 1) carc += "es";
-            else if(Lang == 2) carc += "fr";
-            else if(Lang == 3) carc += "ge";
-            else if(Lang == 4) carc += "it";
-            return carc;
+            list.Items.Clear();
+            foreach (var str in bmg.DAT1.Strings)
+            {
+                list.Items.Add(new TextBox
+                {
+                    TextWrapping = TextWrapping.Wrap,
+                    AcceptsReturn = true,
+                    Text = str,
+                });
+            }
         }
 
-        protected override void OnInitialized(EventArgs e)
+        private List<CARCEditor> Main2D = new List<CARCEditor>();
+        private List<BMG> Common = new List<BMG>();
+
+        private CARCEditor Static2D = null;
+        private List<BMG> MBChild = new List<BMG>();
+
+        private List<CARCEditor> CharacterKartSelect = new List<CARCEditor>();
+        private List<BMG> KartSelect = new List<BMG>();
+
+        private List<CARCEditor> WLMenu = new List<CARCEditor>();
+        private List<BMG> Banner = new List<BMG>();
+
+        private List<CARCEditor> Menu = new List<CARCEditor>();
+        private List<BMG> MenuBMG = new List<BMG>();
+        private List<BMG> Mission = new List<BMG>();
+        private List<BMG> Rule = new List<BMG>();
+
+        private int LastLanguageIndex = -1;
+
+        private readonly string[] CARCLanguages = new string[]
         {
-            // LanguageCombo.SelectedIndex = 0;
-            base.OnInitialized(e);
+            "us",
+            "es",
+            "fr",
+            "ge",
+            "it"
+        };
+
+        private string FormatLanguageFile(string name, string ext, int lang_idx)
+        {
+            return name + "_" + CARCLanguages[lang_idx] + "." + ext;
         }
 
-        private void Save(int Lang)
+        private void UpdateBMGs()
         {
-            string ext = GetCARCExtension(Lang);
-            var rfs = MainWindow.LoadedROM.ToFileSystem();
-            int idx = 0;
-            foreach(TextBox elem in CommonTextsList.Items)
+            if(LastLanguageIndex > -1)
             {
-                Common.DAT1.Strings[idx] = elem.Text;
-                idx++;
-            }
-            var common = Common.Save();
-            var dmain2d = Main2D.ToFileSystem();
-            var fcommon = ROMUtils.GetSFSFile("common.bmg", dmain2d);
-            fcommon.Data = common;
-            Main2D.FromFileSystem(dmain2d);
-            var fmain2d = ROMUtils.GetSFSFile("Main2D" + ext + ".carc", rfs);
-            fmain2d.Data = ROM.LZ77_Compress(Main2D.Write());
-            idx = 0;
-            foreach(TextBox elem in MBChildTextsList.Items)
-            {
-                MBChild.DAT1.Strings[idx] = elem.Text;
-                idx++;
-            }
-            var mbchild = MBChild.Save();
-            var dstatic2d = Static2D.ToFileSystem();
-            var fmbchild = ROMUtils.GetSFSFile("MBChild" + ext + ".bmg", dstatic2d);
-            fmbchild.Data = mbchild;
-            Static2D.FromFileSystem(dstatic2d);
-            var fstatic2d = ROMUtils.GetSFSFile("Static2D.carc", rfs);
-            fstatic2d.Data = ROM.LZ77_Compress(Static2D.Write());
-            idx = 0;
-            foreach(TextBox elem in KartSelectTextsList.Items)
-            {
-                KartSelect.DAT1.Strings[idx] = elem.Text;
-                idx++;
-            }
-            var ksel = KartSelect.Save();
-            var dchksel = CharacterKartSelect.ToFileSystem();
-            var fksel = ROMUtils.GetSFSFile("kart_select.bmg", dchksel);
-            fksel.Data = ksel;
-            CharacterKartSelect.FromFileSystem(dchksel);
-            var fchksel = ROMUtils.GetSFSFile("CharacterKartSelect" + ext + ".carc", rfs);
-            fchksel.Data = ROM.LZ77_Compress(CharacterKartSelect.Write());
+                var lang_idx = LastLanguageIndex;
 
-
-            idx = 0;
-            foreach(TextBox elem in DlPlayTextsList.Items)
-            {
-                Banner.DAT1.Strings[idx] = elem.Text;
-                idx++;
+                Common[lang_idx].LoadFromList(CommonTextsList);
+                MBChild[lang_idx].LoadFromList(MBChildTextsList);
+                KartSelect[lang_idx].LoadFromList(KartSelectTextsList);
+                Banner[lang_idx].LoadFromList(DlPlayTextsList);
+                MenuBMG[lang_idx].LoadFromList(BattleTextsList);
+                Mission[lang_idx].LoadFromList(MissionTextsList);
+                Rule[lang_idx].LoadFromList(RuleTextsList);
             }
-            var banner = Banner.Save();
-            var dwlmenu = WLMenu.ToFileSystem();
-            var fbanner = ROMUtils.GetSFSFile("banner.bmg", dwlmenu);
-            fbanner.Data = banner;
-            WLMenu.FromFileSystem(dwlmenu);
-            var fwlmenu = ROMUtils.GetSFSFile("WLMenu" + ext + ".carc", rfs);
-            fwlmenu.Data = ROM.LZ77_Compress(WLMenu.Write());
+        }
 
-            MainWindow.LoadedROM.FromFileSystem(rfs);
+        private void Save()
+        {
+            UpdateBMGs();
+            for(var i = 0; i < CARCLanguages.Length; i++)
+            {
+                Main2D[i].WriteFile("common.bmg", Common[i].Save());
+                Main2D[i].Save();
+
+                Static2D.WriteFile(FormatLanguageFile("MBChild", "bmg", i), MBChild[i].Save());
+
+                CharacterKartSelect[i].WriteFile("kart_select.bmg", KartSelect[i].Save());
+                CharacterKartSelect[i].Save();
+
+                WLMenu[i].WriteFile("banner.bmg", Banner[i].Save());
+                WLMenu[i].Save();
+
+                Menu[i].WriteFile("menu.bmg", MenuBMG[i].Save());
+                Menu[i].WriteFile("mission.bmg", Mission[i].Save());
+                Menu[i].WriteFile("rule.bmg", Rule[i].Save());
+                Menu[i].Save();
+            }
+            Static2D.Save();
         }
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            var res = MessageBox.Show("Would you like to save current language's texts before changing to another one?\nAny changes will be lost otherwise.", "Save edited texts", MessageBoxButton.YesNoCancel);
-            if(res == MessageBoxResult.Yes)
+            switch(Utils.ShowYesNoMessage(Utils.GetResource("common:saveChanges"), Utils.GetResource("common:warn")))
             {
-                Save(LanguageCombo.SelectedIndex);
+                case MessageBoxResult.Yes:
+                    {
+                        Save();
+                        break;
+                    }
+                case MessageBoxResult.Cancel:
+                    {
+                        e.Cancel = true;
+                        break;
+                    }
             }
-            else if(res == MessageBoxResult.Cancel) e.Cancel = true;
             base.OnClosing(e);
         }
 
         public void Load()
         {
-            if(ComboIndex < 0) LanguageCombo.SelectedIndex = 0;
-            var rfs = MainWindow.LoadedROM.ToFileSystem();
-            string ext = GetCARCExtension(LanguageCombo.SelectedIndex);
-            var cbmain2d = ROMUtils.GetFile("Main2D" + ext + ".carc", rfs);
-            var bmain2d = ROM.LZ77_Decompress(cbmain2d);
-            Main2D = new NARC(bmain2d);
-            var dmain2d = Main2D.ToFileSystem();
-            var common = ROMUtils.GetFile("common.bmg", dmain2d);
-            Common = new BMG(common);
-            var cbstatic2d = ROMUtils.GetFile("Static2D.carc", rfs);
-            var bstatic2d = ROM.LZ77_Decompress(cbstatic2d);
-            Static2D = new NARC(bstatic2d);
-            var dstatic2d = Static2D.ToFileSystem();
-            var mbchild = ROMUtils.GetFile("MBChild" + ext + ".bmg", dstatic2d);
-            MBChild = new BMG(mbchild);
-            var cbchksel = ROMUtils.GetFile("CharacterKartSelect" + ext + ".carc", rfs);
-            var bchksel = ROM.LZ77_Decompress(cbchksel);
-            CharacterKartSelect = new NARC(bchksel);
-            var dchksel = CharacterKartSelect.ToFileSystem();
-            var ksel = ROMUtils.GetFile("kart_select.bmg", dchksel);
-            KartSelect = new BMG(ksel);
-            var cbwlmenu = ROMUtils.GetFile("WLMenu" + ext + ".carc", rfs);
-            var bwlmenu = ROM.LZ77_Decompress(cbwlmenu);
-            WLMenu = new NARC(bwlmenu);
-            var dwlmenu = WLMenu.ToFileSystem();
-            var banner = ROMUtils.GetFile("banner.bmg", dwlmenu);
-            Banner = new BMG(banner);
-            CommonTextsList.Items.Clear();
-            MBChildTextsList.Items.Clear();
-            KartSelectTextsList.Items.Clear();
-            DlPlayTextsList.Items.Clear();
-            foreach(var str in Common.DAT1.Strings) CommonTextsList.Items.Add(new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                AcceptsReturn = true,
-                Text = str,
-            });
-            foreach(var str in MBChild.DAT1.Strings) MBChildTextsList.Items.Add(new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                AcceptsReturn = true,
-                Text = str,
-            });
-            foreach(var str in KartSelect.DAT1.Strings) KartSelectTextsList.Items.Add(new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                AcceptsReturn = true,
-                Text = str,
-            });
-            foreach(var str in Banner.DAT1.Strings) DlPlayTextsList.Items.Add(new TextBox()
-            {
-                TextWrapping = TextWrapping.Wrap,
-                AcceptsReturn = true,
-                Text = str,
-            });
+            LanguageCombo.SelectedIndex = 0;
+        }
+
+        private void LoadBMGs()
+        {
+            var lang_idx = LanguageCombo.SelectedIndex;
+
+            LoadBMGOnList(ref CommonTextsList, Common[lang_idx]);
+            LoadBMGOnList(ref MBChildTextsList, MBChild[lang_idx]);
+            LoadBMGOnList(ref KartSelectTextsList, KartSelect[lang_idx]);
+            LoadBMGOnList(ref DlPlayTextsList, Banner[lang_idx]);
+            LoadBMGOnList(ref BattleTextsList, MenuBMG[lang_idx]);
+            LoadBMGOnList(ref MissionTextsList, Mission[lang_idx]);
+            LoadBMGOnList(ref RuleTextsList, Rule[lang_idx]);
         }
 
         private void LanguageCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(ComboIndex < 0)
+            UpdateBMGs();
+            LoadBMGs();
+            LastLanguageIndex = LanguageCombo.SelectedIndex;
+        }
+
+        private void ExportListJSON(string out_dir, string json_name, ref ListView list)
+        {
+            var json_array = new JArray();
+            foreach (TextBox box in list.Items)
             {
-                ComboIndex = LanguageCombo.SelectedIndex;
-                return;
+                json_array.Add(box.Text);
             }
-            var res = MessageBox.Show("Would you like to save current language's texts before changing to another one?\nAny changes will be lost otherwise.", "Save edited texts", MessageBoxButton.YesNoCancel);
-            if(res == MessageBoxResult.Yes)
+            var path = System.IO.Path.Combine(out_dir, json_name + ".json");
+            MessageBox.Show(json_array.ToString());
+            File.WriteAllText(path, json_array.ToString());
+        }
+
+        private void ImportListJSON(string json_dir, string json_name, ref ListView list)
+        {
+            var path = System.IO.Path.Combine(json_dir, json_name + ".json");
+            var json_data = File.ReadAllText(path);
+            var json_array = JArray.Parse(json_data);
+            for(var i = 0; i < json_array.Count; i++)
             {
-                Save(ComboIndex);
+                (list.Items[i] as TextBox).Text = json_array[i].ToString();
             }
-            else if(res == MessageBoxResult.Cancel)
+        }
+
+        private void ExportButton_Click(object sender, RoutedEventArgs e)
+        {
+            var fbd = new System.Windows.Forms.FolderBrowserDialog
             {
-                ComboIndex = -1;
-                LanguageCombo.SelectedItem = e.RemovedItems[0];
+                Description = "Select folder",
+                ShowNewFolderButton = true
+            };
+            if(fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ExportListJSON(fbd.SelectedPath, "common", ref CommonTextsList);
+                ExportListJSON(fbd.SelectedPath, "mbchild", ref MBChildTextsList);
+                ExportListJSON(fbd.SelectedPath, "kart_select", ref KartSelectTextsList);
+                ExportListJSON(fbd.SelectedPath, "dl_play", ref DlPlayTextsList);
+                ExportListJSON(fbd.SelectedPath, "battle", ref BattleTextsList);
+                ExportListJSON(fbd.SelectedPath, "mission", ref MissionTextsList);
+                ExportListJSON(fbd.SelectedPath, "rule", ref RuleTextsList);
             }
-            Load();
-            ComboIndex = LanguageCombo.SelectedIndex;
+        }
+
+        private void ImportButton_Click(object sender, RoutedEventArgs e)
+        {
+            var fbd = new System.Windows.Forms.FolderBrowserDialog
+            {
+                Description = "Select folder",
+                ShowNewFolderButton = true
+            };
+            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                ImportListJSON(fbd.SelectedPath, "common", ref CommonTextsList);
+                ImportListJSON(fbd.SelectedPath, "mbchild", ref MBChildTextsList);
+                ImportListJSON(fbd.SelectedPath, "kart_select", ref KartSelectTextsList);
+                ImportListJSON(fbd.SelectedPath, "dl_play", ref DlPlayTextsList);
+                ImportListJSON(fbd.SelectedPath, "battle", ref BattleTextsList);
+                ImportListJSON(fbd.SelectedPath, "mission", ref MissionTextsList);
+                ImportListJSON(fbd.SelectedPath, "rule", ref RuleTextsList);
+            }
         }
     }
 }

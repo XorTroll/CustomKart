@@ -1,0 +1,16 @@
+﻿<Window x:Class="CustomKart.UI.TracksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:helix="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
+        xmlns:local="clr-namespace:CustomKart.UI"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        Title="TracksWindow" Height="165.124" ResizeMode="NoResize" Width="519.192">
+    <Grid>
+        <ComboBox Name="TracksCombo" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="207"/>
+        <Button x:Name="PropertiesButton" Content="Track properties" HorizontalAlignment="Left" Margin="357,10,0,0" VerticalAlignment="Top" Width="146" Click="PropertiesButton_Click"/>
+        <Button x:Name="ViewButton" Content="View track" HorizontalAlignment="Left" Margin="388,47,0,0" VerticalAlignment="Top" Width="115" Click="ViewButton_Click"/>
+    </Grid>
+</Window>

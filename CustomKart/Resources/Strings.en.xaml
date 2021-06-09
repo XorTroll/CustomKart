@@ -1,25 +1,78 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
-                    xmlns:cgen="clr-namespace:System.Collections.Generic;assembly=System"
                     xmlns:local="clr-namespace:CustomKart">
-    <system:String x:Key="program">CKart</system:String>
-    <system:String x:Key="editAssets">Edit assets</system:String>
-    <system:String x:Key="gameName">Game name</system:String>
-    <system:String x:Key="gameCode">Game code</system:String>
-    <system:String x:Key="makerCode">Maker code</system:String>
-    <system:String x:Key="ndsROM">Nintendo DS ROM</system:String>
-    <system:String x:Key="officialExt">official format</system:String>
-    <system:String x:Key="commonExt">common format</system:String>
-    <system:String x:Key="ROMOpen">Open Mario Kart DS ROM</system:String>
-    <system:String x:Key="ROMSave">Save Mario Kart DS ROM</system:String>
-    <system:String x:Key="noROM">No ROM opened</system:String>
-    <x:Array x:Key="sequenceNames" Type="system:String">
-        <system:String>Title screen</system:String>
-    </x:Array>
-    <x:Array x:Key="courseNames" Type="system:String">
-        <system:String>Figure-8 Circuit</system:String>
-        <system:String>Yoshi Falls</system:String>
-        <system:String>S</system:String>
-    </x:Array>
+    
+    <!-- Common / MainWindow -->
+    <system:String x:Key="common:program">CKart</system:String>
+    <system:String x:Key="common:ndsROM">Nintendo DS ROM</system:String>
+    <system:String x:Key="common:officialFormat">official format</system:String>
+    <system:String x:Key="common:commonFormat">common format</system:String>
+    <system:String x:Key="common:dialogROMOpen">Open Mario Kart DS ROM</system:String>
+    <system:String x:Key="common:dialogROMSave">Save Mario Kart DS ROM</system:String>
+    <system:String x:Key="common:noROMOpened">No ROM opened</system:String>
+    <system:String x:Key="common:imageFile">Image</system:String>
+    <system:String x:Key="common:warn">Warning</system:String>
+    <system:String x:Key="common:invalidNDSROM">The selected file is not a valid Nintendo DS ROM.</system:String>
+    <system:String x:Key="common:invalidMKDSROM">The selected file is not a valid Mario Kart DS ROM.</system:String>
+    <system:String x:Key="common:successROMLoad">Valid ROM loaded</system:String>
+    <system:String x:Key="common:buildDateInfo">Build date info:</system:String>
+    <system:String x:Key="common:welcome">Welcome! Open a Mario Kart DS ROM to start editing it.</system:String>
+    <system:String x:Key="common:help">Need any help? Place your mouse over the different menus to see what they have!</system:String>
+    <system:String x:Key="common:messageLog">Message log (last messages first)</system:String>
+    <system:String x:Key="common:messageClear">Clear messages</system:String>
+    <system:String x:Key="common:tip:ROMOpen">Open ROM</system:String>
+    <system:String x:Key="common:tip:Assets">Game assets</system:String>
+    <system:String x:Key="common:tip:Texts">Game texts/dialogs</system:String>
+    <system:String x:Key="common:tip:Sound">Game soundtrack</system:String>
+    <system:String x:Key="common:tip:Tracks">Game tracks</system:String>
+    <system:String x:Key="common:tip:Textures">Game textures</system:String>
+    <system:String x:Key="common:tip:Karts">Game karts</system:String>
+    <system:String x:Key="common:objModel">OBJ 3D model</system:String>
+    <system:String x:Key="common:saveChanges">Would you like to save any made changes?</system:String>
+
+    <!-- Track names (trackName_<internal name>) -->
+    
+
+    <!-- AssetsWindow -->
+    <system:String x:Key="assets:dialogIconReplace">Select image to replace icon</system:String>
+    <system:String x:Key="assets:errorIconChange">An error ocurred attempting to change the game's icon.</system:String>
+    <system:String x:Key="assets:basicAssets">Basic assets</system:String>
+    <system:String x:Key="assets:gameName">Game name</system:String>
+    <system:String x:Key="assets:gameCode">Game code</system:String>
+    <system:String x:Key="assets:makerCode">Maker code</system:String>
+    <system:String x:Key="assets:replaceIcon">Replace icon</system:String>
+    <system:String x:Key="assets:titles">Titles</system:String>
+    <system:String x:Key="assets:langEnglish">English</system:String>
+    <system:String x:Key="assets:langSpanish">Spanish</system:String>
+    <system:String x:Key="assets:langJapanese">Japanese</system:String>
+    <system:String x:Key="assets:langGerman">German</system:String>
+    <system:String x:Key="assets:langFrench">French</system:String>
+    <system:String x:Key="assets:langItalian">Italian</system:String>
+    <system:String x:Key="assets:invalidIconSize">Invalid icon size (icons must be 32x32 pixels)</system:String>
+    
+    <!-- SoundWindow -->
+    <system:String x:Key="sound:sequenceReplace">Replace sequence</system:String>
+    <system:String x:Key="sound:midiFile">MIDI audio</system:String>
+    <system:String x:Key="sound:sseqFile">Nitro Sound Sequence</system:String>
+    <system:String x:Key="sound:errorMidiToolNotFound">No MIDI conversion tool was found.</system:String>
+    <system:String x:Key="sound:errorMidiConversion">No MIDI conversion tool (midi2sseq, smfconv + seqconv) was found.</system:String>
+    <system:String x:Key="sound:errorSequenceConversion">Unable to convert MIDI audio to SSEQ.</system:String>
+    
+    <!-- TextsWindow -->
+    <system:String x:Key="texts:saveLanguageChange">Would you like to save current language's texts before changing to another language?</system:String>
+    <system:String x:Key="texts:jsonExport">Export as JSON</system:String>
+    <system:String x:Key="texts:jsonImport">Import from JSON</system:String>
+    
+    <!-- TexturesWindow -->
+    <system:String x:Key="textures:textureExport">Export texture to image</system:String>
+    <system:String x:Key="textures:textureImport">Import texture from image</system:String>
+    
+    <!-- TracksWindow -->
+    <system:String x:Key="tracks:trackName:cross_course">Figure-8 Circuit</system:String>
+    <system:String x:Key="tracks:trackName:mansion_course">Luigi's Mansion</system:String>
+    <system:String x:Key="tracks:trackName:beach_course">Beach</system:String>
+    <system:String x:Key="tracks:trackName:town_course">Town</system:String>
+    <system:String x:Key="tracks:modelExport">Export model</system:String>
+    <system:String x:Key="tracks:modelImport">Import model</system:String>
 </ResourceDictionary>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="CustomKart.UI.TexturesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomKart.UI"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        Title="TexturesWindow" Height="306" ResizeMode="NoResize" Width="500">
+    <Grid>
+        <Image Name="IconImage" HorizontalAlignment="Left" Height="256" Margin="10,0,0,0" VerticalAlignment="Center" Width="256" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+        <Button Name="ExportButton" Content="Export" HorizontalAlignment="Left" Margin="280,126,0,0" VerticalAlignment="Top" Width="191" Click="ExportButton_Click"/>
+        <Button Name="ImportButton" Content="Import" HorizontalAlignment="Left" Margin="280,166,0,0" VerticalAlignment="Top" Width="191" Click="ImportButton_Click"/>
+        <ComboBox Name="TexturesCombo" HorizontalAlignment="Left" Margin="271,73,0,0" VerticalAlignment="Top" Width="207" SelectionChanged="TexturesCombo_SelectionChanged"/>
+    </Grid>
+</Window>

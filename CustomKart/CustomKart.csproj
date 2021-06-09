@@ -52,6 +52,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\EFE\EveryFileExplorer.exe</HintPath>
     </Reference>
+    <Reference Include="HelixToolkit, Version=2.12.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.2.12.0\lib\netstandard1.1\HelixToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2.12.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.Wpf.2.12.0\lib\net45\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="LibDSSound">
       <HintPath>..\References\DSSS\LibDSSound.dll</HintPath>
     </Reference>
@@ -72,6 +78,7 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.1.1345, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.5.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MKDS Course Modifier, Version=4.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\MKDSCM\MKDS Course Modifier.exe</HintPath>
@@ -83,6 +90,9 @@
     <Reference Include="NDS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\EFE\Plugins\NDS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NSMBe5, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -118,9 +128,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Extras\MKDSCMExtras.cs" />
     <Compile Include="MKDS.cs" />
     <Compile Include="Extras\NDSExtras.cs" />
     <Compile Include="Extras\NSMBeExtras.cs" />
+    <Compile Include="CARCEditor.cs" />
+    <Compile Include="NotMKDSROMException.cs" />
     <Compile Include="ROMUtils.cs" />
     <Compile Include="UI\SoundWindow.xaml.cs">
       <DependentUpon>SoundWindow.xaml</DependentUpon>
@@ -128,7 +141,16 @@
     <Compile Include="UI\TextsWindow.xaml.cs">
       <DependentUpon>TextsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\Utils.cs" />
+    <Compile Include="UI\TexturesWindow.xaml.cs">
+      <DependentUpon>TexturesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TracksWindow.xaml.cs">
+      <DependentUpon>TracksWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TrackViewWindow.xaml.cs">
+      <DependentUpon>TrackViewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
     <Page Include="UI\AssetsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,6 +179,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\TextsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\TexturesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\TracksWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\TrackViewWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

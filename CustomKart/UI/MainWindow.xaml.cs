@@ -1,105 +1,105 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Interop;
-using System.Windows.Forms;
-using System.Windows.Media.Imaging;
+using System.Windows.Media;
 using System.Threading;
 using System.IO;
 using System.ComponentModel;
-using LibDSSound.IO;
+using MaterialDesignThemes.Wpf;
 
 namespace CustomKart.UI
 {
     public partial class MainWindow : Window
     {
-        public static NDS.Nitro.NDS LoadedROM { get; private set; }
-
-        public static string ROMPath { get; private set; }
-
         public MainWindow()
         {
             InitializeComponent();
+            Utils.CleanTempDirectories();
             SetupLanguage();
-            Title = Utils.GetResource("program") + " - " + Utils.GetResource("noROM");
-            Notifications.MessageQueue = new MaterialDesignThemes.Wpf.SnackbarMessageQueue(TimeSpan.FromMilliseconds(1000));
+            Title = Utils.GetResource("common:program") + " - " + Utils.GetResource("common:noROMOpened");
         }
 
         private void SetupLanguage()
         {
-            ResourceDictionary langd = new ResourceDictionary();
-            string lang = Thread.CurrentThread.CurrentUICulture.Name;
-            langd.Source = new Uri("Resources\\Strings.en.xaml", UriKind.Relative);
-            // if(lang.StartsWith("es-")) langd.Source = new Uri("Resources\\Strings.es.xaml");
-            Resources.MergedDictionaries.Add(langd);
+            var dict = new ResourceDictionary
+            {
+                Source = new Uri("Resources\\Strings.en.xaml", UriKind.Relative)
+            };
+
+            // TODO: actual multi-language support
+            /*
+            var lang = Thread.CurrentThread.CurrentUICulture.Name;
+            if(lang.StartsWith("es-"))
+            {
+                lang.Source = new Uri("Resources\\Strings.es.xaml");
+            }
+            */
+
+            Application.Current.Resources.MergedDictionaries.Add(dict);
         }
 
-        public void ShowNotification(string Message)
+        public void ShowMessage(string msg)
         {
-            Notifications.MessageQueue.Enqueue(Message);
+            MessageBox.Show(msg);
+            MessageLog.Items.Insert(1, msg);
         }
 
-        public void ShowNotificationWithOption(string Message, string Option, Action ToCall)
+        private AssetsWindow Assets = null;
+        private SoundWindow Sound = null;
+        private TextsWindow Texts = null;
+        private TexturesWindow Textures = null;
+        private TracksWindow Tracks = null;
+
+        public void DoCloseWindow<T>(ref T window) where T : Window
         {
-            Notifications.MessageQueue.Enqueue(Message, Option, ToCall);
+            if(window != null && window.IsLoaded) window.Close();
         }
 
-        private AssetsWindow assets = null;
-        private SoundWindow sound = null;
-        private TextsWindow texts = null;
+        private void HandleClose<T>(ref T window) where T : Window
+        {
+            // TODO: ask to close the window
+            MessageBox.Show("Opened!");
+        }
+
+        private void WindowClick<T>(ref T window) where T : Window, new()
+        {
+            if (window != null && window.IsLoaded) HandleClose(ref window);
+            else
+            {
+                window = new T { Owner = this };
+                window.Show();
+            }
+        }
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            if(LoadedROM != null)
+            if(ROMUtils.HasLoadedROM())
             {
-                if(assets != null)
+                DoCloseWindow(ref Assets);
+                DoCloseWindow(ref Sound);
+                DoCloseWindow(ref Texts);
+                DoCloseWindow(ref Textures);
+                DoCloseWindow(ref Tracks);
+                switch(Utils.ShowYesNoMessage(Utils.GetResource("common:saveChanges"), Utils.GetResource("common:warn")))
                 {
-                    assets.Close();
-                    if(assets.IsVisible)
-                    {
-                        e.Cancel = true;
-                        return;
-                    }
-                }
-                if(sound != null)
-                {
-                    sound.Close();
-                    if(sound.IsVisible)
-                    {
-                        e.Cancel = true;
-                        return;
-                    }
-                }
-                if(texts != null)
-                {
-                    texts.Close();
-                    if(texts.IsVisible)
-                    {
-                        e.Cancel = true;
-                        return;
-                    }
-                }
-                var res = System.Windows.MessageBox.Show("Would you like to save the edited changes?", "Edited changes", MessageBoxButton.YesNoCancel, MessageBoxImage.Warning);
-                if(res == MessageBoxResult.Cancel)
-                {
-                    e.Cancel = true;
-                    return;
-                }
-                if(res == MessageBoxResult.Yes)
-                {
-                    var data = LoadedROM.Write();
-                    SaveFileDialog sf = new SaveFileDialog
-                    {
-                        Filter = Utils.GetNDSFilter(),
-                        Title = Utils.GetResource("ROMSave"),
-                    };
-                    if(sf.ShowDialog() == System.Windows.Forms.DialogResult.OK) File.WriteAllBytes(sf.FileName, data);
+                    case MessageBoxResult.Yes:
+                        {
+                            var sf = new System.Windows.Forms.SaveFileDialog
+                            {
+                                Filter = Utils.GetNDSFilter(),
+                                Title = Utils.GetResource("common:dialogROMSave"),
+                            };
+                            if(sf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                            {
+                                ROMUtils.ROM.Save(sf.FileName);
+                            }
+                            break;
+                        }
+                    case MessageBoxResult.Cancel:
+                        {
+                            e.Cancel = true;
+                            break;
+                        }
                 }
             }
             base.OnClosing(e);
@@ -107,100 +107,72 @@ namespace CustomKart.UI
 
         private void ROMOpenButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog od = new OpenFileDialog
+            var od = new System.Windows.Forms.OpenFileDialog
             {
                 Multiselect = false,
-                Title = Utils.GetResource("ROMOpen"),
+                Title = Utils.GetResource("common:dialogROMOpen"),
                 Filter = Utils.GetNDSFilter(),
             };
             if(od.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                LoadedROM = ROMUtils.LoadROM(od.FileName);
-                if(LoadedROM == null)
+                try
                 {
-                    ShowNotification("The selected file is not a valid Nintendo DS ROM.");
-                    return;
+                    ROMUtils.TryLoad(od.FileName);
+                    Title = Utils.GetResource("common:program") + " - " + Path.GetFileName(od.FileName);
+                    ShowMessage(Utils.GetResource("common:successROMLoad") + ": " + Path.GetFileName(od.FileName) + "\n" + Utils.GetResource("common:buildDateInfo") + " \"" + ROMUtils.GetBuildDate() + "\"");
+                    AssetsButton.IsEnabled = true;
+                    KartsButton.IsEnabled = true;
+                    TexturesButton.IsEnabled = true;
+                    SoundButton.IsEnabled = true;
+                    TextsButton.IsEnabled = true;
+                    TracksButton.IsEnabled = true;
                 }
-                if(!LoadedROM.IsMKDS())
+                catch(NotMKDSROMException)
                 {
-                    ShowNotification("The selected file is not a valid Mario Kart DS ROM.");
-                    LoadedROM = null;
-                    return;
+                    ShowMessage(Utils.GetResource("common:invalidMKDSROM"));
                 }
-                Title = Utils.GetResource("program") + " - " + Path.GetFileName(od.FileName);
-                ShowNotification("MKDS ROM loaded: " + Path.GetFileName(od.FileName));
-                ROMPath = od.FileName;
-                AssetsCard.IsEnabled = true;
-                KartsCard.IsEnabled = true;
-                TexturesCard.IsEnabled = true;
-                SoundCard.IsEnabled = true;
-                TextsCard.IsEnabled = true;
+                catch
+                {
+                    ShowMessage(Utils.GetResource("common:invalidNDSROM"));
+                }
             }
         }
 
         private void AssetsButton_Click(object sender, RoutedEventArgs e)
         {
-            if(assets == null)
-            {
-                assets = new AssetsWindow
-                {
-                    Owner = this
-                };
-                assets.Closing += new CancelEventHandler((object s, CancelEventArgs e2) =>
-                {
-                    Focus();
-                    assets = null;
-                });
-                assets.Show();
-            }
-            else
-            {
-                assets.Focus();
-            }
+            WindowClick(ref Assets);
         }
 
         private void SoundButton_Click(object sender, RoutedEventArgs e)
         {
-            if(sound == null)
-            {
-                sound = new SoundWindow
-                {
-                    Owner = this
-                };
-                sound.Closing += new CancelEventHandler((object s, CancelEventArgs e2) =>
-                {
-                    Focus();
-                    sound = null;
-                });
-                sound.Load(new SDAT(ROMUtils.GetFile("sound_data.sdat", LoadedROM.ToFileSystem())));
-                sound.Show();
-            }
-            else
-            {
-                sound.Focus();
-            }
+            WindowClick(ref Sound);
         }
 
         private void TextsButton_Click(object sender, RoutedEventArgs e)
         {
-            if(texts == null)
-            {
-                texts = new TextsWindow
-                {
-                    Owner = this
-                };
-                texts.Closing += new CancelEventHandler((object s, CancelEventArgs e2) =>
-                {
-                    Focus();
-                    assets = null;
-                });
-                texts.Load();
-                texts.Show();
-            }
-            else
-            {
-                texts.Focus();
-            }
+            WindowClick(ref Texts);
+        }
+
+        private void TexturesButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowClick(ref Textures);
+        }
+
+        private void KartsButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO
+        }
+
+        private void TracksButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowClick(ref Tracks);
+        }
+
+        private void MessageClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            var self = sender as Button;
+            MessageLog.Items.Clear();
+            MessageLog.Items.Add(self);
         }
     }
 }

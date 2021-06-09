@@ -27,7 +27,11 @@ namespace CustomKart.UI
         public SoundWindow()
         {
             InitializeComponent();
-            foreach(var elem in MKDS.Sequences) SequencesCombo.Items.Add(elem.ToString());
+            for(int i = 0; i < MKDS.SequenceCount; i++)
+            {
+                SequencesCombo.Items.Add("Sequence no. " + i.ToString());
+            }
+            Load();
         }
 
         public static SDAT Data { get; set; }
@@ -48,10 +52,10 @@ namespace CustomKart.UI
         {
             Playing = false;
             Stop = true;
-            var fs = MainWindow.LoadedROM.ToFileSystem();
-            var sdatfile = ROMUtils.GetSFSFile("sound_data.sdat", fs);
-            sdatfile.Data = Data.Write();
-            MainWindow.LoadedROM.FromFileSystem(fs);
+
+            // TODO: ask whether to save/close
+            ROMUtils.ROM.WriteFile("sound_data.sdat", Data.Write());
+
             base.OnClosing(e);
         }
 
@@ -72,7 +76,7 @@ namespace CustomKart.UI
             player.Volume = SequenceInfo.Volume;
             while(!Stop)
             {
-                if(Playing && bufferedWaveProvider.BufferedBytes < bufferedWaveProvider.BufferLength && bufferedWaveProvider.BufferLength - bufferedWaveProvider.BufferedBytes > 1364)
+                if(Playing && (bufferedWaveProvider.BufferedBytes < bufferedWaveProvider.BufferLength) && ((bufferedWaveProvider.BufferLength - bufferedWaveProvider.BufferedBytes) > 1364))
                 {
                     dssoundContext.UpdateExChannel();
                     dssoundContext.SeqMain(true);
@@ -80,15 +84,13 @@ namespace CustomKart.UI
                     Util.CalcRandom();
                     for (int i = 0; i < 341; i++)
                     {
-                        short num;
-                        short num2;
-                        dssoundContext.Hardware.Evaluate(256, out num, out num2);
+                        dssoundContext.Hardware.Evaluate(256, out short num, out short num2);
                         bufferedWaveProvider.AddSamples(new byte[]
                         {
-                    (byte)(num & 255),
-                    (byte)(num >> 8 & 255),
-                    (byte)(num2 & 255),
-                    (byte)(num2 >> 8 & 255)
+                            (byte)(num & 255),
+                            (byte)(num >> 8 & 255),
+                            (byte)(num2 & 255),
+                            (byte)(num2 >> 8 & 255)
                         }, 0, 4);
                     }
                 }
@@ -97,11 +99,11 @@ namespace CustomKart.UI
             waveOut.Dispose();
         }
 
-        public void Load(SDAT SData)
+        public void Load()
         {
             Playing = false;
             Stop = true;
-            Data = SData;
+            Data = new SDAT(ROMUtils.ROM.ReadFile("sound_data.sdat"));
             SequencesCombo.SelectedIndex = 0;
         }
 
@@ -109,11 +111,8 @@ namespace CustomKart.UI
         {
             Playing = false;
             Stop = true;
-            PlayButton.Content = new PackIcon
-            {
-                Kind = PackIconKind.Play
-            };
-            int sidx = MKDS.Sequences[SequencesCombo.SelectedIndex];
+            PlayButton.Content = new PackIcon { Kind = PackIconKind.Play };
+            int sidx = SequencesCombo.SelectedIndex;
             SequenceInfo = Data.InfoBlock.SequenceInfos[sidx];
             Sequence = new SSEQ(Data.GetFileData(SequenceInfo.FileId));
             BankInfo = Data.InfoBlock.BankInfos[SequenceInfo.Bank];
@@ -181,10 +180,10 @@ namespace CustomKart.UI
                 };
                 Playing = !Playing;
             }
-            OpenFileDialog od = new OpenFileDialog
+            var od = new OpenFileDialog
             {
-                Title = "Replace sound sequence",
-                Filter = "MIDI audio|*.mid|Nitro Sound Sequence (SSEQ)|*.sseq",
+                Title = Utils.GetResource("sound:sequenceReplace"),
+                Filter = Utils.GetResource("sound:midiFile") + " |*.mid|" + Utils.GetResource("sound:sseqFile") + " (SSEQ)|*.sseq",
                 Multiselect = false,
             };
             if(od.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -198,12 +197,12 @@ namespace CustomKart.UI
                     MIDIConverter cvtr = ROMUtils.DetermineConverter();
                     if(cvtr == MIDIConverter.Invalid)
                     {
-                        Utils.ShowMessage("No MIDI conversion tool was found.");
+                        Utils.ShowMessage(Utils.GetResource("sound:errorMidiConversion"));
                         return;
                     }
                     else if(cvtr == MIDIConverter.MIDI2SSEQ)
                     {
-                        string midi2sseq = ROMUtils.GetExePath() + "\\midi2sseq.exe";
+                        string midi2sseq = Utils.GetSelfPath() + "\\midi2sseq.exe";
                         var p = new Process
                         {
                             StartInfo = new ProcessStartInfo
@@ -216,10 +215,10 @@ namespace CustomKart.UI
                         };
                         p.Start();
                         p.WaitForExit();
-                        if(!File.Exists(ROMUtils.GetExePath() + "\\" + fname + ".sseq"))
+                        if(!File.Exists(Utils.GetSelfPath() + "\\" + fname + ".sseq"))
                         {
-                            Utils.ShowMessage("Unable to convert MIDI audio to SSEQ.");
-                            if(chplay)
+                            Utils.ShowMessage(Utils.GetResource("sound:errorSequenceConversion"));
+                            if (chplay)
                             {
                                 PlayButton.Content = new PackIcon
                                 {
@@ -229,12 +228,12 @@ namespace CustomKart.UI
                             }
                             return;
                         }
-                        sseq = ROMUtils.GetExePath() + "\\" + fname + ".sseq";
+                        sseq = Utils.GetSelfPath() + "\\" + fname + ".sseq";
                     }
                     else if(cvtr == MIDIConverter.SmfSeqConv)
                     {
-                        string smfconv = ROMUtils.GetExePath() + "\\smfconv.exe";
-                        string seqconv = ROMUtils.GetExePath() + "\\seqconv.exe";
+                        string smfconv = Utils.GetSelfPath() + "\\smfconv.exe";
+                        string seqconv = Utils.GetSelfPath() + "\\seqconv.exe";
                         var p = new Process
                         {
                             StartInfo = new ProcessStartInfo
@@ -250,7 +249,7 @@ namespace CustomKart.UI
                         string basenoext = Path.GetDirectoryName(od.FileName) + "\\" + fname;
                         if(!File.Exists(basenoext + ".smft"))
                         {
-                            Utils.ShowMessage("Unable to generate SMFT from MIDI audio.");
+                            Utils.ShowMessage(Utils.GetResource("sound:errorSequenceConversion"));
                             if (chplay)
                             {
                                 PlayButton.Content = new PackIcon
@@ -275,7 +274,7 @@ namespace CustomKart.UI
                         p2.WaitForExit();
                         if(!File.Exists(basenoext + ".sseq"))
                         {
-                            Utils.ShowMessage("Unable to generate SSEQ from SMFT data.");
+                            Utils.ShowMessage(Utils.GetResource("sound:errorSequenceConversion"));
                             if(chplay)
                             {
                                 PlayButton.Content = new PackIcon
@@ -291,7 +290,7 @@ namespace CustomKart.UI
                         sseq = basenoext + ".sseq";
                     }
                 }
-                Data.FileAllocationTable.Entries[(int)Data.InfoBlock.SequenceInfos[MKDS.Sequences[SequencesCombo.SelectedIndex]].FileId].Data = File.ReadAllBytes(sseq);
+                Data.FileAllocationTable.Entries[(int)Data.InfoBlock.SequenceInfos[SequencesCombo.SelectedIndex].FileId].Data = File.ReadAllBytes(sseq);
                 Reload();
                 if(ext.EndsWith("mid")) File.Delete(sseq);
             }

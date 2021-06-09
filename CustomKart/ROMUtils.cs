@@ -1,10 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Drawing;
 using LibEveryFileExplorer.Files.SimpleFileSystem;
 using System.IO;
-using System.Reflection;
+using System.Text;
+using NSMBe4;
+using NSMBe4.DSFileSystem;
+
+using EFEROM = NDS.Nitro.NDS;
+using NSMBeROM = NSMBe4.ROM;
+using NSMBeROMFs = NSMBe4.DSFileSystem.NitroROMFilesystem;
+using SystemFile = System.IO.File;
+using NARCFormat = NDS.NitroSystem.FND.NARC;
 
 namespace CustomKart
 {
@@ -15,34 +22,104 @@ namespace CustomKart
         SmfSeqConv
     }
 
+    public class ROMObject
+    {
+        public string Path { get; set; }
+
+        public EFEROM ROM { get; set; }
+
+        public SFSDirectory ROMFs { get; set; }
+
+        public Bitmap Icon { get; set; }
+
+        private void WriteROMIcon()
+        {
+            const int ImageSize = 512;
+            const int PaletteSize = 32;
+            // Virtual banner file used in NSMBe simplifies this a lot
+            var banner_f = NSMBeROM.getLevelFile("banner");
+            var image_f = new InlineFile(banner_f, PaletteSize, ImageSize, banner_f.name);
+            var palette_f = new InlineFile(banner_f, ImageSize + PaletteSize, PaletteSize, banner_f.name);
+            var image = new Image2D(image_f, 32, true, false);
+            var palette = new FilePalette(palette_f);
+            image.replaceImgAndPal(Icon, palette);
+            Array.Copy(image.getData(), ROM.Banner.Banner.Image, ImageSize);
+            Array.Copy(palette.getData(), ROM.Banner.Banner.Pltt, PaletteSize);
+        }
+
+        private void DoWithNSMBeROM(string path, System.Action callback)
+        {
+            NSMBeROM.load(new NSMBeROMFs(path));
+            callback();
+            NSMBeROM.close();
+        }
+
+        private void Load()
+        {
+            // Load ROM icon
+            Icon = ROM.Banner.Banner.GetIcon();
+
+            // Load filesystem
+            ROMFs = ROM.ToFileSystem();
+        }
+
+        public byte[] ReadFile(string name)
+        {
+            var file = ROMUtils.GetSFSFile(name, ROMFs);
+            return file.Data;
+        }
+
+        public void WriteFile(string name, byte[] data)
+        {
+            var file = ROMUtils.GetSFSFile(name, ROMFs);
+            file.Data = data;
+        }
+
+        public ROMObject(string path, EFEROM rom)
+        {
+            Path = path;
+            ROM = rom;
+            Load();
+        }
+
+        public void Save(string path)
+        {
+            // Write ROM icon (uses NSMBe to generate icon data)
+            DoWithNSMBeROM(Path, WriteROMIcon);
+
+            // Write filesystem
+            ROM.FromFileSystem(ROMFs);
+
+            // Save the ROM
+            var data = ROM.Write();
+            SystemFile.WriteAllBytes(path, data);
+        }
+    }
+
     public static class ROMUtils
     {
-        public static string GetExePath()
+        public static ROMObject ROM = null;
+
+        public static void TryLoad(string path)
         {
-            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            var rom = new EFEROM(SystemFile.ReadAllBytes(path));
+            // Ensure the filesystem is valid
+            rom.ToFileSystem();
+            // Check its a valid MKDS ROM
+            if(!rom.IsMKDS()) throw new NotMKDSROMException();
+            ROM = new ROMObject(path, rom);
         }
 
-        public static NDS.Nitro.NDS LoadROM(string Path)
+        public static bool HasLoadedROM()
         {
-            NDS.Nitro.NDS rom;
-            try
-            {
-                rom = new NDS.Nitro.NDS(File.ReadAllBytes(Path));
-                var tmpfs = rom.ToFileSystem();
-            }
-            catch
-            {
-                rom = null;
-            }
-            return rom;
+            return ROM != null;
         }
-
         public static MIDIConverter DetermineConverter()
         {
-            MIDIConverter cvtr = MIDIConverter.Invalid;
-            string curdir = GetExePath();
-            if(File.Exists(curdir + "\\midi2sseq.exe")) cvtr = MIDIConverter.MIDI2SSEQ;
-            if(File.Exists(curdir + "\\smfconv.exe") && File.Exists(curdir + "\\seqconv.exe")) cvtr = MIDIConverter.SmfSeqConv;
+            var cvtr = MIDIConverter.Invalid;
+            var curdir = Utils.GetSelfPath();
+            if(SystemFile.Exists(Path.Combine(curdir, "midi2sseq.exe"))) cvtr = MIDIConverter.MIDI2SSEQ;
+            if(SystemFile.Exists(Path.Combine(curdir, "smfconv.exe")) && SystemFile.Exists(Path.Combine(curdir, "seqconv.exe"))) cvtr = MIDIConverter.SmfSeqConv;
             return cvtr;
         }
         public static byte[] GetFile(string Name, SFSDirectory Dir)
@@ -69,7 +146,7 @@ namespace CustomKart
             }
             if(data == null)
             {
-                if (Dir.SubDirectories.Count > 0)
+                if(Dir.SubDirectories.Count > 0)
                 {
                     foreach (var dir in Dir.SubDirectories)
                     {
@@ -83,6 +160,21 @@ namespace CustomKart
                 }
             }
             return data;
+        }
+
+        public static string GetBuildDate()
+        {
+            return Encoding.ASCII.GetString(ROM.ReadFile("builddate.bin"));
+        }
+
+        public static Bitmap ConvertCharPaletteIcon(byte[] chr, byte[] plt)
+        {
+            var bannerv1 = new EFEROM.RomBanner.BannerV1
+            {
+                Image = chr,
+                Pltt = plt
+            };
+            return bannerv1.GetIcon();
         }
 
     }

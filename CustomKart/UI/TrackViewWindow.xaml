@@ -1,0 +1,72 @@
+﻿<Window x:Class="CustomKart.UI.TrackViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:helix="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
+        xmlns:local="clr-namespace:CustomKart.UI"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="TrackViewWindow" Height="727.625" ResizeMode="CanResize" Width="875">
+    <Grid>
+        <helix:HelixViewport3D x:Name="Viewport">
+            <helix:HelixViewport3D.Camera>
+                <PerspectiveCamera/>
+            </helix:HelixViewport3D.Camera>
+            <helix:DefaultLights></helix:DefaultLights>
+            <ModelVisual3D x:Name="Model"></ModelVisual3D>
+        </helix:HelixViewport3D>
+        <Grid x:Name="SettingsGrid" Background="{StaticResource PrimaryHueLightBrush}" Height="228" VerticalAlignment="Top">
+            <RepeatButton x:Name="XIButton" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="60" Click="XIButton_Click" Height="50">
+                <TextBlock TextAlignment="Center">
+                    ← X
+                    <LineBreak/>
+                    (Z)
+                </TextBlock>
+            </RepeatButton>
+            <RepeatButton x:Name="XDButton" HorizontalAlignment="Left" Margin="75,168,0,0" VerticalAlignment="Top" Width="60" Click="XDButton_Click" Height="50">
+                <TextBlock TextAlignment="Center">
+                    X →
+                    <LineBreak/>
+                    (8)
+                </TextBlock>
+            </RepeatButton>
+            <RepeatButton x:Name="ZIButton" HorizontalAlignment="Left" Margin="166,168,0,0" VerticalAlignment="Top" Width="60" Click="ZIButton_Click" Height="50">
+                <TextBlock TextAlignment="Center">
+                    ← Z
+                    <LineBreak/>
+                    (9)
+                </TextBlock>
+            </RepeatButton>
+            <RepeatButton x:Name="ZDButton" HorizontalAlignment="Left" Margin="231,168,0,0" VerticalAlignment="Top" Width="60" Click="ZDButton_Click" Height="50">
+                <TextBlock TextAlignment="Center">
+                    Z →
+                    <LineBreak/>
+                    (0)
+                </TextBlock>
+            </RepeatButton>
+            <RepeatButton x:Name="YDButton" HorizontalAlignment="Left" Margin="120,110,0,0" VerticalAlignment="Top" Width="60" Height="50" Click="YDButton_Click">
+                <TextBlock TextAlignment="Center">
+                    Y ↓
+                    <LineBreak/>
+                    (7)
+                </TextBlock>
+            </RepeatButton>
+            <RepeatButton x:Name="YIButton" HorizontalAlignment="Left" Margin="120,55,0,0" VerticalAlignment="Top" Width="60" Height="50" Click="YIButton_Click">
+                <TextBlock TextAlignment="Center">
+                    Y ↑
+                    <LineBreak/>
+                    (5)
+                </TextBlock>
+            </RepeatButton>
+            <ComboBox x:Name="ModelCombo" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="281"/>
+            <Button x:Name="ExportButton" Content="{DynamicResource tracks:modelExport}" HorizontalAlignment="Left" Margin="354,55,0,0" VerticalAlignment="Top" Width="200" Click="ExportButton_Click"/>
+            <Button x:Name="ImportButton" Content="{DynamicResource tracks:modelImport}" HorizontalAlignment="Left" Margin="573,55,0,0" VerticalAlignment="Top" Width="200" Click="ImportButton_Click"/>
+            <ComboBox x:Name="MainModelCombo" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Width="419"/>
+        </Grid>
+        <Button x:Name="SettingsButton" Style="{StaticResource MaterialDesignFloatingActionButton}" Margin="0,10,10,0" VerticalAlignment="Top" Width="45" Height="45" Click="SettingsButton_Click" HorizontalAlignment="Right">
+            <material:PackIcon Kind="Settings"></material:PackIcon>
+        </Button>
+    </Grid>
+</Window>

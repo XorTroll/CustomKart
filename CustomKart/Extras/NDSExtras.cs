@@ -52,6 +52,8 @@ namespace CustomKart
             return ex;
         }
 
+        // Some files used to check whether a NDS ROM is actually MKDS.
+
         public static string[] SomeMKDSFiles = new string[]
         {
             "Main2D.carc",
@@ -76,7 +78,7 @@ namespace CustomKart
         public static bool IsMKDS(this NDS.Nitro.NDS ROM)
         {
             bool ismk = true;
-            SFSDirectory root = ROM.ToFileSystem();
+            var root = ROM.ToFileSystem();
             foreach(var file in SomeMKDSFiles)
             {
                 if(!ROM.ExistsFile(file, root))

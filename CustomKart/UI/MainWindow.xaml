@@ -4,61 +4,47 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomKart.UI"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
+        Background="{StaticResource PrimaryHueLightBrush}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        ResizeMode="CanMinimize" Height="400" Width="800">
+        Height="300" Width="900">
     <Grid>
-        <materialDesign:Card Name="AssetsCard" Background="{DynamicResource SecondaryAccentBrush}" IsEnabled="False" Margin="40,73,0,0" HorizontalAlignment="Left" Width="320" VerticalAlignment="Top" Height="118">
-            <Grid>
-                <Label Content="Basic assets" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                <Label Content="Game name codes, titles, icon..." HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top"/>
-                <Button Name="AssetsButton" Content="Edit game assets" HorizontalAlignment="Center" Margin="86,70,85,0" VerticalAlignment="Top" Click="AssetsButton_Click"/>
-
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Name="KartsCard" Background="{DynamicResource SecondaryAccentBrush}" IsEnabled="False" Margin="392,74,40,0" VerticalAlignment="Top" Height="117">
-            <Grid>
-                <Label Content="Characters and karts" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                <Label Content="Custom textures and models for players and their karts" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top"/>
-                <Button Name="KartsButton" Content="Edit characters and karts" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top"/>
-
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Name="TexturesCard" Background="{DynamicResource SecondaryAccentBrush}" IsEnabled="False" Margin="40,210,503,0" VerticalAlignment="Top" Height="117">
-            <Grid>
-                <Label Content="Textures and sprites" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                <Label Content="Custom textures, sprites..." HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top"/>
-                <Button Name="TexturesButton" Content="Edit sprites" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top"/>
-
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Name="SoundCard" Background="{DynamicResource SecondaryAccentBrush}" IsEnabled="False" Margin="320,210,244,0" VerticalAlignment="Top" Height="117">
-            <Grid>
-                <Label Content="Music and effects" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                <Label Content="Customize  every little sound!" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top"/>
-                <Button Name="SoundButton" Content="Edit music" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Click="SoundButton_Click"/>
-
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Name="TextsCard" Background="{DynamicResource SecondaryAccentBrush}" IsEnabled="False" Margin="577,210,40,0" VerticalAlignment="Top" Height="117">
-            <Grid>
-                <Label Content="Game texts" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
-                <Label Content="Customize game strings" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top"/>
-                <Button Name="TextsButton" Content="Edit texts" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Click="TextsButton_Click"/>
-
-            </Grid>
-        </materialDesign:Card>
-        
-        <materialDesign:Snackbar Name="Notifications" IsActive="False"/>
         <ToolBar VerticalAlignment="Top">
-            <Button Name="ROMOpenButton" Click="ROMOpenButton_Click">Open</Button>
+            <Button Name="ROMOpenButton" ToolTip="{DynamicResource common:tip:ROMOpen}" Click="ROMOpenButton_Click">
+                <material:PackIcon Kind="Folder" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
+            <Separator/>
+            <Button Name="AssetsButton" ToolTip="{DynamicResource common:tip:Assets}" IsEnabled="False" Click="AssetsButton_Click">
+                <material:PackIcon Kind="Pencil" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
+            <Button Name="TextsButton" ToolTip="{DynamicResource common:tip:Texts}" IsEnabled="False" Click="TextsButton_Click">
+                <material:PackIcon Kind="Message" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
+            <Button Name="SoundButton" ToolTip="{DynamicResource common:tip:Sound}" IsEnabled="False" Click="SoundButton_Click">
+                <material:PackIcon Kind="Music" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
+            <Button Name="TracksButton" ToolTip="{DynamicResource common:tip:Tracks}" IsEnabled="False" Click="TracksButton_Click">
+                <material:PackIcon Kind="Road" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
+            <Button Name="TexturesButton" ToolTip="{DynamicResource common:tip:Textures}" IsEnabled="False" Click="TexturesButton_Click">
+                <material:PackIcon Kind="Texture" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
+            <Button Name="KartsButton" ToolTip="{DynamicResource common:tip:Karts}" IsEnabled="False" Click="KartsButton_Click">
+                <material:PackIcon Kind="Car" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
         </ToolBar>
+        <ListView x:Name="MessageLog" Margin="10,82,8,11">
+            <Button x:Name="MessageClearButton" HorizontalAlignment="Center" Content="{DynamicResource common:messageClear}" Click="MessageClearButton_Click"/>
+            <ListViewItem Content="{DynamicResource common:help}"></ListViewItem>
+            <ListViewItem Content="{DynamicResource common:welcome}"></ListViewItem>
+        </ListView>
+        <Label FontWeight="Bold" Content="{DynamicResource common:messageLog}" HorizontalAlignment="Center" Margin="10,56,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
