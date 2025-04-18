@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Threading;
+using System.Linq;
 using System.IO;
 using System.ComponentModel;
 using MaterialDesignThemes.Wpf;
@@ -14,9 +14,12 @@ namespace CustomKart.UI
         public MainWindow()
         {
             InitializeComponent();
+            Utils.EnsureDirectories();
             Utils.CleanTempDirectories();
+            Settings.Load();
+
             SetupLanguage();
-            Title = Utils.GetResource("common:program") + " - " + Utils.GetResource("common:noROMOpened");
+            Title = Utils.GetResource("common:program") + " - " + Utils.GetResource("common:notOpened");
         }
 
         private void SetupLanguage()
@@ -44,11 +47,13 @@ namespace CustomKart.UI
             MessageLog.Items.Insert(1, msg);
         }
 
-        private AssetsWindow Assets = null;
-        private SoundWindow Sound = null;
-        private TextsWindow Texts = null;
-        private TexturesWindow Textures = null;
-        private TracksWindow Tracks = null;
+        private SettingsWindow WSettings = null;
+        private AssetsWindow WAssets = null;
+        //  private SoundWindow WSound = null;
+        private AudioWindow WAudio = null;
+        private TextsWindow WTexts = null;
+        private TexturesWindow WTextures = null;
+        private TracksWindow WTracks = null;
 
         public void DoCloseWindow<T>(ref T window) where T : Window
         {
@@ -63,7 +68,7 @@ namespace CustomKart.UI
 
         private void WindowClick<T>(ref T window) where T : Window, new()
         {
-            if (window != null && window.IsLoaded) HandleClose(ref window);
+            if (window != null && window.IsLoaded) HandleClose(ref window); // TODO: do nothing instead?
             else
             {
                 window = new T { Owner = this };
@@ -75,19 +80,20 @@ namespace CustomKart.UI
         {
             if(ROMUtils.HasLoadedROM())
             {
-                DoCloseWindow(ref Assets);
-                DoCloseWindow(ref Sound);
-                DoCloseWindow(ref Texts);
-                DoCloseWindow(ref Textures);
-                DoCloseWindow(ref Tracks);
+                DoCloseWindow(ref WSettings);
+                DoCloseWindow(ref WAssets);
+                DoCloseWindow(ref WAudio);
+                DoCloseWindow(ref WTexts);
+                DoCloseWindow(ref WTextures);
+                DoCloseWindow(ref WTracks);
                 switch(Utils.ShowYesNoMessage(Utils.GetResource("common:saveChanges"), Utils.GetResource("common:warn")))
                 {
                     case MessageBoxResult.Yes:
                         {
                             var sf = new System.Windows.Forms.SaveFileDialog
                             {
-                                Filter = Utils.GetNDSFilter(),
-                                Title = Utils.GetResource("common:dialogROMSave"),
+                                Filter = Utils.NDSFilter,
+                                Title = Utils.GetResource("common:dialogSave"),
                             };
                             if(sf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                             {
@@ -105,13 +111,13 @@ namespace CustomKart.UI
             base.OnClosing(e);
         }
 
-        private void ROMOpenButton_Click(object sender, RoutedEventArgs e)
+        private void OpenButton_Click(object sender, RoutedEventArgs e)
         {
             var od = new System.Windows.Forms.OpenFileDialog
             {
                 Multiselect = false,
-                Title = Utils.GetResource("common:dialogROMOpen"),
-                Filter = Utils.GetNDSFilter(),
+                Title = Utils.GetResource("common:dialogOpen"),
+                Filter = Utils.NDSFilter,
             };
             if(od.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -138,34 +144,59 @@ namespace CustomKart.UI
             }
         }
 
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowClick(ref WSettings);
+        }
+
         private void AssetsButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowClick(ref Assets);
+            WindowClick(ref WAssets);
         }
 
         private void SoundButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowClick(ref Sound);
+            WindowClick(ref WAudio);
         }
 
         private void TextsButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowClick(ref Texts);
+            WindowClick(ref WTexts);
         }
 
         private void TexturesButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowClick(ref Textures);
+            WindowClick(ref WTextures);
+        }
+
+        private static System.Drawing.Color[] ConvertXBGR1555(byte[] Data)
+        {
+            System.Drawing.Color[] array = new System.Drawing.Color[Data.Length / 2];
+            for (int i = 0; i < Data.Length; i += 2)
+            {
+                array[i / 2] = System.Drawing.Color.FromArgb((int)LibEveryFileExplorer.GFX.GFXUtil.ConvertColorFormat(LibEveryFileExplorer.IO.IOUtil.ReadU16LE(Data, i), LibEveryFileExplorer.GFX.ColorFormat.XBGR1555, LibEveryFileExplorer.GFX.ColorFormat.ARGB8888));
+            }
+            return array;
+        }
+
+        private static uint ConvertARGB(uint argb)
+        {
+            return LibEveryFileExplorer.GFX.GFXUtil.ConvertColorFormat(argb, LibEveryFileExplorer.GFX.ColorFormat.ARGB8888, LibEveryFileExplorer.GFX.ColorFormat.XBGR1555);
         }
 
         private void KartsButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO
+            var data = File.ReadAllBytes(@"I:\NitroEdit\ext_fs\\1311482822\data\Sound\sound_data.sdat");
+            var sdat = new MKDS_Course_Modifier.Sound.SDAT(data);
+            var swar_data = sdat.FAT.Records[sdat.INFO.WAVEARCRecord.Entries[7].fileID].Data;
+            File.WriteAllBytes(@"E:\demo.swar", swar_data);
+            var swar = new MKDS_Course_Modifier.Sound.SWAR(swar_data);
+            MessageBox.Show("Doen");
         }
 
         private void TracksButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowClick(ref Tracks);
+            WindowClick(ref WTracks);
         }
 
         private void MessageClearButton_Click(object sender, RoutedEventArgs e)

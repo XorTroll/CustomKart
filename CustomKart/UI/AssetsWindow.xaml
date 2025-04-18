@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CustomKart.UI"
         mc:Ignorable="d"
         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
-        Title="AssetsWindow" Height="332" ResizeMode="NoResize" Width="407.629">
+        Title="AssetsWindow" Height="340" ResizeMode="NoResize" Width="405">
     <Grid>
         <dragablz:TabablzControl>
             <TabItem Header="{DynamicResource assets:basicAssets}">
@@ -18,23 +18,23 @@
                     <Label Content="{DynamicResource assets:makerCode}" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top"/>
                     <TextBox Name="MakerCodeText" MaxLength="2" HorizontalAlignment="Left" Height="23" Margin="10,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Image Name="IconImage" HorizontalAlignment="Left" Height="128" Margin="238,50,0,0" VerticalAlignment="Top" Width="128" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
-                    <Button Name="IconReplaceButton" Click="IconReplaceButton_Click" Content="{DynamicResource assets:replaceIcon}" HorizontalAlignment="Left" Margin="238,185,0,0" VerticalAlignment="Top"/>
+                    <Button Name="IconReplaceButton" Click="IconReplaceButton_Click" Content="{DynamicResource assets:replaceIcon}" HorizontalAlignment="Left" Margin="245,185,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="{DynamicResource assets:titles}">
                 <Grid>
-                    <Label Content="{DynamicResource assets:langEnglish}" HorizontalAlignment="Left" Margin="20,15,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="TitleEnText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="20,41,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
-                    <Label Content="{DynamicResource assets:langSpanish}" HorizontalAlignment="Left" Margin="20,94,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="TitleEsText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="20,117,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
-                    <Label Content="{DynamicResource assets:langJapanese}" HorizontalAlignment="Left" Margin="20,168,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="TitleJaText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="20,194,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
-                    <Label Content="{DynamicResource assets:langGerman}" HorizontalAlignment="Left" Margin="210,15,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="TitleDeText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="210,41,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
-                    <Label Content="{DynamicResource assets:langFrench}" HorizontalAlignment="Left" Margin="210,94,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="TitleFrText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="210,117,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
-                    <Label Content="{DynamicResource assets:langItalian}" HorizontalAlignment="Left" Margin="210,168,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="TitleItText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="210,194,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="{DynamicResource assets:langEnglish}" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleEnText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="20,40,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="{DynamicResource assets:langSpanish}" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleEsText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="20,120,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="{DynamicResource assets:langJapanese}" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleJaText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="20,200,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="{DynamicResource assets:langGerman}" HorizontalAlignment="Left" Margin="200,20,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleDeText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="210,40,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="{DynamicResource assets:langFrench}" HorizontalAlignment="Left" Margin="200,100,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleFrText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="210,120,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
+                    <Label Content="{DynamicResource assets:langItalian}" HorizontalAlignment="Left" Margin="200,180,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TitleItText" MaxLength="128" HorizontalAlignment="Left" Height="45" Margin="210,200,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Width="165"/>
                 </Grid>
                 
             </TabItem>

@@ -9,9 +9,11 @@ namespace CustomKart
 {
     public static class Utils
     {
+        public const string ProgramDirectory = "ckart";
+
         public static string GetResource(string key)
         {
-            return Application.Current.FindResource(key) as string;
+            return GetResourceAs<string>(key);
         }
 
         public static T GetResourceAs<T>(string key) where T : class
@@ -29,41 +31,34 @@ namespace CustomKart
             return MessageBox.Show(msg, GetResource("common:program") + " - " + caption, MessageBoxButton.YesNoCancel);
         }
 
-        public static string GetNDSFilter()
-        {
-            return GetResource("common:ndsROM") + " (" + GetResource("common:commonFormat") + ")|*.nds|" + GetResource("common:ndsROM") + " (" + GetResource("common:officialFormat") + ")|*.srl";
-        }
+        public static string NDSFilter => GetResource("common:ndsROM") + " (" + GetResource("common:commonFormat") + ")|*.nds|" + GetResource("common:ndsROM") + " (" + GetResource("common:officialFormat") + ")|*.srl";
 
         public static void UpdateImageWithBitmap(ref System.Windows.Controls.Image img, Bitmap bmp)
         {
-            using(MemoryStream memory = new MemoryStream())
+            using(var memory = new MemoryStream())
             {
                 bmp.Save(memory, ImageFormat.Png);
                 memory.Position = 0;
-                BitmapImage bitmapimage = new BitmapImage();
-                bitmapimage.BeginInit();
-                bitmapimage.StreamSource = memory;
-                bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapimage.EndInit();
-                img.Source = bitmapimage;
+                var bitmap_img = new BitmapImage();
+                bitmap_img.BeginInit();
+                bitmap_img.StreamSource = memory;
+                bitmap_img.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap_img.EndInit();
+                img.Source = bitmap_img;
             }
         }
 
-        public static string GetSelfPath()
-        {
-            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-        }
+        public static string SelfPath => Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
-        public static string GetTempDirectory()
-        {
-            return Path.Combine(GetSelfPath(), "_temp");
-        }
+        public static string FullProgramDirectory => Path.Combine(SelfPath, ProgramDirectory);
+
+        public static string TempDirectory => Path.Combine(SelfPath, "_temp");
 
         public static void CleanTempDirectories()
         {
             try
             {
-                var dirs = Directory.GetDirectories(GetTempDirectory());
+                var dirs = Directory.GetDirectories(TempDirectory);
                 foreach (var dir in dirs)
                 {
                     try
@@ -76,11 +71,23 @@ namespace CustomKart
             catch { }
         }
 
-        public static string PrepareTempDirectory()
+        public static void EnsureDirectories()
         {
-            var tmp = GetTempDirectory();
-            var new_dir = Path.Combine(tmp, Path.GetRandomFileName());
-            Directory.CreateDirectory(new_dir);
+            try
+            {
+                Directory.CreateDirectory(FullProgramDirectory);
+            }
+            catch { }
+        }
+
+        public static string MakeTempDirectory()
+        {
+            var new_dir = Path.Combine(TempDirectory, Path.GetRandomFileName());
+            try
+            {
+                Directory.CreateDirectory(new_dir);
+            }
+            catch { }
             return new_dir;
         }
     }

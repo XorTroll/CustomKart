@@ -22,14 +22,14 @@
                 <TextBlock TextAlignment="Center">
                     ← X
                     <LineBreak/>
-                    (Z)
+                    (1)
                 </TextBlock>
             </RepeatButton>
             <RepeatButton x:Name="XDButton" HorizontalAlignment="Left" Margin="75,168,0,0" VerticalAlignment="Top" Width="60" Click="XDButton_Click" Height="50">
                 <TextBlock TextAlignment="Center">
                     X →
                     <LineBreak/>
-                    (8)
+                    (2)
                 </TextBlock>
             </RepeatButton>
             <RepeatButton x:Name="ZIButton" HorizontalAlignment="Left" Margin="166,168,0,0" VerticalAlignment="Top" Width="60" Click="ZIButton_Click" Height="50">
@@ -50,7 +50,7 @@
                 <TextBlock TextAlignment="Center">
                     Y ↓
                     <LineBreak/>
-                    (7)
+                    (6)
                 </TextBlock>
             </RepeatButton>
             <RepeatButton x:Name="YIButton" HorizontalAlignment="Left" Margin="120,55,0,0" VerticalAlignment="Top" Width="60" Height="50" Click="YIButton_Click">

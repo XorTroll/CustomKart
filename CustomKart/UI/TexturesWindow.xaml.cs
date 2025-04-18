@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using System.Windows.Media.Imaging;
 using System.Drawing.Imaging;
 using NSMBe4;
-using NSMBe4.DSFileSystem;
 using NDS.NitroSystem.FND;
 using System.ComponentModel;
 
@@ -23,94 +22,23 @@ namespace CustomKart.UI
     /// Lógica de interacción para TexturesWindow.xaml
     /// </summary>
     ///
-
-    public class VirtualInlineFile : FileWithLock
-    {
-        private int inlineOffs;
-
-        private int inlineLen;
-
-        private byte[] vdata;
-
-        public VirtualInlineFile(byte[] data, int offs, int len, string name)
-        {
-            nameP = name;
-            fileSizeP = len;
-            vdata = data;
-            inlineOffs = offs;
-            inlineLen = len;
-        }
-
-        public override byte[] getContents()
-        {
-            return vdata.Skip(inlineOffs).Take(inlineLen).ToArray();
-        }
-
-        public override void replace(byte[] newFile, object editor)
-        {
-            if (newFile.Length != inlineLen)
-            {
-                throw new Exception("Trying to resize an InlineFile: " + base.name);
-            }
-            replaceInterval(newFile, 0);
-        }
-
-        public override byte[] getInterval(int start, int end)
-        {
-            validateInterval(start, end);
-            return vdata.Skip(inlineOffs + start).Take(end - (inlineOffs + start)).ToArray();
-        }
-
-        public override void replaceInterval(byte[] newFile, int start)
-        {
-            validateInterval(start, start + newFile.Length);
-            Array.Copy(newFile, 0, vdata, inlineOffs + start, newFile.Length);
-        }
-
-        public byte[] getAll()
-        {
-            return vdata;
-        }
-
-        public override void startEdition()
-        {
-        }
-
-        public override void endEdition()
-        {
-        }
-    }
-
-    public class LoadedTexture
-    {
-        public Texture Data { get; set; }
-
-        public CARCEditor CARC { get; set; }
-
-        public VirtualInlineFile SpriteFile { get; set; }
-
-        public Image2D Sprite { get; set; }
-
-        public VirtualInlineFile PaletteFile { get; set; }
-
-        public Palette Palette { get; set; }
-
-        public LoadedTexture(Texture tex_base)
-        {
-            Data = tex_base;
-        }
-    }
-
     public partial class TexturesWindow : Window
     {
         public TexturesWindow()
         {
             InitializeComponent();
-            foreach(var tex_data in MKDS.Textures)
+            foreach (var tex_data in Settings.Textures)
             {
-                var tex = LoadTexture(tex_data);
-                Textures.Add(tex);
-                TexturesCombo.Items.Add(tex_data.Name);
+                try
+                {
+                    var tex = LoadTexture(tex_data);
+                    Textures.Add(tex);
+                    TexturesCombo.Items.Add(tex_data.Name);
+                }
+                catch
+                {
+                    Utils.ShowMessage("Invalid texture: " + tex_data.Name);
+                }
             }
             Load();
         }
@@ -139,7 +67,7 @@ namespace CustomKart.UI
             var tex = new LoadedTexture(tex_data);
             byte[] ncgr_data;
             byte[] nclr_data;
-            if(tex_data.IsInCARC)
+            if (tex_data.IsInCARC)
             {
                 tex.CARC = new CARCEditor(tex_data.CARC);
                 ncgr_data = tex.CARC.ReadFile(tex_data.NCGR);
@@ -171,9 +99,9 @@ namespace CustomKart.UI
             foreach(var tex in Textures)
             {
                 tex.Sprite.save();
-                var ncgr_data = tex.SpriteFile.getAll();
+                var ncgr_data = tex.SpriteFile.GetData();
                 tex.Palette.save();
-                var nclr_data = tex.PaletteFile.getAll();
+                var nclr_data = tex.PaletteFile.GetData();
                 if(tex.Data.IsInCARC)
                 {
                     tex.CARC.WriteFile(tex.Data.NCGR, ncgr_data);
@@ -190,7 +118,19 @@ namespace CustomKart.UI
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            Save();
+            switch(Utils.ShowYesNoMessage(Utils.GetResource("common:saveChanges"), Utils.GetResource("common:warn")))
+            {
+                case MessageBoxResult.Yes:
+                    {
+                        Save();
+                        break;
+                    }
+                case MessageBoxResult.Cancel:
+                    {
+                        e.Cancel = true;
+                        break;
+                    }
+            }
             base.OnClosing(e);
         }
 
@@ -207,7 +147,11 @@ namespace CustomKart.UI
                 Filter = Utils.GetResource("common:imageFile") + "|*.png",
                 Title = Utils.GetResource("textures:textureExport")
             };
-            if(sd.ShowDialog() == System.Windows.Forms.DialogResult.OK) CurrentTexture.Save(sd.FileName, ImageFormat.Png);
+            if(sd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                CurrentTexture.Save(sd.FileName, ImageFormat.Png);
+                Utils.ShowMessage("Nice m8");
+            }
         }
 
         private void UpdateTexture()
@@ -237,7 +181,7 @@ namespace CustomKart.UI
                 }
                 catch
                 {
-                    // TODO
+                    Utils.ShowMessage("Not good m8");
                 }
             }
         }

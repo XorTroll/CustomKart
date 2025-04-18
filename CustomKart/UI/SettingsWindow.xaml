@@ -1,0 +1,22 @@
+﻿<Window x:Class="CustomKart.UI.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomKart.UI"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        Title="SettingsWindow" Height="450" ResizeMode="NoResize" Width="850">
+    <Grid>
+        <dragablz:TabablzControl>
+            <TabItem Header="Texture list" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListView Name="TexturesList"></ListView>
+            </TabItem>
+            <TabItem Header="...">
+                <Grid>
+                </Grid>
+            </TabItem>
+        </dragablz:TabablzControl>
+
+    </Grid>
+</Window>

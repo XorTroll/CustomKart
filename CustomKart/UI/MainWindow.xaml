@@ -16,8 +16,11 @@
         Height="300" Width="900">
     <Grid>
         <ToolBar VerticalAlignment="Top">
-            <Button Name="ROMOpenButton" ToolTip="{DynamicResource common:tip:ROMOpen}" Click="ROMOpenButton_Click">
+            <Button Name="OpenButton" ToolTip="{DynamicResource common:tip:Open}" Click="OpenButton_Click">
                 <material:PackIcon Kind="Folder" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
+            </Button>
+            <Button Name="SettingsButton" HorizontalAlignment="Right" ToolTip="{DynamicResource common:tip:Settings}" IsEnabled="True" Click="SettingsButton_Click">
+                <material:PackIcon Kind="Settings" Foreground="{StaticResource SecondaryAccentBrush}"></material:PackIcon>
             </Button>
             <Separator/>
             <Button Name="AssetsButton" ToolTip="{DynamicResource common:tip:Assets}" IsEnabled="False" Click="AssetsButton_Click">

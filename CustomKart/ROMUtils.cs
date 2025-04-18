@@ -30,6 +30,10 @@ namespace CustomKart
 
         public SFSDirectory ROMFs { get; set; }
 
+        public NDS.UtilityBin UtilityBin { get; set; }
+
+        public SFSDirectory UtilityBinFs { get; set; }
+
         public Bitmap Icon { get; set; }
 
         private void WriteROMIcon()
@@ -43,8 +47,8 @@ namespace CustomKart
             var image = new Image2D(image_f, 32, true, false);
             var palette = new FilePalette(palette_f);
             image.replaceImgAndPal(Icon, palette);
-            Array.Copy(image.getData(), ROM.Banner.Banner.Image, ImageSize);
-            Array.Copy(palette.getData(), ROM.Banner.Banner.Pltt, PaletteSize);
+            Array.Copy(image.GetData(), ROM.Banner.Banner.Image, ImageSize);
+            Array.Copy(palette.GetData(), ROM.Banner.Banner.Pltt, PaletteSize);
         }
 
         private void DoWithNSMBeROM(string path, System.Action callback)
@@ -61,6 +65,10 @@ namespace CustomKart
 
             // Load filesystem
             ROMFs = ROM.ToFileSystem();
+
+            // Load utility.bin filesystem
+            UtilityBin = new NDS.UtilityBin(ReadFile("utility.bin"));
+            UtilityBinFs = UtilityBin.ToFileSystem();
         }
 
         public byte[] ReadFile(string name)
@@ -75,6 +83,30 @@ namespace CustomKart
             file.Data = data;
         }
 
+        public byte[] ReadUtilityBinFile(string name)
+        {
+            var file = ROMUtils.GetSFSFile(name, UtilityBinFs);
+            return file.Data;
+        }
+
+        public void WriteUtilityBinFile(string name, byte[] data)
+        {
+            var file = ROMUtils.GetSFSFile(name, UtilityBinFs);
+            file.Data = data;
+        }
+
+        public byte[] ReadDecompressUtilityBinFile(string name)
+        {
+            var file = ROMUtils.GetSFSFile(name, UtilityBinFs);
+            return NSMBeROM.LZ77_Decompress(file.Data);
+        }
+
+        public void WriteCompressUtilityBinFile(string name, byte[] data)
+        {
+            var file = ROMUtils.GetSFSFile(name, UtilityBinFs);
+            file.Data = NSMBeROM.LZ77_Compress(data);
+        }
+
         public ROMObject(string path, EFEROM rom)
         {
             Path = path;
@@ -84,6 +116,10 @@ namespace CustomKart
 
         public void Save(string path)
         {
+            // Save utility.bin filesystem
+            UtilityBin.FromFileSystem(UtilityBinFs);
+            WriteFile("utility.bin", UtilityBin.Write());
+
             // Write ROM icon (uses NSMBe to generate icon data)
             DoWithNSMBeROM(Path, WriteROMIcon);
 
@@ -117,9 +153,8 @@ namespace CustomKart
         public static MIDIConverter DetermineConverter()
         {
             var cvtr = MIDIConverter.Invalid;
-            var curdir = Utils.GetSelfPath();
-            if(SystemFile.Exists(Path.Combine(curdir, "midi2sseq.exe"))) cvtr = MIDIConverter.MIDI2SSEQ;
-            if(SystemFile.Exists(Path.Combine(curdir, "smfconv.exe")) && SystemFile.Exists(Path.Combine(curdir, "seqconv.exe"))) cvtr = MIDIConverter.SmfSeqConv;
+            if(SystemFile.Exists(Path.Combine(Utils.SelfPath, "midi2sseq.exe"))) cvtr = MIDIConverter.MIDI2SSEQ;
+            if(SystemFile.Exists(Path.Combine(Utils.SelfPath, "smfconv.exe")) && SystemFile.Exists(Path.Combine(Utils.SelfPath, "seqconv.exe"))) cvtr = MIDIConverter.SmfSeqConv;
             return cvtr;
         }
         public static byte[] GetFile(string Name, SFSDirectory Dir)

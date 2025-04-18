@@ -2,6 +2,9 @@
 
 > WPF tool to easily create Mario Kart DS ROM hacks
 
+
+## **IMPORTANT!** this project is no longer continued.
+
 ## About
 
 CustomKart (CKart) is a project, using four very well known DS hacking programs (**MKDS Course Modifier**, **Every File Explorer**, **DS Sound Studio** and **NSMB Editor**) as libraries, whose aim is to make Mario Kart DS ROM hacking as simple as possible.

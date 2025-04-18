@@ -81,7 +81,7 @@ namespace CustomKart.UI
                 nsbmd.TexPlttSet = nsbtx.TexPlttSet;
             }
 
-            var path = IOPath.Combine(Utils.PrepareTempDirectory(), "model.obj");
+            var path = IOPath.Combine(Utils.MakeTempDirectory(), "model.obj");
             GlNitro.glNitroBindTextures(nsbmd, 1);
             nsbmd.modelSet.models[0].ExportMesh(nsbmd.TexPlttSet, path, "PNG");
             Path = path;
@@ -92,7 +92,7 @@ namespace CustomKart.UI
         {
             MKDSCMExtras.GenerateNSBMD(path, scale, HasTexture, out var nsbmd_data, out var nsbtx_data);
 
-            var new_path = IOPath.Combine(Utils.PrepareTempDirectory(), "model.obj");
+            var new_path = IOPath.Combine(Utils.MakeTempDirectory(), "model.obj");
             MKDSCMExtras.ScaleOBJ(path, new_path, scale);
             Path = new_path;
             NSBMD = nsbmd_data;
@@ -174,7 +174,10 @@ namespace CustomKart.UI
                 MainModels.Add(track_model);
                 LoadModelIntoView(track_model);
             }
-            else Utils.ShowMessage("Unable to load track model.");
+            else
+            {
+                Utils.ShowMessage("Unable to load track model.");
+            }
 
             var skybox_model = new Model(SkyboxModelInfo, MainCARC, texture_carc);
             if (skybox_model.Export())
@@ -184,7 +187,10 @@ namespace CustomKart.UI
                 MainModels.Add(skybox_model);
                 LoadModelIntoView(skybox_model);
             }
-            else Utils.ShowMessage("Unable to load track skybox model.");
+            else
+            {
+                Utils.ShowMessage("Unable to load track skybox model.");
+            }
 
             var nkm_data = MainCARC.ReadFile("course_map.nkm");
             TrackNKM = new NKMD(nkm_data);
@@ -206,7 +212,10 @@ namespace CustomKart.UI
                 UpdateModelTranslate(0, ktps.Position.X / 16, ktps.Position.Y / 16, ktps.Position.Z / 16, true);
                 UpdateModelRotation(0, ktps.Rotation.X, ktps.Rotation.Y, ktps.Rotation.Z);
             }
-            else Utils.ShowMessage("Unable to load demo kart model.");
+            else
+            {
+                Utils.ShowMessage("Unable to load demo kart model.");
+            }
         }
 
         public Point3D GetCenter(Model3D model, double translate_x, double translate_y, double translate_z)
@@ -220,7 +229,7 @@ namespace CustomKart.UI
         {
             try
             {
-                // Change this so that ObjReader parses inf values properly
+                // Change this so that ObjReader internally parses "infinity" values properly
                 var obj_data = File.ReadAllText(model.Path);
                 var new_obj_data = obj_data.Replace("∞", "Infinity");
                 File.WriteAllText(model.Path, new_obj_data);

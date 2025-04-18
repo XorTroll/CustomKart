@@ -61,7 +61,7 @@
             </TabItem>
         </dragablz:TabablzControl>
         <Button Name="ExportButton" TextBlock.FontSize="12" Margin="0,0,10,4" Height="28" Content="{DynamicResource texts:jsonExport}" HorizontalAlignment="Right" Width="125" VerticalAlignment="Bottom" Click="ExportButton_Click"/>
-        <Button Name="ImportButton" TextBlock.FontSize="12" Margin="0,0,147,4" Height="28" Content="{DynamicResource texts:jsonImport}" HorizontalAlignment="Right" Width="125" VerticalAlignment="Bottom" Click="ImportButton_Click"/>
+        <Button Name="ImportButton" TextBlock.FontSize="12" Margin="0,0,140,4" Height="28" Content="{DynamicResource texts:jsonImport}" HorizontalAlignment="Right" Width="150" VerticalAlignment="Bottom" Click="ImportButton_Click"/>
 
     </Grid>
 </Window>

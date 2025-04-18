@@ -1,0 +1,280 @@
+﻿{
+    "textures": [
+        {
+            "name": "title_us",
+            "carc": "Title_us.carc",
+            "ncgr": "title_m_b.NCGR",
+            "nclr": "title_m_b.NCLR"
+        },
+        {
+            "name": "title_es",
+            "carc": "Title_es.carc",
+            "ncgr": "title_m_b.NCGR",
+            "nclr": "title_m_b.NCLR"
+        },
+        {
+            "name": "title_fr",
+            "carc": "Title_fr.carc",
+            "ncgr": "title_m_b.NCGR",
+            "nclr": "title_m_b.NCLR"
+        },
+        {
+            "name": "title_ge",
+            "carc": "Title_ge.carc",
+            "ncgr": "title_m_b.NCGR",
+            "nclr": "title_m_b.NCLR"
+        },
+        {
+            "name": "title_it",
+            "carc": "Title_it.carc",
+            "ncgr": "title_m_b.NCGR",
+            "nclr": "title_m_b.NCLR"
+        },
+        {
+            "name": "title_true_us",
+            "carc": "Title_us.carc",
+            "ncgr": "title_true_m_b.NCGR",
+            "nclr": "title_true_m_b.NCLR"
+        },
+        {
+            "name": "title_true_es",
+            "carc": "Title_es.carc",
+            "ncgr": "title_true_m_b.NCGR",
+            "nclr": "title_true_m_b.NCLR"
+        },
+        {
+            "name": "title_true_fr",
+            "carc": "Title_fr.carc",
+            "ncgr": "title_true_m_b.NCGR",
+            "nclr": "title_true_m_b.NCLR"
+        },
+        {
+            "name": "title_true_ge",
+            "carc": "Title_ge.carc",
+            "ncgr": "title_true_m_b.NCGR",
+            "nclr": "title_true_m_b.NCLR"
+        },
+        {
+            "name": "title_true_it",
+            "carc": "Title_it.carc",
+            "ncgr": "title_true_m_b.NCGR",
+            "nclr": "title_true_m_b.NCLR"
+        },
+        {
+            "name": "select_menu_etc",
+            "carc": "CharacterKartSelect.carc",
+            "ncgr": "select_menu_etc_m_b.NCGR",
+            "nclr": "select_menu_etc_m_b.NCLR"
+        },
+        {
+            "name": "thanksYou_00",
+            "carc": "Ending.carc",
+            "ncgr": "thanksYou_m_b_00.NCGR",
+            "nclr": "thanksYou_m_b_00.NCLR"
+        },
+        {
+            "name": "thanksYou_01",
+            "carc": "Ending.carc",
+            "ncgr": "thanksYou_m_b_01.NCGR",
+            "nclr": "thanksYou_m_b_01.NCLR"
+        },
+        {
+            "name": "logo_end_marioKart_00",
+            "carc": "Ending.carc",
+            "ncgr": "logo_end_marioKart_m_b_00.NCGR",
+            "nclr": "logo_end_marioKart_m_b.NCLR"
+        },
+        {
+            "name": "logo_end_marioKart_01",
+            "carc": "Ending.carc",
+            "ncgr": "logo_end_marioKart_m_b_01.NCGR",
+            "nclr": "logo_end_marioKart_m_b.NCLR"
+        },
+        {
+            "name": "logo_end_marioKart_02",
+            "carc": "Ending.carc",
+            "ncgr": "logo_end_marioKart_m_b_02.NCGR",
+            "nclr": "logo_end_marioKart_m_b.NCLR"
+        },
+        {
+            "name": "logo_R_Nintendo",
+            "carc": "Logo.carc",
+            "ncgr": "logo_R_Nintendo_m_b.NCGR",
+            "nclr": "logo_R_Nintendo_m_b.NCLR"
+        },
+        {
+            "name": "allRightsReserved",
+            "carc": "Logo.carc",
+            "ncgr": "allRightsReserved_s_b.NCGR",
+            "nclr": "allRightsReserved_s_b.NCLR"
+        },
+        {
+            "name": "ESRB_Online",
+            "carc": "Logo.carc",
+            "ncgr": "ESRB_Online_s_b.NCGR",
+            "nclr": "ESRB_Online_s_b.NCLR"
+        },
+
+        {
+            "name": "select_cup_nitro01",
+            "ncgr": "select_cup_nitro01_m_b.NCGR",
+            "nclr": "select_cup_nitro01_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro02",
+            "ncgr": "select_cup_nitro02_m_b.NCGR",
+            "nclr": "select_cup_nitro02_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro03",
+            "ncgr": "select_cup_nitro03_m_b.NCGR",
+            "nclr": "select_cup_nitro03_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro04",
+            "ncgr": "select_cup_nitro04_m_b.NCGR",
+            "nclr": "select_cup_nitro04_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro05",
+            "ncgr": "select_cup_nitro05_m_b.NCGR",
+            "nclr": "select_cup_nitro05_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro06",
+            "ncgr": "select_cup_nitro06_m_b.NCGR",
+            "nclr": "select_cup_nitro06_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro07",
+            "ncgr": "select_cup_nitro07_m_b.NCGR",
+            "nclr": "select_cup_nitro07_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro08",
+            "ncgr": "select_cup_nitro08_m_b.NCGR",
+            "nclr": "select_cup_nitro08_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro09",
+            "ncgr": "select_cup_nitro09_m_b.NCGR",
+            "nclr": "select_cup_nitro09_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro10",
+            "ncgr": "select_cup_nitro10_m_b.NCGR",
+            "nclr": "select_cup_nitro10_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro11",
+            "ncgr": "select_cup_nitro11_m_b.NCGR",
+            "nclr": "select_cup_nitro11_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro12",
+            "ncgr": "select_cup_nitro12_m_b.NCGR",
+            "nclr": "select_cup_nitro12_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro13",
+            "ncgr": "select_cup_nitro13_m_b.NCGR",
+            "nclr": "select_cup_nitro13_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro14",
+            "ncgr": "select_cup_nitro14_m_b.NCGR",
+            "nclr": "select_cup_nitro14_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro15",
+            "ncgr": "select_cup_nitro15_m_b.NCGR",
+            "nclr": "select_cup_nitro15_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_nitro16",
+            "ncgr": "select_cup_nitro16_m_b.NCGR",
+            "nclr": "select_cup_nitro16_m_b.NCLR"
+        },
+
+        {
+            "name": "select_cup_retro01",
+            "ncgr": "select_cup_retro01_m_b.NCGR",
+            "nclr": "select_cup_retro01_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro02",
+            "ncgr": "select_cup_retro02_m_b.NCGR",
+            "nclr": "select_cup_retro02_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro03",
+            "ncgr": "select_cup_retro03_m_b.NCGR",
+            "nclr": "select_cup_retro03_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro04",
+            "ncgr": "select_cup_retro04_m_b.NCGR",
+            "nclr": "select_cup_retro04_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro05",
+            "ncgr": "select_cup_retro05_m_b.NCGR",
+            "nclr": "select_cup_retro05_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro06",
+            "ncgr": "select_cup_retro06_m_b.NCGR",
+            "nclr": "select_cup_retro06_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro07",
+            "ncgr": "select_cup_retro07_m_b.NCGR",
+            "nclr": "select_cup_retro07_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro08",
+            "ncgr": "select_cup_retro08_m_b.NCGR",
+            "nclr": "select_cup_retro08_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro09",
+            "ncgr": "select_cup_retro09_m_b.NCGR",
+            "nclr": "select_cup_retro09_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro10",
+            "ncgr": "select_cup_retro10_m_b.NCGR",
+            "nclr": "select_cup_retro10_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro11",
+            "ncgr": "select_cup_retro11_m_b.NCGR",
+            "nclr": "select_cup_retro11_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro12",
+            "ncgr": "select_cup_retro12_m_b.NCGR",
+            "nclr": "select_cup_retro12_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro13",
+            "ncgr": "select_cup_retro13_m_b.NCGR",
+            "nclr": "select_cup_retro13_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro14",
+            "ncgr": "select_cup_retro14_m_b.NCGR",
+            "nclr": "select_cup_retro14_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro15",
+            "ncgr": "select_cup_retro15_m_b.NCGR",
+            "nclr": "select_cup_retro15_m_b.NCLR"
+        },
+        {
+            "name": "select_cup_retro16",
+            "ncgr": "select_cup_retro16_m_b.NCGR",
+            "nclr": "select_cup_retro16_m_b.NCLR"
+        }
+    ]
+}

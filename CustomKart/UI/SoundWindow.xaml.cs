@@ -50,42 +50,52 @@ namespace CustomKart.UI
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            Playing = false;
-            Stop = true;
+            switch(Utils.ShowYesNoMessage(Utils.GetResource("common:saveChanges"), Utils.GetResource("common:warn")))
+            {
+                case MessageBoxResult.Yes:
+                    {
+                        Playing = false;
+                        Stop = true;
 
-            // TODO: ask whether to save/close
-            ROMUtils.ROM.WriteFile("sound_data.sdat", Data.Write());
-
+                        ROMUtils.ROM.WriteFile("sound_data.sdat", Data.Write());
+                        break;
+                    }
+                case MessageBoxResult.Cancel:
+                    {
+                        e.Cancel = true;
+                        break;
+                    }
+            }
             base.OnClosing(e);
         }
 
         private void SoundThread()
         {
-            BufferedWaveProvider bufferedWaveProvider = new BufferedWaveProvider(new WaveFormat(65456, 16, 2));
-            bufferedWaveProvider.DiscardOnBufferOverflow = true;
-            bufferedWaveProvider.BufferLength = 21824;
-            WaveOut waveOut = new WaveOut();
-            waveOut.DesiredLatency = 150;
-            waveOut.Init(bufferedWaveProvider);
-            waveOut.Play();
-            DSSoundContext dssoundContext = new DSSoundContext();
-            dssoundContext.ExChannelInit();
-            dssoundContext.SeqInit();
-            dssoundContext.StartSeq(0, Sequence.Data, 0, Bank);
-            Player player = dssoundContext.Work.Players[0];
+            var buf_wave_provider = new BufferedWaveProvider(new WaveFormat(65456, 16, 2));
+            buf_wave_provider.DiscardOnBufferOverflow = true;
+            buf_wave_provider.BufferLength = 21824;
+            var wave_out = new WaveOut();
+            wave_out.DesiredLatency = 150;
+            wave_out.Init(buf_wave_provider);
+            wave_out.Play();
+            var ds_sound_ctx = new DSSoundContext();
+            ds_sound_ctx.ExChannelInit();
+            ds_sound_ctx.SeqInit();
+            ds_sound_ctx.StartSeq(0, Sequence.Data, 0, Bank);
+            var player = ds_sound_ctx.Work.Players[0];
             player.Volume = SequenceInfo.Volume;
             while(!Stop)
             {
-                if(Playing && (bufferedWaveProvider.BufferedBytes < bufferedWaveProvider.BufferLength) && ((bufferedWaveProvider.BufferLength - bufferedWaveProvider.BufferedBytes) > 1364))
+                if(Playing && (buf_wave_provider.BufferedBytes < buf_wave_provider.BufferLength) && ((buf_wave_provider.BufferLength - buf_wave_provider.BufferedBytes) > 1364))
                 {
-                    dssoundContext.UpdateExChannel();
-                    dssoundContext.SeqMain(true);
-                    dssoundContext.ExChannelMain(true);
+                    ds_sound_ctx.UpdateExChannel();
+                    ds_sound_ctx.SeqMain(true);
+                    ds_sound_ctx.ExChannelMain(true);
                     Util.CalcRandom();
                     for (int i = 0; i < 341; i++)
                     {
-                        dssoundContext.Hardware.Evaluate(256, out short num, out short num2);
-                        bufferedWaveProvider.AddSamples(new byte[]
+                        ds_sound_ctx.Hardware.Evaluate(256, out short num, out short num2);
+                        buf_wave_provider.AddSamples(new byte[]
                         {
                             (byte)(num & 255),
                             (byte)(num >> 8 & 255),
@@ -95,8 +105,8 @@ namespace CustomKart.UI
                     }
                 }
             }
-            waveOut.Stop();
-            waveOut.Dispose();
+            wave_out.Stop();
+            wave_out.Dispose();
         }
 
         public void Load()
@@ -112,8 +122,8 @@ namespace CustomKart.UI
             Playing = false;
             Stop = true;
             PlayButton.Content = new PackIcon { Kind = PackIconKind.Play };
-            int sidx = SequencesCombo.SelectedIndex;
-            SequenceInfo = Data.InfoBlock.SequenceInfos[sidx];
+            var sel_idx = SequencesCombo.SelectedIndex;
+            SequenceInfo = Data.InfoBlock.SequenceInfos[sel_idx];
             Sequence = new SSEQ(Data.GetFileData(SequenceInfo.FileId));
             BankInfo = Data.InfoBlock.BankInfos[SequenceInfo.Bank];
             Bank = new SBNK(Data.GetFileData(BankInfo.FileId));
@@ -121,7 +131,7 @@ namespace CustomKart.UI
             {
                 if (BankInfo.WaveArchives[i] != 65535)
                 {
-                    Bank.AssignWaveArc(i, new SWAR(Data.GetFileData(Data.InfoBlock.WaveArchiveInfos[(int)BankInfo.WaveArchives[i]].FileId)));
+                    Bank.AssignWaveArc(i, new SWAR(Data.GetFileData(Data.InfoBlock.WaveArchiveInfos[BankInfo.WaveArchives[i]].FileId)));
                 }
             }
         }
@@ -188,12 +198,12 @@ namespace CustomKart.UI
             };
             if(od.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string ext = Path.GetExtension(od.FileName);
-                string sseq = "";
+                var ext = Path.GetExtension(od.FileName);
+                var sseq = "";
                 if(ext.EndsWith("sseq")) sseq = od.FileName;
                 else if(ext.EndsWith("mid"))
                 {
-                    string fname = Path.GetFileNameWithoutExtension(od.FileName);
+                    var fname = Path.GetFileNameWithoutExtension(od.FileName);
                     MIDIConverter cvtr = ROMUtils.DetermineConverter();
                     if(cvtr == MIDIConverter.Invalid)
                     {
@@ -202,7 +212,7 @@ namespace CustomKart.UI
                     }
                     else if(cvtr == MIDIConverter.MIDI2SSEQ)
                     {
-                        string midi2sseq = Utils.GetSelfPath() + "\\midi2sseq.exe";
+                        var midi2sseq = Utils.SelfPath + "\\midi2sseq.exe";
                         var p = new Process
                         {
                             StartInfo = new ProcessStartInfo
@@ -215,7 +225,7 @@ namespace CustomKart.UI
                         };
                         p.Start();
                         p.WaitForExit();
-                        if(!File.Exists(Utils.GetSelfPath() + "\\" + fname + ".sseq"))
+                        if(!File.Exists(Utils.SelfPath + "\\" + fname + ".sseq"))
                         {
                             Utils.ShowMessage(Utils.GetResource("sound:errorSequenceConversion"));
                             if (chplay)
@@ -228,12 +238,12 @@ namespace CustomKart.UI
                             }
                             return;
                         }
-                        sseq = Utils.GetSelfPath() + "\\" + fname + ".sseq";
+                        sseq = Utils.SelfPath + "\\" + fname + ".sseq";
                     }
                     else if(cvtr == MIDIConverter.SmfSeqConv)
                     {
-                        string smfconv = Utils.GetSelfPath() + "\\smfconv.exe";
-                        string seqconv = Utils.GetSelfPath() + "\\seqconv.exe";
+                        var smfconv = Utils.SelfPath + "\\smfconv.exe";
+                        var seqconv = Utils.SelfPath + "\\seqconv.exe";
                         var p = new Process
                         {
                             StartInfo = new ProcessStartInfo
@@ -246,7 +256,7 @@ namespace CustomKart.UI
                         };
                         p.Start();
                         p.WaitForExit();
-                        string basenoext = Path.GetDirectoryName(od.FileName) + "\\" + fname;
+                        var basenoext = Path.GetDirectoryName(od.FileName) + "\\" + fname;
                         if(!File.Exists(basenoext + ".smft"))
                         {
                             Utils.ShowMessage(Utils.GetResource("sound:errorSequenceConversion"));

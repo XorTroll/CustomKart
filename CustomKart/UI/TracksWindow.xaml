@@ -7,10 +7,10 @@
         xmlns:local="clr-namespace:CustomKart.UI"
         mc:Ignorable="d"
         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
-        Title="TracksWindow" Height="165.124" ResizeMode="NoResize" Width="519.192">
+        Title="TracksWindow" Height="165.124" ResizeMode="NoResize" Width="500">
     <Grid>
-        <ComboBox Name="TracksCombo" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="207"/>
-        <Button x:Name="PropertiesButton" Content="Track properties" HorizontalAlignment="Left" Margin="357,10,0,0" VerticalAlignment="Top" Width="146" Click="PropertiesButton_Click"/>
-        <Button x:Name="ViewButton" Content="View track" HorizontalAlignment="Left" Margin="388,47,0,0" VerticalAlignment="Top" Width="115" Click="ViewButton_Click"/>
+        <ComboBox Name="TracksCombo" HorizontalAlignment="Left" Margin="100,14,0,0" VerticalAlignment="Top" Width="294"/>
+        <Button x:Name="PropertiesButton" Content="Track properties" HorizontalAlignment="Left" Margin="46,69,0,0" VerticalAlignment="Top" Width="200" Click="PropertiesButton_Click"/>
+        <Button x:Name="ViewButton" Content="View track" HorizontalAlignment="Left" Margin="251,69,0,0" VerticalAlignment="Top" Width="200" Click="ViewButton_Click"/>
     </Grid>
 </Window>

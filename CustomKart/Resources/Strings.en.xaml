@@ -8,9 +8,9 @@
     <system:String x:Key="common:ndsROM">Nintendo DS ROM</system:String>
     <system:String x:Key="common:officialFormat">official format</system:String>
     <system:String x:Key="common:commonFormat">common format</system:String>
-    <system:String x:Key="common:dialogROMOpen">Open Mario Kart DS ROM</system:String>
-    <system:String x:Key="common:dialogROMSave">Save Mario Kart DS ROM</system:String>
-    <system:String x:Key="common:noROMOpened">No ROM opened</system:String>
+    <system:String x:Key="common:dialogOpen">Open Mario Kart DS ROM</system:String>
+    <system:String x:Key="common:dialogSave">Save Mario Kart DS ROM</system:String>
+    <system:String x:Key="common:notOpened">No ROM opened</system:String>
     <system:String x:Key="common:imageFile">Image</system:String>
     <system:String x:Key="common:warn">Warning</system:String>
     <system:String x:Key="common:invalidNDSROM">The selected file is not a valid Nintendo DS ROM.</system:String>
@@ -21,7 +21,8 @@
     <system:String x:Key="common:help">Need any help? Place your mouse over the different menus to see what they have!</system:String>
     <system:String x:Key="common:messageLog">Message log (last messages first)</system:String>
     <system:String x:Key="common:messageClear">Clear messages</system:String>
-    <system:String x:Key="common:tip:ROMOpen">Open ROM</system:String>
+    <system:String x:Key="common:tip:Open">Open ROM</system:String>
+    <system:String x:Key="common:tip:Settings">Program settings</system:String>
     <system:String x:Key="common:tip:Assets">Game assets</system:String>
     <system:String x:Key="common:tip:Texts">Game texts/dialogs</system:String>
     <system:String x:Key="common:tip:Sound">Game soundtrack</system:String>
@@ -52,6 +53,10 @@
     <system:String x:Key="assets:invalidIconSize">Invalid icon size (icons must be 32x32 pixels)</system:String>
     
     <!-- SoundWindow -->
+    <system:String x:Key="sound:gameSounds">Game sounds</system:String>
+    <system:String x:Key="sound:utilitySounds">Download Play sounds</system:String>
+    <system:String x:Key="sound:sequences">Sequences</system:String>
+    <system:String x:Key="sound:waveArchives">Wave archives</system:String>
     <system:String x:Key="sound:sequenceReplace">Replace sequence</system:String>
     <system:String x:Key="sound:midiFile">MIDI audio</system:String>
     <system:String x:Key="sound:sseqFile">Nitro Sound Sequence</system:String>

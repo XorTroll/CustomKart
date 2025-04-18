@@ -9,6 +9,7 @@ using MKDS_Course_Modifier.Converters;
 using MKDS_Course_Modifier.Converters._3D;
 using MKDS_Course_Modifier.G3D_Binary_File_Format;
 using MKDS_Course_Modifier._3D_Formats;
+using MKDS_Course_Modifier.Sound;
 using OpenTK;
 using Tao.OpenGl;
 

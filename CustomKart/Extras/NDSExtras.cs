@@ -67,12 +67,13 @@ namespace CustomKart
             "MainRace.carc",
             "Static2D.carc",
             "MainEffect.carc",
+            "MapObj.carc",
             "charmenuparam.bin",
             "kartmenuparam.bin",
             "kartoffsetdata.bin",
             "kartphysicalparam.bin",
             "sound_data.sdat",
-            "MapObj.carc"
+            "utility.bin"
         };
 
         public static bool IsMKDS(this NDS.Nitro.NDS ROM)
